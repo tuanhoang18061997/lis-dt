@@ -1,0 +1,50 @@
+﻿@{
+    var lstresultCDHAs = ViewData["lstresultCDHAs"] as List<ResultCDHA>;
+}
+
+<div class="table-responsive">
+    <div class="left">
+        <div class="list-service">
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <tbody class="tbody-service">
+                        @{
+                            if (lstresultCDHAs != null && lstresultCDHAs.Count > 0)
+                            {
+                                var index = 0;
+                                foreach (var item in lstresultCDHAs)
+                                {
+                                    index++;
+                                    <tr id="start-camera" class="row-service" onclick="Process_CheckedBoxOnRow(@item.Id)">
+                                        <td class="td-check">
+                                            <input class="form-check-input" type="checkbox" value="@item.Id" id="flexCheckChecked">
+                                        </td>
+                                        <td class="td-name">@item.Service.Name</td>
+                                    </tr>
+                                }
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>     
+    </div>
+    <div class="right">
+        <div class="desscription">
+            <div class="content">
+                <textarea id="xq_process_description" class="form-control textarea-desscription pading-left-5 pading-right-5" placeholder="Mô tả ..."></textarea>
+                <script>
+                    CKEDITOR.replace("xq_process_description");
+                </script>
+            </div>
+        </div>
+        <div class="result-suggest">
+            <div class="result">
+                <textarea id="xq_process_result" class="form-control textarea-result pading-left-5 pading-right-5" placeholder="Kết luận ..."></textarea>
+            </div>
+            <div class="suggest">
+                <textarea id="xq_process_suggest" class="form-control textarea-suggest pading-left-5 pading-right-5" placeholder="Đề nghị ..."></textarea>
+            </div>
+        </div>
+    </div>
+</div>

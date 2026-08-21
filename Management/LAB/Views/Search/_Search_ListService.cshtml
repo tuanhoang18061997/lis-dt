@@ -1,0 +1,55 @@
+﻿@using Management.BL
+@{
+    var lstSearch = ViewData["lstSearch"] as List<Search>;
+}
+
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="sticky-top">
+            <tr class="tr-title">
+                <th class="th-number" scope="col">STT</th>
+                <th class="th-name" scope="col">TÊN DỊCH VỤ</th>
+                <th class="th-status" scope="col">TRẠNG THÁI</th>
+                <th class="th-print" scope="col"></th>
+            </tr>
+        </thead>
+        <tbody id="tbody-gridview-service">
+            @{
+                if (lstSearch != null && lstSearch.Count > 0)
+                {
+                    var index = 0;
+                    foreach (var item in lstSearch)
+                    {
+                        index++;
+                        <tr>
+                            <td class="td-number">@index</td>
+                            <td class="td-name">@item.ServiceName</td>
+
+                            @{
+                                if (@item.Status == "Wait")
+                                {
+                                    <td class="td-status">@item.Status</td>
+                                    <td class="td-print"></td>
+                                }
+                                else if (@item.Status == "Process")
+                                {
+                                    <td class="td-status">@item.Status</td>
+                                    <td class="td-print"></td>
+                                }
+                                else
+                                {
+                                    <td class="td-status" style="color: #198754">@item.Status </td>
+                                    <td class="td-print">
+                                        <button type="button" class="btn btn-outline-success btn-blue-in-gridview" value="@item.KeyResultForHis" onclick="Search_Print(this.value)">
+                                            <i class="bi bi-printer"></i>
+                                        </button>
+                                    </td>
+                                }
+                            }
+                        </tr>
+                    }
+                }
+            }
+        </tbody>
+    </table>
+</div>

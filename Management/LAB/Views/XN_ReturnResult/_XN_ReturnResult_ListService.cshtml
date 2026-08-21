@@ -1,0 +1,122 @@
+﻿@{
+    var lstresultXNs = ViewData["lstResultXNs"] as List<ResultXN>;
+}
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead class="sticky-top">
+            <tr class="tr-title">
+                <th class="th-number" scope="col"></th>
+                <th class="th-name" scope="col">TÊN XÉT NGHIỆM</th>
+                <th class="th-result" scope="col">KẾT QUẢ</th>
+                <th class="th-defaultvalue" scope="col">CHỈ SỐ BÌNH THƯỜNG</th>
+                <th class="th-unit" scope="col">ĐƠN VỊ</th>
+                <th class="th-validPrint" scope="col">VALID & IN</th>
+            </tr>
+        </thead>
+        <tbody id="tbody-gridview-service">
+            @{
+                if (lstresultXNs != null && lstresultXNs.Count > 0)
+                {
+                    var index = 0;
+                    var idResult = string.Empty;
+                    var result_posneg = string.Empty;
+
+                    foreach (var item in lstresultXNs)
+                    {
+                        index++;
+                        idResult = "result" + index;
+                        if (!string.IsNullOrEmpty(item.Result) && !string.IsNullOrEmpty(item.PosNeg))
+                        {
+                            result_posneg = item.PosNeg + " (" + item.Result + ")";
+                        }
+                        else if (!string.IsNullOrEmpty(item.Result) && string.IsNullOrEmpty(item.PosNeg))
+                        {
+                            result_posneg = item.Result;
+                        }
+                        else if (string.IsNullOrEmpty(item.Result) && !string.IsNullOrEmpty(item.PosNeg))
+                        {
+                            result_posneg = item.PosNeg;
+                        }
+                        else
+                        {
+                            result_posneg = string.Empty;
+                        }
+
+                        if (index % 2 != 0)
+                        {
+                            <tr class="tr-content process-row-result">
+                                <td class="td-id" hidden>@item.Id</td>
+                                <td class="td-number">@index</td>
+                                <td class="td-name-process">@item.TestCode.Name</td>
+                                @{
+                                    if (item?.Status == 0)
+                                    {
+                                        <td style="color:black" class="td-result-returnresult">@result_posneg</td>
+                                    }
+                                    else if (item?.Status == 1)
+                                    {
+                                        <td style="color:blue" class="td-result-returnresult">@result_posneg</td>
+                                    }
+                                    else if (item?.Status == 2)
+                                    {
+                                        <td style="color:red" class="td-result-returnresult">@result_posneg</td>
+                                    }
+                                }
+                                <td class="td-defaultvalue">@item.TestCode.NormalResult</td>
+                                <td class="td-unit">@item.TestCode.Unit</td>
+                                <td class="td-validPrint">
+                                    @{
+                                        if (item.ValidPrint)
+                                        {
+                                            <input class="form-check-input validPrint" type="checkbox" value="@item.ValidPrint" checked id="flexCheckDefault" disabled>
+                                        }
+                                        else
+                                        {
+                                            <input class="form-check-input validPrint" type="checkbox" value="@item.ValidPrint" id="flexCheckDefault" disabled>
+                                        }
+                                    }
+                                </td>
+                            </tr>
+                        }
+                        else
+                        {
+                            <tr class="process-row-result">
+                                <td class="td-id" hidden>@item.Id</td>
+                                <td class="td-number">@index</td>
+                                <td class="td-name-process">@item.TestCode.Name</td>
+                                @{
+                                    if (item?.Status == 0)
+                                    {
+                                        <td style="color:black" class="td-result-returnresult">@result_posneg</td>
+                                    }
+                                    else if (item?.Status == 1)
+                                    {
+                                        <td style="color:blue" class="td-result-returnresult">@result_posneg</td>
+                                    }
+                                    else if (item?.Status == 2)
+                                    {
+                                        <td style="color:red" class="td-result-returnresult">@result_posneg</td>
+                                    }
+                                }
+                                <td class="td-defaultvalue">@item.TestCode.NormalResult</td>
+                                <td class="td-unit">@item.TestCode.Unit</td>
+                                <td class="td-validPrint">
+                                    @{
+                                        if (item.ValidPrint)
+                                        {
+                                            <input class="form-check-input validPrint" type="checkbox" value="@item.ValidPrint" checked id="flexCheckDefault" disabled>
+                                        }
+                                        else
+                                        {
+                                            <input class="form-check-input validPrint" type="checkbox" value="@item.ValidPrint" id="flexCheckDefault" disabled>
+                                        }
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    }
+                }
+            }
+        </tbody>
+    </table>
+</div>

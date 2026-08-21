@@ -1,0 +1,1374 @@
+﻿html {
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 1rem;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.table {
+    color: black !important;
+}
+
+
+/****************************************************** CKEditor */
+.cke_chrome {
+    border: 1px solid #808080 !important;
+}
+
+
+/******************************************************* Select Option*/
+select:required:invalid {
+    color: gray;
+}
+
+option[value=""][disabled] {
+    display: none;
+}
+
+option {
+    color: black;
+}
+
+/******************************************************** Select 2 */
+.select2-results__option {
+    height: 28px;
+    font-size: 0.875rem;
+}
+
+.select2-search__field {
+    font-size: 0.875rem !important;
+}
+
+.select2-container--default .select2-selection--single {
+    border-radius: unset !important;
+    border-color: #808080 !important;
+    padding: 0rem 0.3rem 0.1rem 0rem !important;
+}
+
+    .select2-container--default .select2-selection--single:focus {
+        box-shadow: 0rem 0rem 0.063rem 0.063rem #337ab7 !important;
+    }
+
+.select2-container--default .select2-search--dropdown .select2-search__field:focus {
+    border: unset;
+}
+
+.select2-selection__arrow {
+    right: 11px !important;
+}
+
+.select2-selection__rendered {
+    color: black !important;
+}
+/******************************************************** Thẻ DIV canh giữa => Bỏ phần tử nào vào trong cũng tự động canh giữa*/
+.div-center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-margin-top-5 {
+    margin-top: 0.313rem;
+}
+
+
+/******************************************************** Thẻ Input trong form*/
+.form-control {
+    border-color: #808080;
+    border-radius: unset;
+    color: black;
+}
+
+    .form-control:focus {
+        box-shadow: 0rem 0rem 0.063rem 0.063rem #337ab7;
+    }
+
+.form-select {
+    border-color: #808080;
+    border-radius: unset;
+    padding: 0.1rem 0.3rem 0.1rem 0.4rem;
+}
+
+    .form-select:focus {
+        box-shadow: 0rem 0rem 0.063rem 0.063rem #337ab7;
+    }
+
+
+/******************************************************** Margin */
+.margin-right-10 {
+    margin-right: 0.625rem;
+}
+
+.margin-right-5 {
+    margin-right: 0.312rem;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 0.9rem;
+}
+
+.margin-left-100 {
+    margin-left: 100px;
+}
+
+.margin-top-2 {
+    margin-top: 5px;
+}
+
+.margin-right-2 {
+    margin-right: 4px;
+}
+
+/********************************************************Pading */
+.pading-left-5 {
+    padding-left: 0.312rem;
+}
+
+.pading-right-5 {
+    padding-right: 0.312rem;
+}
+
+.pading-left-10 {
+    padding-left: 0.624rem;
+}
+
+.pading-right-2 {
+    padding-right: 0.125rem;
+}
+
+.pading-unset {
+    padding: unset;
+}
+
+/******************************************************** Text color*/
+.text-red {
+    color: red;
+}
+
+/******************************************************** Width - Height*/
+.width-20 {
+    width: 7.53rem;
+}
+
+.width-97 {
+    width: 6.01rem;
+}
+
+.width-95 {
+    width: 5.95rem;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.height-100 {
+    height: 100% !important;
+}
+
+.height-28 {
+    height: 1.75rem;
+}
+
+.height-60 {
+    height: 3.8rem;
+}
+
+.height-160 {
+    height: 10rem;
+}
+
+.height-30 {
+    height: 4.85rem;
+}
+
+
+/******************************************************** Border */
+.border-red {
+    border-color: red;
+}
+
+.border-left-none {
+    border-left: unset !important;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+/******************************************************** Account */
+.account {
+    font-size: 0.938rem;
+    margin-bottom: 0.234rem;
+    background-image: url("/images/Background.jpg");
+    /*background-color: #ffffff;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/******************************************************** From Login*/
+.login-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-child {
+    background-color: #ffffff;
+    min-width: 25rem;
+    min-height: 16.875rem;
+    padding: 1.25rem 1.25rem 0.313rem 1.25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0rem 0rem 0.938rem 0.5rem #808080;
+}
+
+
+/********************************************************* Menu ngang*/
+.menu {
+    width: 100%;
+    display: flex;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-size: 14px;
+}
+
+
+/********************************************************* Menu ngang left*/
+.menu-left {
+    float: left;
+    flex-grow: 100;
+}
+
+.menu-left-height {
+    height: 2.5rem;
+}
+
+.menu-left-color {
+    color: white;
+}
+
+.hover:hover {
+    background-color: white !important;
+    color: black !important;
+}
+
+.badge-success {
+    color: #fff;
+    background-color: #28a745;
+}
+
+.badge-danger {
+    color: #fff;
+    background-color: #dc3545;
+}
+/********************************************************* Menu ngang right*/
+.menu-right {
+    min-height: 2.5rem;
+    min-width: 14.375rem;
+    float: left;
+    background-color: #337ab7;
+    color: white;
+}
+
+.menu-right-bg {
+    background-color: #337ab7;
+    border: none;
+    padding: 0.5rem 0rem 0.5rem 0.5rem;
+}
+
+.menu-right-width {
+    width: 100%;
+    text-align: left;
+}
+
+.menu-right-height-64 {
+    min-height: 4rem;
+}
+
+.menu-right-height-20 {
+    line-height: 1.25rem;
+    padding-left: 0.5rem;
+}
+
+    .menu-right-height-20:hover {
+        background-color: #337ab7;
+        color: white;
+    }
+
+.menu-right-bg:hover {
+    background-color: #1e65a3;
+    box-shadow: none;
+}
+
+.menu-right-bg:focus {
+    background-color: #1e65a3;
+    box-shadow: none;
+}
+
+/********************************************************* Format cho RenderBody */
+.renderBody {
+    font-size: 0.875rem;
+    color: black;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+    .renderBody .form-control {
+        font-size: 0.875rem;
+    }
+
+    .renderBody .form-select {
+        font-size: 0.875rem;
+    }
+
+    .renderBody .btn-blue {
+        font-size: 0.875rem;
+        height: 1.75rem;
+        background-color: #337ab7;
+        line-height: 0.875rem;
+        border-color: #337ab7;
+        border-radius: unset;
+    }
+
+        .renderBody .btn-blue:hover {
+            background-color: #1e65a3;
+        }
+
+        .renderBody .btn-blue:focus {
+            box-shadow: 0rem 0rem 0.063rem 0.063rem #1e65a3;
+        }
+
+    .renderBody .btn-red {
+        font-size: 0.875rem;
+        height: 1.75rem;
+        line-height: 0.875rem;
+        border-radius: unset;
+    }
+
+        .renderBody .btn-red:hover {
+            background-color: #dc3545;
+        }
+
+        .renderBody .btn-red:focus {
+            box-shadow: 0rem 0rem 0.063rem 0.063rem #dc3545;
+        }
+
+/********************************************************* Main */
+.main-bg {
+    background-color: #666;
+}
+
+.main-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-child {
+    min-width: 49.375rem;
+    min-height: 35rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 1.875rem;
+}
+
+.main-card {
+    background-color: #666;
+    width: 11rem;
+    float: left;
+    margin: 1.25rem 2.188rem 0rem 2.188rem;
+    border: none;
+}
+
+.main-card-body {
+    color: white;
+    text-align: center;
+}
+
+.main-card-title {
+    font-size: 1.125rem;
+    font-weight: normal;
+    padding-top: 0.625rem;
+}
+
+/********************************************************** Xét Nghiệm */
+
+.xq-container {
+    width: 100%;
+    margin-top: 0.625rem;
+}
+
+
+
+
+/********************************** XN Left */
+.xq-left {
+    width: 15.625rem;
+    height: 100%;
+    float: left;
+    padding-right: 0.313rem;
+}
+
+.xq-left-search {
+    width: 100%;
+    height: 10rem;
+    float: left;
+}
+
+.xq-left-list {
+    width: 100%;
+    height: calc(100vh - 13.563rem); /* = Chiều cao màn hình (100vh) - Chiều cao sa-left-search (130px) - Chiều cao menu-left-height (50px)*/
+    float: left;
+}
+
+    .xq-left-list .list-group-item-secondary {
+        background-color: #eef0f0;
+    }
+
+.list-group {
+    font-size: 0.875rem;
+    margin-top: 0.313rem;
+    max-height: 100%;
+    margin-bottom: 0.625rem;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.list-group-item {
+    padding: 0rem 0.313rem 0.313rem 0.313rem;
+    color: black;
+}
+
+.list-group-item-action {
+    border-bottom: 1px solid rgb(197, 197, 197);
+}
+
+    .list-group-item-action:hover {
+        background-color: #ced4da;
+        color: black;
+    }
+
+    .list-group-item-action:focus {
+        background-color: #ced4da;
+        color: black;
+    }
+
+.list-group-item-pid-age-sex {
+    width: 100%;
+    float: left;
+}
+
+.list-group-item-pid-age-sex-pid {
+    width: 40%;
+    float: left;
+}
+
+.list-group-item-pid-age-sex-age {
+    width: 40%;
+    float: left;
+    text-align: center;
+}
+
+.list-group-item-pid-age-sex-sex {
+    width: 20%;
+    float: left;
+    text-align: right;
+}
+
+.list-group-item-name {
+    width: 100%;
+    float: left;
+    color: #15428b;
+    font-weight: bold;
+}
+
+
+/********************************** XN Right */
+.xq-right {
+    width: calc(100% - 15.625rem);
+    height: 100%;
+    float: left;
+    padding-left: 0.313rem;
+}
+
+/********************************** Thông tin bệnh nhân*/
+.xq-right-info {
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-bottom: .3rem;
+}
+
+.xq-right-info-title {
+    width: 100%;
+    height: 1.75rem;
+    float: left;
+    line-height: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 0.313rem;
+    background-color: #dce0e0;
+    color: black;
+    padding-left: 0.313rem;
+}
+
+.xq-right-info-div-1 {
+    width: 25rem;
+    height: 100%;
+    float: left;
+}
+
+.xq-right-info-div-2 {
+    width: 25rem;
+    height: 100%;
+    float: left;
+}
+
+.xq-right-info-div-3 {
+    width: calc(100% - 25rem - 25rem);
+    height: 100%;
+    float: left;
+}
+
+.xq-right-info-div-combo-2 {
+    width: 100%;
+    float: left;
+}
+
+.xq-right-info-div-combo-2-label {
+    width: 25%;
+    max-width: 7rem;
+    float: left;
+    line-height: 1.75rem;
+}
+
+.xq-right-info-div-combo-2-input {
+    width: calc(100% - 25%);
+    max-width: 19rem;
+    float: left;
+}
+
+.xq-right-info-div-combo-2-input-input1 {
+    width: 33%;
+    float: left;
+}
+
+.xq-right-info-div-combo-2-input-input2 {
+    width: 67%;
+    float: left;
+}
+
+
+.xq-right-info-div-combo-4 {
+    width: 100%;
+    float: left;
+}
+
+.xq-right-info-div-combo-4-label-age-object {
+    width: 25%;
+    float: left;
+    line-height: 1.75rem;
+}
+
+.xq-right-info-div-combo-4-label-sex-benhan {
+    width: 17%;
+    float: left;
+    line-height: 1.75rem;
+}
+
+.xq-right-info-div-combo-4-input {
+    width: 29%;
+    float: left;
+}
+
+
+/************************************** Chỉ định xét nghiệm */
+
+.xq-right-service {
+    width: 100%;
+    height: calc(100% - 12.5rem);
+    float: left;
+}
+
+.xq-right-service-group {
+    width: 100%;
+    /*height: 1.75rem;*/
+    float: left;
+    margin-bottom: 0.313rem;
+}
+
+.xq-right-service-group-button {
+    width: 400px;
+    height: 100%;
+    float: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.2rem;
+}
+
+    .xq-right-service-group-button .btn {
+        width: 97px;
+        padding: unset;
+    }
+
+.xq-right-service-group-button-title-sample {
+    width: calc(100% - 400px);
+    height: 100%;
+    float: left;
+}
+
+
+    .xq-right-service-group-button-title-sample .title-process {
+        width: 97px;
+        height: 100%;
+        float: left;
+        line-height: 1.75rem;
+        font-weight: bold;
+        background-color: #dce0e0;
+        color: black;
+        margin-left: 5px;
+        padding-left: 5px;
+    }
+
+    .xq-right-service-group-button-title-sample .title-returnresult {
+        width: calc(100% - 5px);
+        height: 100%;
+        float: left;
+        line-height: 1.75rem;
+        font-weight: bold;
+        background-color: #dce0e0;
+        color: black;
+        margin-left: 5px;
+        padding-left: 5px;
+    }
+
+    .xq-right-service-group-button-title-sample .sample {
+        width: calc(100% - 102px);
+        height: 100%;
+        float: left;
+        padding-left: 5px;
+    }
+
+.xq-right-service-group-category {
+    width: 250px;
+    height: 100%;
+    float: left;
+    background-color: #dce0e0;
+}
+
+.xq-right-service-group-category-label {
+    width: 107px;
+    height: 100%;
+    float: left;
+    padding-left: 10px;
+    font-weight: bold;
+    line-height: 1.75rem;
+}
+
+.xq-right-service-group-category-select {
+    width: 143px;
+    height: 100%;
+    float: left;
+    line-height: 1.75rem;
+    padding-right: 1px;
+}
+
+.xq-right-service-group-service {
+    width: calc(100% - 400px - 250px);
+    height: 100%;
+    float: left;
+    background-color: #dce0e0;
+}
+
+.xq-right-service-group-service-label {
+    width: 89px;
+    height: 100%;
+    float: left;
+    padding-left: 10px;
+    font-weight: bold;
+    line-height: 1.75rem;
+}
+
+.xq-right-service-group-service-select {
+    width: calc(100% - 89px);
+    height: 100%;
+    float: left;
+    line-height: 1.75rem;
+}
+
+.xq-right-service-gridview {
+    width: 100%;
+    height: calc(100% - 12.5rem - 1.75rem);
+    float: left;
+}
+
+    /********************************************************************* Get sample */
+    .xq-right-service-gridview .table-responsive {
+        padding: 0px;
+        height: calc(100vh - 3.5rem - 12.5rem - 1.75rem);
+    }
+
+        .xq-right-service-gridview .table-responsive td {
+            line-height: 25px;
+        }
+
+    .xq-right-service-gridview .table-bordered {
+        border-color: #c5c5c5;
+    }
+
+    .xq-right-service-gridview .tr-title {
+        background-color: #dce0e0;
+    }
+
+    .xq-right-service-gridview .tr-content {
+        background-color: #eef0f0;
+    }
+
+
+    .xq-right-service-gridview .th-number {
+        width: 60px;
+        text-align: center;
+    }
+
+    .xq-right-service-gridview .th-name {
+        min-width: 490px;
+        text-align: center;
+    }
+
+    .xq-right-service-gridview .th-delete {
+        width: 60px;
+        text-align: center;
+    }
+
+    .xq-right-service-gridview .td-number {
+        padding: unset;
+        margin: unset;
+        height: 25px;
+        text-align: center;
+    }
+
+    .xq-right-service-gridview .td-name {
+        padding: unset;
+        margin: unset;
+        height: 25px;
+        text-align: left;
+        padding-left: 5px;
+    }
+
+    .xq-right-service-gridview .td-delete {
+        padding: unset;
+        margin: unset;
+        text-align: center;
+    }
+
+
+        .xq-right-service-gridview .td-delete .btn-red-in-gridview {
+            font-size: 0.875rem;
+            height: 25px;
+            width: 100%;
+            line-height: 12.5px;
+            border-radius: unset;
+            padding: unset;
+            border: none;
+        }
+
+            .xq-right-service-gridview .td-delete .btn-red-in-gridview:hover {
+                background-color: #dc3545;
+                border: none;
+            }
+
+            .xq-right-service-gridview .td-delete .btn-red-in-gridview:focus {
+                box-shadow: 0rem 0rem 0.063rem 0.063rem #dc3545;
+                border: none;
+            }
+
+    /********************************************************************* Process */
+    .xq-right-service-gridview .table-responsive .left {
+        width: 400px;
+        height: 100%;
+        float: left;
+    }
+
+        .xq-right-service-gridview .table-responsive .left .list-service {
+            width: 100%;
+            height: 100%;
+            float: left;
+            margin-bottom: 5px;
+        }
+
+            .xq-right-service-gridview .table-responsive .left .list-service .table-responsive {
+                padding: 0px;
+                width: 100%;
+                height: 100%;
+                float: left;
+            }
+
+                .xq-right-service-gridview .table-responsive .left .list-service .table-responsive .table-bordered {
+                    border-color: #c5c5c5;
+                }
+
+                    .xq-right-service-gridview .table-responsive .left .list-service .table-responsive .table-bordered .td-check {
+                        padding: unset;
+                        margin: unset;
+                        width: 30px;
+                        height: 25px;
+                        line-height: 25px;
+                        text-align: center;
+                    }
+
+                    .xq-right-service-gridview .table-responsive .left .list-service .table-responsive .table-bordered .td-name {
+                        padding: unset;
+                        margin: unset;
+                        height: 25px;
+                        line-height: 25px;
+                        padding-left: 5px;
+                    }
+
+
+        .xq-right-service-gridview .table-responsive .left .image-returnresult { /************************************************************************/
+            width: 100%;
+            height: 317px;
+            float: left;
+            overflow: auto;
+            white-space: nowrap;
+            border: 1px solid #808080;
+        }
+
+            .xq-right-service-gridview .table-responsive .left .image-returnresult .image-item {
+                width: 191.5px;
+                height: 150px;
+                float: left;
+                margin: 5px 5px 0px 5px;
+            }
+
+                .xq-right-service-gridview .table-responsive .left .image-returnresult .image-item:nth-child(odd) {
+                    margin-right: unset;
+                }
+
+                .xq-right-service-gridview .table-responsive .left .image-returnresult .image-item:last-child {
+                    margin-bottom: unset;
+                }
+
+                .xq-right-service-gridview .table-responsive .left .image-returnresult .image-item:nth-last-child(2) {
+                    margin-bottom: unset;
+                }
+
+
+                .xq-right-service-gridview .table-responsive .left .image-returnresult .image-item .image {
+                    width: 100%;
+                    height: 100%;
+                    float: left;
+                    margin: unset;
+                    padding: unset;
+                }
+
+    .xq-right-service-gridview .table-responsive .right {
+        width: calc(100% - 400px);
+        height: 100%;
+        float: left;
+    }
+
+        .xq-right-service-gridview .table-responsive .right .desscription {
+            width: 100%;
+            height: 306px;
+            float: left;
+            padding-left: 5px;
+            margin-bottom: 5px;
+        }
+
+            .xq-right-service-gridview .table-responsive .right .desscription .content {
+                width: 100%;
+                height: 310px;
+            }
+
+                .xq-right-service-gridview .table-responsive .right .desscription .content .textarea-desscription {
+                    width: 100%;
+                    height: 100%;
+                    float: left;
+                    margin: unset;
+                    padding: unset;
+                }
+
+        .xq-right-service-gridview .table-responsive .right .result-suggest {
+            width: 100%;
+            height: 61.5px;
+            float: left;
+        }
+
+            .xq-right-service-gridview .table-responsive .right .result-suggest .result {
+                width: 450px;
+                height: 100%;
+                float: left;
+                padding-left: 5px;
+            }
+
+                .xq-right-service-gridview .table-responsive .right .result-suggest .result .textarea-result {
+                    width: 100%;
+                    height: 100%;
+                    float: left;
+                }
+
+
+            .xq-right-service-gridview .table-responsive .right .result-suggest .suggest {
+                width: calc(100% - 450px);
+                height: 100%;
+                float: left;
+                padding-left: 5px;
+            }
+
+                .xq-right-service-gridview .table-responsive .right .result-suggest .suggest .textarea-suggest {
+                    width: 100%;
+                    height: 100%;
+                    float: left;
+                }
+
+
+/******************************************************* Form thêm dịch vụ cho bệnh nhân */
+.modal-content {
+    border-radius: unset;
+}
+
+.xq-right-add-service-for-patient-title {
+    width: 100%;
+    height: 2.3rem;
+    float: left;
+    line-height: 2.3rem;
+    font-weight: bold;
+    color: black;
+    padding-left: 0.313rem;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+    .xq-right-add-service-for-patient-title .title {
+        float: left;
+    }
+
+    .xq-right-add-service-for-patient-title .btn-close {
+        float: right;
+        margin-right: 7px;
+        margin-top: 9px;
+        font-size: 12px;
+    }
+
+.xq-right-add-service-for-patient-service {
+    width: 100%;
+    padding: 0px 10px 0px 10px;
+    float: left;
+}
+
+    .xq-right-add-service-for-patient-service .title {
+        width: 15%;
+        float: left;
+    }
+
+    .xq-right-add-service-for-patient-service .content {
+        width: 85%;
+        float: left;
+    }
+
+        .xq-right-add-service-for-patient-service .content .select2-container {
+            width: 100% !important;
+        }
+
+.xq-right-add-service-for-patient-button {
+    width: 100%;
+    height: 2.3rem;
+    float: left;
+    line-height: 2.3rem;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+    .xq-right-add-service-for-patient-button .btn {
+        width: 97px;
+        padding: unset;
+    }
+
+
+/******************************************************* Form chọn Device */
+
+.xq-right-select-device-title {
+    width: 100%;
+    height: 2.3rem;
+    float: left;
+    line-height: 2.3rem;
+    font-weight: bold;
+    color: black;
+    padding-left: 0.313rem;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+    .xq-right-select-device-title .title {
+        float: left;
+    }
+
+    .xq-right-select-device-title .btn-close {
+        float: right;
+        margin-right: 7px;
+        margin-top: 9px;
+        font-size: 12px;
+    }
+
+.xq-right-select-device {
+    width: 100%;
+    padding: 0px 10px 0px 10px;
+    float: left;
+}
+
+    .xq-right-select-device .title {
+        width: 15%;
+        float: left;
+    }
+
+    .xq-right-select-device .content {
+        width: 85%;
+        float: left;
+    }
+
+        .xq-right-select-device .content .select2-container {
+            width: 100% !important;
+        }
+
+.xq-right-select-device-button {
+    width: 100%;
+    height: 2.3rem;
+    float: left;
+    line-height: 2.3rem;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+    .xq-right-select-device-button .btn {
+        width: 97px;
+        padding: unset;
+    }
+
+
+/******************************************************* Form Loading */
+.modal-content-child {
+    margin-top: calc(100vh / 2.5);
+    text-align: center;
+    width: 100%;
+    border: unset;
+    background-color: transparent;
+}
+
+    .modal-content-child img {
+        width: 60px;
+        height: 60px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+/********************************************************************************************** Export Result */
+.hospital-xq { /***************************************************** Hospital */
+    width: 100%;
+    height: 160px;
+    float: left;
+    font-family: 'Times New Roman';
+}
+
+    .hospital-xq .hospital-logo {
+        width: 260px;
+        height: 100%;
+        float: left;
+    }
+
+        .hospital-xq .hospital-logo .image {
+            width: 170px;
+            height: 130px;
+        }
+
+    .hospital-xq .hospital-info {
+        width: calc(100% - 260px);
+        height: 100%;
+        float: left;
+    }
+
+        .hospital-xq .hospital-info .hospital-info-name {
+            width: 100%;
+            height: 30px;
+            float: left;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .hospital-xq .hospital-info .hospital-info-address {
+            width: 100%;
+            height: 25px;
+            font-size: 18px;
+            float: left;
+        }
+
+        .hospital-xq .hospital-info .hospital-info-phonemail {
+            width: 100%;
+            height: 20px;
+            font-size: 18px;
+            float: left;
+        }
+
+        .hospital-xq .hospital-info .hospital-info-title {
+            width: 100%;
+            height: 50px;
+            margin-top: 10px;
+            padding-top: 10px;
+            float: left;
+            font-size: 33px;
+            font-weight: bold;
+            border-top: 1px dotted black;
+        }
+
+.patient-xq { /***************************************************** Patient */
+    float: left;
+    width: 100%;
+    height: 150px;
+    font-size: 22px;
+    font-family: 'Times New Roman';
+}
+
+    .patient-xq .label1 {
+        width: 135px;
+        height: 100%;
+        float: left;
+    }
+
+    .patient-xq .label2 {
+        width: 115px;
+        height: 100%;
+        float: left;
+    }
+
+    .patient-xq .name-sex-age {
+        width: 100%;
+        height: 30px;
+        float: left;
+    }
+
+        .patient-xq .name-sex-age .name {
+            width: 500px;
+            height: 100%;
+            float: left;
+        }
+
+        .patient-xq .name-sex-age .sex {
+            width: 220px;
+            height: 100%;
+            float: left;
+        }
+
+        .patient-xq .name-sex-age .age {
+            width: calc(100% - 500px - 220px);
+            height: 100%;
+            float: left;
+        }
+
+    .patient-xq .sid-obj {
+        width: 100%;
+        height: 30px;
+        float: left;
+    }
+
+        .patient-xq .sid-obj .sid {
+            width: 500px;
+            height: 100%;
+            float: left;
+        }
+
+        .patient-xq .sid-obj .obj {
+            width: calc(100% - 500px);
+            height: 100%;
+            float: left;
+        }
+
+    .patient-xq .address {
+        width: 100%;
+        min-height: 30px;
+        float: left;
+    }
+
+    .patient-xq .doctor-location {
+        width: 100%;
+        height: 30px;
+        float: left;
+    }
+
+        .patient-xq .doctor-location .doctor {
+            width: 500px;
+            height: 100%;
+            float: left;
+        }
+
+        .patient-xq .doctor-location .location {
+            width: calc(100% - 500px);
+            height: 100%;
+            float: left;
+        }
+
+    .patient-xq .diagnostic {
+        width: 100%;
+        min-height: 30px;
+        float: left;
+    }
+
+
+.export-result-xq { /***************************************************** Result */
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    font-size: 23px;
+    font-family: 'Times New Roman';
+}
+
+    .export-result-xq .des-res-sug {
+        width: 100%;
+        height: 100px;
+        float: left;
+    }
+
+        .export-result-xq .des-res-sug .title {
+            width: 100%;
+            height: 25px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            float: left;
+        }
+
+        .export-result-xq .des-res-sug .des {
+            width: 100%;
+            float: left;
+            margin-bottom: 10px;
+        }
+
+            .export-result-xq .des-res-sug .des .des-title {
+                width: 100%;
+                float: left;
+                font-weight: bold;
+            }
+
+            .export-result-xq .des-res-sug .des .des-content {
+                width: 100%;
+                float: left;
+                padding-left: 10px;
+                padding-right: 20px;
+            }
+
+        .export-result-xq .des-res-sug .res {
+            width: 100%;
+            float: left;
+            margin-bottom: 10px;
+        }
+
+            .export-result-xq .des-res-sug .res .res-title {
+                width: 100%;
+                float: left;
+                font-weight: bold;
+            }
+
+            .export-result-xq .des-res-sug .res .res-content {
+                width: 100%;
+                float: left;
+                padding-left: 10px;
+                padding-right: 20px;
+                white-space: pre-line;
+            }
+
+        .export-result-xq .des-res-sug .sug {
+            width: 100%;
+            float: left;
+            margin-bottom: 10px;
+        }
+
+            .export-result-xq .des-res-sug .sug .sug-title {
+                width: 100%;
+                float: left;
+                font-weight: bold;
+            }
+
+            .export-result-xq .des-res-sug .sug .sug-content {
+                width: 100%;
+                float: left;
+                padding-left: 10px;
+                padding-right: 20px;
+                white-space: pre-line;
+            }
+
+
+.signature-page-xq { /***************************************************** Chữ ký */
+    width: 100%;
+    height: 180px;
+    float: left;
+    margin-top: 22px;
+    font-family: 'Times New Roman';
+}
+
+    .signature-page-xq .signature {
+        width: 100%;
+        height: 155px;
+        float: left;
+    }
+
+        .signature-page-xq .signature .signature-left {
+            width: calc(100% - 400px);
+            height: 100%;
+            float: left;
+        }
+
+        .signature-page-xq .signature .signature-right {
+            width: 400px;
+            height: 100%;
+            float: left;
+            font-size: 22px;
+        }
+
+            .signature-page-xq .signature .signature-right .signature-right-time {
+                width: 100%;
+                height: 30px;
+                float: left;
+                text-align: center;
+            }
+
+            .signature-page-xq .signature .signature-right .signature-right-title {
+                width: 100%;
+                height: 95px;
+                float: left;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            .signature-page-xq .signature .signature-right .signature-right-user {
+                width: 100%;
+                height: 30px;
+                float: left;
+                text-align: center;
+                font-weight: bold;
+                font-size: 25px;
+            }
+
+    .signature-page-xq .page {
+        width: 100%;
+        height: 25px;
+        float: left;
+        text-align: center;
+        font-size: 16px;
+        margin-top: 15px;
+    }

@@ -1,0 +1,1942 @@
+﻿html {
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 1rem;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.table {
+    color: black !important;
+}
+
+
+/******************************************************* Select Option*/
+select:required:invalid {
+    color: gray;
+}
+
+option[value=""][disabled] {
+    display: none;
+}
+
+option {
+    color: black;
+}
+
+/******************************************************** Select 2 */
+.select2-results__option {
+    height: 28px;
+    font-size: 0.875rem;
+}
+
+.select2-search__field {
+    font-size: 0.875rem !important;
+}
+
+.select2-container--default .select2-selection--single {
+    border-radius: unset !important;
+    border-color: #808080 !important;
+    padding: 0rem 0.3rem 0.1rem 0rem !important;
+}
+
+    .select2-container--default .select2-selection--single:focus {
+        box-shadow: 0rem 0rem 0.063rem 0.063rem #337ab7 !important;
+    }
+
+.select2-container--default .select2-search--dropdown .select2-search__field:focus {
+    border: unset;
+}
+
+.select2-selection__arrow {
+    right: 11px !important;
+}
+
+.select2-selection__rendered {
+    color: black !important;
+}
+/******************************************************** Thẻ DIV canh giữa => Bỏ phần tử nào vào trong cũng tự động canh giữa*/
+.div-center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-margin-top-5 {
+    margin-top: 0.313rem;
+}
+
+
+/******************************************************** Thẻ Input trong form*/
+.form-control {
+    border-color: #808080;
+    border-radius: unset;
+    color: black;
+}
+
+    .form-control:focus {
+        box-shadow: 0rem 0rem 0.063rem 0.063rem #337ab7;
+    }
+
+.form-select {
+    border-color: #808080;
+    border-radius: unset;
+    padding: 0.1rem 0.3rem 0.1rem 0.4rem;
+}
+
+    .form-select:focus {
+        box-shadow: 0rem 0rem 0.063rem 0.063rem #337ab7;
+    }
+
+
+
+
+/******************************************************** Margin */
+.margin-right-10 {
+    margin-right: 0.625rem;
+}
+
+.margin-right-5 {
+    margin-right: 0.312rem;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 0.9rem;
+}
+
+.margin-left-100 {
+    margin-left: 100px;
+}
+
+/********************************************************Pading */
+.pading-left-5 {
+    padding-left: 0.312rem;
+}
+
+.pading-right-5 {
+    padding-right: 0.312rem;
+}
+
+.pading-left-10 {
+    padding-left: 0.624rem;
+}
+
+.pading-right-2 {
+    padding-right: 0.125rem;
+}
+
+.pading-unset {
+    padding: unset;
+}
+/******************************************************** Text color*/
+.text-red {
+    color: red;
+}
+
+/******************************************************** Width - Height*/
+.width-20 {
+    width: 7.53rem;
+}
+
+.width-97 {
+    width: 6.01rem;
+}
+
+.width-95 {
+    width: 5.95rem;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.height-100 {
+    height: 100% !important;
+}
+
+.height-28 {
+    height: 1.75rem;
+}
+
+.height-60 {
+    height: 3.8rem;
+}
+
+.height-2 {
+    height: 2rem;
+}
+
+.height-160 {
+    height: 10rem;
+}
+
+.height-30 {
+    height: 4.85rem;
+}
+
+
+/******************************************************** Border */
+.border-red {
+    border-color: red;
+}
+
+.border-left-none {
+    border-left: unset !important;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+/******************************************************** Account */
+.account {
+    font-size: 0.938rem;
+    margin-bottom: 0.234rem;
+    background-image: url("/images/logo/Background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/******************************************************** From Login*/
+.login-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-child {
+    background-color: #ffffff;
+    min-width: 25rem;
+    min-height: 16.875rem;
+    padding: 1.25rem 1.25rem 0.313rem 1.25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0rem 0rem 0.938rem 0.5rem #1e65a3;
+}
+
+
+/********************************************************* Menu ngang*/
+.menu {
+    width: 100%;
+    display: flex;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-size: 14px;
+}
+
+
+/********************************************************* Menu ngang left*/
+.menu-left {
+    float: left;
+    flex-grow: 100;
+}
+
+.menu-left-height {
+    height: 2.5rem;
+}
+
+.menu-left-color {
+    color: white;
+}
+
+.hover:hover {
+    background-color: white !important;
+    color: black !important;
+}
+
+.badge-success {
+    color: #fff;
+    background-color: #28a745;
+}
+
+.badge-danger {
+    color: #fff;
+    background-color: #dc3545;
+}
+/********************************************************* Menu ngang right*/
+.menu-right {
+    min-height: 2.5rem;
+    min-width: 14.375rem;
+    float: left;
+    background-color: #337ab7;
+    color: white;
+}
+
+.menu-right-bg {
+    background-color: #337ab7;
+    border: none;
+    padding: 0.5rem 0rem 0.5rem 0.5rem;
+}
+
+.menu-right-width {
+    width: 100%;
+    text-align: left;
+}
+
+.menu-right-height-64 {
+    min-height: 4rem;
+}
+
+.menu-right-height-20 {
+    line-height: 1.25rem;
+    padding-left: 0.5rem;
+}
+
+    .menu-right-height-20:hover {
+        background-color: #337ab7;
+        color: white;
+    }
+
+.menu-right-bg:hover {
+    background-color: #1e65a3;
+    box-shadow: none;
+}
+
+.menu-right-bg:focus {
+    background-color: #1e65a3;
+    box-shadow: none;
+}
+
+/********************************************************* Format cho RenderBody */
+.renderBody {
+    font-size: 0.875rem;
+    color: black;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+    .renderBody .form-control {
+        font-size: 0.875rem;
+    }
+
+    .renderBody .form-select {
+        font-size: 0.875rem;
+    }
+
+    .renderBody .btn-blue {
+        font-size: 0.875rem;
+        height: 1.75rem;
+        background-color: #337ab7;
+        line-height: 0.875rem;
+        border-color: #337ab7;
+        border-radius: unset;
+    }
+
+        .renderBody .btn-blue:hover {
+            background-color: #1e65a3;
+        }
+
+        .renderBody .btn-blue:focus {
+            box-shadow: 0rem 0rem 0.063rem 0.063rem #1e65a3;
+        }
+
+    .renderBody .btn-red {
+        font-size: 0.875rem;
+        height: 1.75rem;
+        line-height: 0.875rem;
+        border-radius: unset;
+    }
+
+        .renderBody .btn-red:hover {
+            background-color: #dc3545;
+        }
+
+        .renderBody .btn-red:focus {
+            box-shadow: 0rem 0rem 0.063rem 0.063rem #dc3545;
+        }
+
+/********************************************************* Main */
+.main-bg {
+    background-image: url("/images/logo/Background_01.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-child-settup {
+    min-width: 76rem;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 4rem;
+    margin-top: 3rem;
+}
+
+.main-card-settup {
+    width: 7rem;
+    float: left;
+    margin: 1.25rem 2.188rem 0rem 2.188rem;
+    border: none;
+}
+
+.main-card-body-settup {
+    color: white;
+    text-align: center;
+}
+
+.main-card-title-settup {
+    font-size: 1rem;
+    font-weight: normal;
+    padding-top: 0.625rem;
+}
+
+.card-img-top {
+    box-shadow: 0rem 0rem 0.5rem 0.3rem #1e65a3;
+}
+
+/********************************************************** Settup */
+.settup {
+    background-color: #ffffff;
+}
+
+.settup-container {
+    width: 100%;
+    margin-top: 0.625rem;
+}
+
+/********************************** Left */
+.settup-left {
+    width: calc(100% - 400px);
+    height: 100%;
+    float: left;
+    padding-right: 0.313rem;
+}
+
+    .settup-left .settup-left-title-search {
+        width: 100%;
+        height: 1.75rem;
+        float: left;
+        margin-bottom: 5px;
+    }
+
+        .settup-left .settup-left-title-search .title {
+            width: 50%;
+            height: 100%;
+            float: left;
+            line-height: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 0.313rem;
+            background-color: #dce0e0;
+            color: black;
+            padding-left: 0.313rem;
+        }
+
+        .settup-left .settup-left-title-search .search {
+            width: 50%;
+            height: 100%;
+            float: left;
+        }
+
+    .settup-left .settup-left-list {
+        width: 100%;
+        height: calc(100vh - 90px);
+        float: left;
+    }
+
+
+        .settup-left .settup-left-list .table-responsive {
+            padding: 0px;
+            height: 100%;
+            table-layout: fixed;
+        }
+
+        .settup-left .settup-left-list .table-responsive td{
+          line-height: 25px;
+        }
+
+        .settup-left .settup-left-list .table-bordered {
+            border-color: #c5c5c5;
+        }
+
+        .settup-left .settup-left-list .tr-title {
+            background-color: #dce0e0;
+            height: 28px;
+            line-height: 28px;
+        }
+
+        .settup-left .settup-left-list .tr-content {
+            background-color: #eef0f0;
+        }
+
+        .settup-left .settup-left-list .th-checkbox {
+            width: 4%;
+            padding: unset;
+        }
+
+        .settup-left .settup-left-list .th-number {
+            width: 7%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left .settup-left-list .th-id {
+            width: 7%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left .settup-left-list .th-code {
+            width: 15%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left .settup-left-list .th-name {
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left .settup-left-list .th-active {
+            width: 7%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left .settup-left-list .td-checkbox {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+        }
+
+        .settup-left .settup-left-list .td-number {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+        }
+
+        .settup-left .settup-left-list .td-id {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+        }
+
+        .settup-left .settup-left-list .td-code {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .settup-left .settup-left-list .td-name {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .settup-left .settup-left-list .td-active {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+            padding-left: 5px;
+        }
+
+        .settup-left .settup-left-list .td-all {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+
+/********************************** Right */
+.settup-right {
+    width: 400px;
+    height: 100%;
+    float: left;
+}
+
+    .settup-right .settup-right-title {
+        width: 100%;
+        height: 1.75rem;
+        float: left;
+        line-height: 1.75rem;
+        font-weight: bold;
+        margin-bottom: 0.313rem;
+        background-color: #dce0e0;
+        color: black;
+        padding-left: 0.313rem;
+    }
+
+    .settup-right .settup-right-info {
+        width: 100%;
+        float: left;
+    }
+
+        .settup-right .settup-right-info .div-lable-input {
+            width: 100%;
+            float: left;
+            margin-bottom: 5px;
+        }
+
+        .settup-right .settup-right-info .div-lable {
+            width: 100%;
+            float: left;
+        }
+
+        .settup-right .settup-right-info .div-input {
+            width: 100%;
+            float: left;
+        }
+
+            .settup-right .settup-right-info .div-input .div-input-child {
+                width: 25%;
+                float: left;
+            }
+
+            .settup-right .settup-right-info .div-input .div-input-child-20 {
+                width: 20%;
+                float: left;
+            }
+
+    .settup-right .settup-right-button {
+        width: 100%;
+        float: left;
+        margin-top: 5px;
+        border-top: 1px solid #808080;
+        padding-top: 10px;
+    }
+
+        .settup-right .settup-right-button button {
+            width: 97px;
+            padding: unset;
+        }
+
+            .settup-right .settup-right-button button.user {
+                width: 76.9px;
+                padding: unset;
+            }
+
+
+#div-sample-description textarea.form-control {
+    height: 284px !important;
+}
+
+
+/********************************** Left Sample */
+.settup-left-sample {
+    width: calc(100% - 600px);
+    height: 100%;
+    float: left;
+    padding-right: 0.313rem;
+}
+
+    .settup-left-sample .settup-left-title-search {
+        width: 100%;
+        height: 1.75rem;
+        float: left;
+        margin-bottom: 5px;
+    }
+
+        .settup-left-sample .settup-left-title-search .title {
+            width: 50%;
+            height: 100%;
+            float: left;
+            line-height: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 0.313rem;
+            background-color: #dce0e0;
+            color: black;
+            padding-left: 0.313rem;
+        }
+
+        .settup-left-sample .settup-left-title-search .search {
+            width: 50%;
+            height: 100%;
+            float: left;
+        }
+
+    .settup-left-sample .settup-left-list {
+        width: 100%;
+        height: calc(100vh - 90px);
+        float: left;
+    }
+
+
+        .settup-left-sample .settup-left-list .table-responsive {
+            padding: 0px;
+            height: 100%;
+        }
+
+        .settup-left-sample .settup-left-list .table-bordered {
+            border-color: #c5c5c5;
+        }
+
+        .settup-left-sample .settup-left-list .tr-title {
+            background-color: #dce0e0;
+            height: 28px;
+            line-height: 28px;
+        }
+
+        .settup-left-sample .settup-left-list .tr-content {
+            background-color: #eef0f0;
+        }
+
+        .settup-left-sample .settup-left-list .th-checkbox {
+            width: 4%;
+            padding: unset;
+        }
+
+        .settup-left-sample .settup-left-list .th-number {
+            width: 7%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-sample .settup-left-list .th-id {
+            width: 7%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-sample .settup-left-list .th-code {
+            width: 10%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-sample .settup-left-list .th-name {
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-sample .settup-left-list .th-active {
+            width: 7%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-sample .settup-left-list .td-checkbox {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+        }
+
+        .settup-left-sample .settup-left-list .td-number {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+        }
+
+        .settup-left-sample .settup-left-list .td-id {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+        }
+
+        .settup-left-sample .settup-left-list .td-code {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .settup-left-sample .settup-left-list .td-name {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .settup-left-sample .settup-left-list .td-active {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+            padding-left: 5px;
+        }
+
+        .settup-left-sample .settup-left-list .td-all {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+
+/********************************** Right sample*/
+.settup-right-sample {
+    width: 600px;
+    height: 100%;
+    float: left;
+}
+
+    .settup-right-sample .settup-right-title {
+        width: 100%;
+        height: 1.75rem;
+        float: left;
+        line-height: 1.75rem;
+        font-weight: bold;
+        margin-bottom: 0.313rem;
+        background-color: #dce0e0;
+        color: black;
+        padding-left: 0.313rem;
+    }
+
+    .settup-right-sample .settup-right-info {
+        width: 100%;
+        float: left;
+    }
+
+        .settup-right-sample .settup-right-info .div-lable-input {
+            width: 100%;
+            float: left;
+            margin-bottom: 5px;
+        }
+        .settup-right-sample .settup-right-info .div-lable-input .child-01 {
+            width: 87%;
+            float: left;
+        }
+        .settup-right-sample .settup-right-info .div-lable-input .child-02{
+            width: 13%;
+            float: left;
+            padding-left: 20px;
+        }
+
+        .settup-right-sample .settup-right-info .div-lable {
+            width: 100%;
+            float: left;
+        }
+
+        .settup-right-sample .settup-right-info .div-input {
+            width: 100%;
+            float: left;
+        }
+
+            .settup-right-sample .settup-right-info .div-input .div-input-child {
+                width: 25%;
+                float: left;
+            }
+
+    .settup-right-sample .settup-right-button {
+        width: 100%;
+        float: left;
+        margin-top: 5px;
+        border-top: 1px solid #808080;
+        padding-top: 10px;
+    }
+
+        .settup-right-sample .settup-right-button button {
+            width: 86.7px;
+            padding: unset;
+        }
+
+
+/********************************** Left TestCode*/
+.settup-left-testcode {
+    width: calc(100% - 400px);
+    height: 100%;
+    float: left;
+    padding-right: 0.313rem;
+}
+
+    .settup-left-testcode .settup-left-title-search {
+        width: 100%;
+        height: 1.75rem;
+        float: left;
+        margin-bottom: 5px;
+    }
+
+        .settup-left-testcode .settup-left-title-search .title {
+            width: 50%;
+            height: 100%;
+            float: left;
+            line-height: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 0.313rem;
+            background-color: #dce0e0;
+            color: black;
+            padding-left: 0.313rem;
+        }
+
+        .settup-left-testcode .settup-left-title-search .search {
+            width: 50%;
+            height: 100%;
+            float: left;
+        }
+
+    .settup-left-testcode .settup-left-list {
+        width: 100%;
+        height: calc(100vh - 90px);
+        float: left;
+    }
+
+
+        .settup-left-testcode .settup-left-list .table-responsive {
+            padding: 0px;
+            height: 100%;
+            table-layout: fixed;
+        }
+
+        .settup-left-testcode .settup-left-list .table-bordered {
+            border-color: #c5c5c5;
+        }
+
+        .settup-left-testcode .settup-left-list .tr-title {
+            background-color: #dce0e0;
+            height: 28px;
+            line-height: 28px;
+        }
+
+        .settup-left-testcode .settup-left-list .tr-content {
+            background-color: #eef0f0;
+        }
+
+        .settup-left-testcode .settup-left-list .th-checkbox {
+            width: 4%;
+            padding: unset;
+        }
+
+        .settup-left-testcode .settup-left-list .th-number {
+            width: 7%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-testcode .settup-left-list .th-id {
+            width: 7%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-testcode .settup-left-list .th-code {
+            width: 15%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-testcode .settup-left-list .th-name {
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-testcode .settup-left-list .th-active {
+            width: 7%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-testcode .settup-left-list .td-checkbox {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+        }
+
+        .settup-left-testcode .settup-left-list .td-number {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+        }
+
+        .settup-left-testcode .settup-left-list .td-id {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+        }
+
+        .settup-left-testcode .settup-left-list .td-code {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .settup-left-testcode .settup-left-list .td-name {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .settup-left-testcode .settup-left-list .td-active {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+            padding-left: 5px;
+        }
+
+        .settup-left-testcode .settup-left-list .td-all {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+
+/********************************** Right TestCode*/
+.settup-right-testcode {
+    width: 400px;
+    height: 100%;
+    float: left;
+}
+
+    .settup-right-testcode .settup-right-title {
+        width: 100%;
+        height: 1.75rem;
+        float: left;
+        line-height: 1.75rem;
+        font-weight: bold;
+        margin-bottom: 0.313rem;
+        background-color: #dce0e0;
+        color: black;
+        padding-left: 0.313rem;
+    }
+
+    .settup-right-testcode .settup-right-info {
+        width: 100%;
+        float: left;
+    }
+
+        .settup-right-testcode .settup-right-info .div-lable-input {
+            width: 100%;
+            float: left;
+            margin-bottom: 5px;
+        }
+
+        .settup-right-testcode .settup-right-info .div-lable {
+            width: 90px;
+            float: left;
+        }
+
+        .settup-right-testcode .settup-right-info .div-input {
+            width: 305px;
+            float: left;
+            margin-left: 5px;
+        }
+
+            .settup-right-testcode .settup-right-info .div-input .div-input-child {
+                width: 30%;
+                float: left;
+            }
+
+    .settup-right-testcode .settup-right-button {
+        width: 100%;
+        float: left;
+        margin-top: 5px;
+        border-top: 1px solid #808080;
+        padding-top: 10px;
+    }
+
+        .settup-right-testcode .settup-right-button button {
+            width: 97px;
+            padding: unset;
+        }
+
+
+/********************************** Left ServiceTest */
+.settup-left-servicetest {
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding-right: 0.313rem;
+}
+
+    .settup-left-servicetest .settup-left-title-search {
+        width: 100%;
+        height: 1.75rem;
+        float: left;
+        margin-bottom: 5px;
+    }
+
+        .settup-left-servicetest .settup-left-title-search .title {
+            width: 50%;
+            height: 100%;
+            float: left;
+            line-height: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 0.313rem;
+            background-color: #dce0e0;
+            color: black;
+            padding-left: 0.313rem;
+        }
+
+        .settup-left-servicetest .settup-left-title-search .search {
+            width: 50%;
+            height: 100%;
+            float: left;
+        }
+
+    .settup-left-servicetest .settup-left-list {
+        width: 100%;
+        height: calc(100vh - 90px);
+        float: left;
+    }
+
+
+        .settup-left-servicetest .settup-left-list .table-responsive {
+            padding: 0px;
+            height: 100%;
+        }
+
+        .settup-left-servicetest .settup-left-list .table-bordered {
+            border-color: #c5c5c5;
+        }
+
+        .settup-left-servicetest .settup-left-list .tr-title {
+            background-color: #dce0e0;
+            height: 28px;
+            line-height: 28px;
+        }
+
+        .settup-left-servicetest .settup-left-list .tr-content {
+            background-color: #eef0f0;
+        }
+
+        .settup-left-servicetest .settup-left-list .th-checkbox {
+            width: 5%;
+            padding: unset;
+        }
+
+        .settup-left-servicetest .settup-left-list .th-id {
+            width: 10%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-servicetest .settup-left-list .th-code {
+            width: 20%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-servicetest .settup-left-list .th-name {
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-servicetest .settup-left-list .td-checkbox {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+        }
+
+        .settup-left-servicetest .settup-left-list .td-id {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+        }
+
+        .settup-left-servicetest .settup-left-list .td-code {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .settup-left-servicetest .settup-left-list .td-name {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+
+/********************************** Right Servicetest*/
+.settup-right-servicetest {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+    .settup-right-servicetest .settup-right-title-search {
+        width: 100%;
+        height: 1.75rem;
+        float: left;
+        margin-bottom: 5px;
+    }
+
+        .settup-right-servicetest .settup-right-title-search .title {
+            width: 100%;
+            height: 100%;
+            float: left;
+            line-height: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 0.313rem;
+            background-color: #dce0e0;
+            color: black;
+            padding-left: 0.313rem;
+        }
+
+    .settup-right-servicetest .settup-right-list {
+        width: 100%;
+        height: calc(100vh - 132px);
+        float: left;
+    }
+
+
+        .settup-right-servicetest .settup-right-list .table-responsive {
+            padding: 0px;
+            height: 100%;
+        }
+
+        .settup-right-servicetest .settup-right-list .table-bordered {
+            border-color: #c5c5c5;
+        }
+
+        .settup-right-servicetest .settup-right-list .tr-title {
+            background-color: #dce0e0;
+            height: 28px;
+            line-height: 28px;
+        }
+
+        .settup-right-servicetest .settup-right-list .tr-content {
+            background-color: #eef0f0;
+        }
+
+        .settup-right-servicetest .settup-right-list .th-checkbox {
+            width: 5%;
+            padding: unset;
+        }
+
+        .settup-right-servicetest .settup-right-list .th-id {
+            width: 10%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-right-servicetest .settup-right-list .th-code {
+            width: 20%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-right-servicetest .settup-right-list .th-name {
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-right-servicetest .settup-right-list .td-checkbox {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+        }
+
+        .settup-right-servicetest .settup-right-list .td-id {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+        }
+
+        .settup-right-servicetest .settup-right-list .td-code {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .settup-right-servicetest .settup-right-list .td-name {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+    .settup-right-servicetest .settup-right-button {
+        width: 100%;
+        float: left;
+        margin-top: 5px;
+        border-top: 1px solid #808080;
+        padding-top: 5px;
+    }
+
+        .settup-right-servicetest .settup-right-button button {
+            width: 86.7px;
+            padding: unset;
+        }
+
+/********************************** Left Map */
+.settup-left-map {
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding-right: 0.313rem;
+}
+
+    .settup-left-map .settup-left-title-search {
+        width: 100%;
+        height: 1.75rem;
+        float: left;
+        margin-bottom: 5px;
+    }
+
+        .settup-left-map .settup-left-title-search .title {
+            width: 100%;
+            height: 100%;
+            float: left;
+            line-height: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 0.313rem;
+            background-color: #dce0e0;
+            color: black;
+            padding-left: 0.313rem;
+        }
+
+    .settup-left-map .settup-left-list {
+        width: 100%;
+        height: calc(100vh - 90px);
+        float: left;
+    }
+
+
+        .settup-left-map .settup-left-list .table-responsive {
+            padding: 0px;
+            height: 100%;
+        }
+
+        .settup-left-map .settup-left-list .table-bordered {
+            border-color: #c5c5c5;
+        }
+
+        .settup-left-map .settup-left-list .tr-title {
+            background-color: #dce0e0;
+            height: 28px;
+            line-height: 28px;
+        }
+
+        .settup-left-map .settup-left-list .tr-content {
+            background-color: #eef0f0;
+        }
+
+        .settup-left-map .settup-left-list .th-checkbox {
+            width: 5%;
+            padding: unset;
+        }
+
+        .settup-left-map .settup-left-list .th-id {
+            width: 10%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-map .settup-left-list .th-code {
+            width: 20%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-map .settup-left-list .th-name {
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-map .settup-left-list .td-checkbox {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+        }
+
+        .settup-left-map .settup-left-list .td-id {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+        }
+
+        .settup-left-map .settup-left-list .td-code {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .settup-left-map .settup-left-list .td-name {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+
+/********************************** Right Map*/
+.settup-right-map {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+    .settup-right-map .settup-right-title-search {
+        width: 100%;
+        height: 1.75rem;
+        float: left;
+        margin-bottom: 5px;
+    }
+
+        .settup-right-map .settup-right-title-search .title {
+            width: 100%;
+            height: 100%;
+            float: left;
+            line-height: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 0.313rem;
+            background-color: #dce0e0;
+            color: black;
+            padding-left: 0.313rem;
+        }
+
+    .settup-right-map .settup-right-list {
+        width: 100%;
+        height: calc(100vh - 132px);
+        float: left;
+    }
+
+
+        .settup-right-map .settup-right-list .table-responsive {
+            padding: 0px;
+            height: 100%;
+        }
+
+        .settup-right-map .settup-right-list .table-bordered {
+            border-color: #c5c5c5;
+        }
+
+        .settup-right-map .settup-right-list .tr-title {
+            background-color: #dce0e0;
+            height: 28px;
+            line-height: 28px;
+        }
+
+        .settup-right-map .settup-right-list .tr-content {
+            background-color: #eef0f0;
+        }
+
+        .settup-right-map .settup-right-list .th-checkbox {
+            width: 5%;
+            padding: unset;
+        }
+
+        .settup-right-map .settup-right-list .th-testcode {
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-right-map .settup-right-list .th-testcodein {
+            width: 20%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-right-map .settup-right-list .th-testcodein2 {
+            width: 20%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-right-map .settup-right-list .td-checkbox {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+        }
+
+        .settup-right-map .settup-right-list .td-testcode {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .settup-right-map .settup-right-list .td-testcodein {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .settup-right-map .settup-right-list .td-testcodein2 {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+    .settup-right-map .settup-right-button {
+        width: 100%;
+        float: left;
+        margin-top: 5px;
+        border-top: 1px solid #808080;
+        padding-top: 5px;
+    }
+
+        .settup-right-map .settup-right-button button {
+            width: 86.7px;
+            padding: unset;
+        }
+
+
+/********************************** Left setting*/
+.settup-left-setting {
+    width: calc(100% - 400px);
+    height: 100%;
+    float: left;
+    padding-right: 0.313rem;
+}
+
+    .settup-left-setting .settup-left-title-search {
+        width: 100%;
+        height: 1.75rem;
+        float: left;
+        margin-bottom: 5px;
+    }
+
+        .settup-left-setting .settup-left-title-search .title {
+            width: 50%;
+            height: 100%;
+            float: left;
+            line-height: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 0.313rem;
+            background-color: #dce0e0;
+            color: black;
+            padding-left: 0.313rem;
+        }
+
+        .settup-left-setting .settup-left-title-search .search {
+            width: 50%;
+            height: 100%;
+            float: left;
+        }
+
+    .settup-left-setting .settup-left-list {
+        width: 100%;
+        height: calc(100vh - 90px);
+        float: left;
+    }
+
+
+        .settup-left-setting .settup-left-list .table-responsive {
+            padding: 0px;
+            height: 100%;
+        }
+
+        .settup-left-setting .settup-left-list .table-bordered {
+            border-color: #c5c5c5;
+        }
+
+        .settup-left-setting .settup-left-list .tr-title {
+            background-color: #dce0e0;
+            height: 28px;
+            line-height: 28px;
+        }
+
+        .settup-left-setting .settup-left-list .tr-content {
+            background-color: #eef0f0;
+        }
+
+        .settup-left-setting .settup-left-list .th-checkbox {
+            width: 4%;
+            padding: unset;
+        }
+
+        .settup-left-setting .settup-left-list .th-id {
+            width: 7%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-setting .settup-left-list .th-code {
+            width: 15%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-setting .settup-left-list .th-name {
+            width: 15%;
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-setting .settup-left-list .th-value {
+            text-align: center;
+            padding: unset;
+        }
+
+        .settup-left-setting .settup-left-list .td-checkbox {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+        }
+
+
+        .settup-left-setting .settup-left-list .td-id {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+        }
+
+        .settup-left-setting .settup-left-list .td-code {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .settup-left-setting .settup-left-list .td-name {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: left;
+            padding-left: 5px;
+        }
+
+        .settup-left-setting .settup-left-list .td-value {
+            padding: unset;
+            margin: unset;
+            height: 25px;
+            text-align: center;
+            padding-left: 5px;
+        }
+
+
+/********************************** Right Setting*/
+.settup-right-setting {
+    width: 400px;
+    height: 100%;
+    float: left;
+}
+
+    .settup-right-setting .settup-right-title {
+        width: 100%;
+        height: 1.75rem;
+        float: left;
+        line-height: 1.75rem;
+        font-weight: bold;
+        margin-bottom: 0.313rem;
+        background-color: #dce0e0;
+        color: black;
+        padding-left: 0.313rem;
+    }
+
+    .settup-right-setting .settup-right-info {
+        width: 100%;
+        float: left;
+    }
+
+        .settup-right-setting .settup-right-info .div-lable-input {
+            width: 100%;
+            float: left;
+            margin-bottom: 5px;
+        }
+
+        .settup-right-setting .settup-right-info .div-lable {
+            width: 100%;
+            float: left;
+        }
+
+        .settup-right-setting .settup-right-info .div-input {
+            width: 100%;
+            float: left;
+        }
+
+            .settup-right-setting .settup-right-info .div-input .div-input-child {
+                width: 25%;
+                float: left;
+            }
+
+    .settup-right-setting .settup-right-button {
+        width: 100%;
+        float: left;
+        margin-top: 5px;
+        border-top: 1px solid #808080;
+        padding-top: 10px;
+    }
+
+        .settup-right-setting .settup-right-button button {
+            width: 97px;
+            padding: unset;
+        }
+
+/******************************************************* Form Function */
+.modal-content {
+    border-radius: unset;
+}
+
+.user-function-title {
+    width: 100%;
+    height: 2.3rem;
+    float: left;
+    line-height: 2.3rem;
+    font-weight: bold;
+    color: black;
+    padding-left: 0.313rem;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+    .user-function-title .title {
+        float: left;
+    }
+
+    .user-function-title .btn-close {
+        float: right;
+        margin-right: 7px;
+        margin-top: 9px;
+        font-size: 12px;
+    }
+
+.user-function-content {
+    width: 100%;
+    padding: 0px 10px 0px 30px;
+    float: left;
+}
+
+    .user-function-content .row-function {
+        width: 33%;
+        height: 28px;
+        float: left;
+    }
+
+.user-function-button {
+    width: 100%;
+    height: 2.3rem;
+    float: left;
+    line-height: 2.3rem;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+    .user-function-button .btn {
+        width: 97px;
+        padding: unset;
+    }
+
+.hr {
+    width: 440px;
+    text-align: left;
+    margin: unset;
+    margin-bottom: 7px;
+}
+
+
+/******************************************************* Form ServiceTest */
+.modal-content {
+    border-radius: unset;
+}
+
+.servicetest-addtestcode-title {
+    width: 100%;
+    height: 2.3rem;
+    float: left;
+    line-height: 2.3rem;
+    font-weight: bold;
+    color: black;
+    padding-left: 0.313rem;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+    .servicetest-addtestcode-title .title {
+        float: left;
+    }
+
+    .servicetest-addtestcode-title .btn-close {
+        float: right;
+        margin-right: 7px;
+        margin-top: 9px;
+        font-size: 12px;
+    }
+
+.servicetest-addtestcode-content {
+    width: 100%;
+    height: calc(100vh - 180px);
+    float: left;
+}
+
+    .servicetest-addtestcode-content .table-responsive {
+        padding: 0px;
+        height: 97%;
+    }
+
+    .servicetest-addtestcode-content .table-bordered {
+        border-color: #c5c5c5;
+    }
+
+    .servicetest-addtestcode-content .tr-title {
+        background-color: #dce0e0;
+        height: 28px;
+        line-height: 28px;
+    }
+
+    .servicetest-addtestcode-content .tr-content {
+        background-color: #eef0f0;
+    }
+
+    .servicetest-addtestcode-content .th-checkbox {
+        width: 10px;
+        padding: unset;
+    }
+
+    .servicetest-addtestcode-content .th-code {
+        width: 48px;
+        text-align: center;
+        padding: unset;
+    }
+
+    .servicetest-addtestcode-content .th-name {
+        width: 200px;
+        text-align: center;
+        padding: unset;
+    }
+
+    .servicetest-addtestcode-content .td-checkbox {
+        padding: unset;
+        margin: unset;
+        height: 25px;
+        text-align: center;
+    }
+
+    .servicetest-addtestcode-content .td-code {
+        padding: unset;
+        margin: unset;
+        height: 25px;
+        text-align: left;
+        padding-left: 5px;
+    }
+
+    .servicetest-addtestcode-content .td-name {
+        padding: unset;
+        margin: unset;
+        height: 25px;
+        text-align: left;
+        padding-left: 5px;
+    }
+
+
+.servicetest-addtestcode-button {
+    width: 100%;
+    height: 2.3rem;
+    float: left;
+    line-height: 2.3rem;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+    .servicetest-addtestcode-button .btn {
+        width: 97px;
+        padding: unset;
+    }
+
+/******************************************************* Form Map */
+.modal-content {
+    border-radius: unset;
+}
+
+.map-addtestcode-title {
+    width: 100%;
+    height: 2.3rem;
+    float: left;
+    line-height: 2.3rem;
+    font-weight: bold;
+    color: black;
+    padding-left: 0.313rem;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+    .map-addtestcode-title .title {
+        float: left;
+    }
+
+    .map-addtestcode-title .btn-close {
+        float: right;
+        margin-right: 7px;
+        margin-top: 9px;
+        font-size: 12px;
+    }
+
+.map-addtestcode-content {
+    width: 100%;
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+    .map-addtestcode-content .div-lable-input {
+        width: 100%;
+        float: left;
+        margin-bottom: 5px;
+    }
+
+    .map-addtestcode-content .div-lable {
+        width: 100%;
+        float: left;
+    }
+
+    .map-addtestcode-content .div-input {
+        width: 100%;
+        float: left;
+    }
+
+.map-addtestcode-button {
+    width: 100%;
+    height: 2.3rem;
+    float: left;
+    line-height: 2.3rem;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+    .map-addtestcode-button .btn {
+        width: 97px;
+        padding: unset;
+    }

@@ -1,0 +1,34 @@
+﻿@{
+    var lstSampleResult = ViewData["lstSampleResult"] as List<Sample>;
+}
+
+<div class="ddt-right-service-group-button">
+    <button id="ddt_process_saveresult" class="btn btn-success btn-blue" onclick="Process_SaveResult(false)">
+        <i class="bi bi-download"></i> Lưu
+    </button>
+    <button id="ddt_process_cancelresult" class="btn btn-success btn-blue" onclick="Process_CancelResultt()">
+        <i class="bi bi-arrow-return-left"></i> Bỏ qua
+    </button>
+    <button id="ddt_process_valid_in" class="btn btn-success btn-blue" onclick="Process_ValidPrint()">
+        <i class="bi bi-printer"></i> Valid & In
+    </button>  
+    <button id="ddt_process_getsample" class="btn btn-success btn-blue" onclick="Process_GetSample()">
+        <i class="bi bi-arrow-left"></i> Đang chờ
+    </button>
+</div>
+<div class="ddt-right-service-group-button-title-sample"> 
+    <div class="title-process">
+        MÔ TẢ
+    </div>
+    <div class="sample">
+        <select id="ddt_process_sampleresult" name="ddt_process_sampleresult" class="form-select height-28" onchange="GetSampleForService(this.value)">
+            @if (lstSampleResult != null)
+            {
+                foreach (var item in lstSampleResult)
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+            }
+        </select>
+    </div>   
+</div>

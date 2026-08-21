@@ -1,0 +1,214 @@
+C:\Users\Oanh\Desktop\Connects\Connects\obj\Debug\net6.0-windows\Connects.csproj.AssemblyReference.cache
+C:\Users\Oanh\Desktop\Connects\Connects\obj\Debug\net6.0-windows\Connects.frmConfigCom.resources
+C:\Users\Oanh\Desktop\Connects\Connects\obj\Debug\net6.0-windows\Connects.frmConfigTCP.resources
+C:\Users\Oanh\Desktop\Connects\Connects\obj\Debug\net6.0-windows\Connects.frmConnect.resources
+C:\Users\Oanh\Desktop\Connects\Connects\obj\Debug\net6.0-windows\Connects.frmConnectString.resources
+C:\Users\Oanh\Desktop\Connects\Connects\obj\Debug\net6.0-windows\Connects.frmDevice.resources
+C:\Users\Oanh\Desktop\Connects\Connects\obj\Debug\net6.0-windows\Connects.frmLogin.resources
+C:\Users\Oanh\Desktop\Connects\Connects\obj\Debug\net6.0-windows\Connects.csproj.GenerateResource.cache
+C:\Users\Oanh\Desktop\Connects\Connects\obj\Debug\net6.0-windows\Connects.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Oanh\Desktop\Connects\Connects\obj\Debug\net6.0-windows\Connects.AssemblyInfoInputs.cache
+C:\Users\Oanh\Desktop\Connects\Connects\obj\Debug\net6.0-windows\Connects.AssemblyInfo.cs
+C:\Users\Oanh\Desktop\Connects\Connects\obj\Debug\net6.0-windows\Connects.csproj.CoreCompileInputs.cache
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Connects.exe
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Connects.deps.json
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Connects.runtimeconfig.json
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Connects.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Connects.pdb
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\EntityFramework.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Humanizer.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\log4net.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\System.IO.Ports.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\runtimes\unix\lib\net6.0\System.IO.Ports.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.IO.Ports.dll
+C:\Users\Oanh\Desktop\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Oanh\Desktop\Connects\Connects\obj\Debug\net6.0-windows\Connects.csproj.CopyComplete
+C:\Users\Oanh\Desktop\Connects\Connects\obj\Debug\net6.0-windows\Connects.dll
+C:\Users\Oanh\Desktop\Connects\Connects\obj\Debug\net6.0-windows\refint\Connects.dll
+C:\Users\Oanh\Desktop\Connects\Connects\obj\Debug\net6.0-windows\Connects.pdb
+C:\Users\Oanh\Desktop\Connects\Connects\obj\Debug\net6.0-windows\Connects.genruntimeconfig.cache
+C:\Users\Oanh\Desktop\Connects\Connects\obj\Debug\net6.0-windows\ref\Connects.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Connects.exe
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Connects.deps.json
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Connects.runtimeconfig.json
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Connects.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Connects.pdb
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Castle.Core.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\EntityFramework.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\log4net.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Proxies.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\System.IO.Ports.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\unix\lib\net6.0\System.IO.Ports.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.IO.Ports.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.csproj.AssemblyReference.cache
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.frmConfigCom.resources
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.frmConfigTCP.resources
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.frmConnect.resources
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.frmConnectString.resources
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.frmDevice.resources
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.frmLogin.resources
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.csproj.GenerateResource.cache
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.GeneratedMSBuildEditorConfig.editorconfig
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.AssemblyInfoInputs.cache
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.AssemblyInfo.cs
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.csproj.CoreCompileInputs.cache
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.csproj.CopyComplete
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\refint\Connects.dll
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.pdb
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.genruntimeconfig.cache
+E:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\ref\Connects.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Connects.exe
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Connects.deps.json
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Connects.runtimeconfig.json
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Connects.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Connects.pdb
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Castle.Core.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\EntityFramework.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\log4net.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Data.SqlClient.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Proxies.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.Identity.Client.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\System.IO.Ports.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\unix\lib\net6.0\System.IO.Ports.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.IO.Ports.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\bin\Debug\net6.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.csproj.AssemblyReference.cache
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.frmConfigCom.resources
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.frmConfigTCP.resources
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.frmConnect.resources
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.frmConnectString.resources
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.frmDevice.resources
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.frmLogin.resources
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.csproj.GenerateResource.cache
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.GeneratedMSBuildEditorConfig.editorconfig
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.AssemblyInfoInputs.cache
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.AssemblyInfo.cs
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.csproj.CoreCompileInputs.cache
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.sourcelink.json
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.csproj.CopyComplete
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\refint\Connects.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.pdb
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\Connects.genruntimeconfig.cache
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Connects\obj\Debug\net6.0-windows\ref\Connects.dll

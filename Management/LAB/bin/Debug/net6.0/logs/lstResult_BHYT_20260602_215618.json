@@ -1,0 +1,206 @@
+[
+  {
+    "patient_id": "015186",
+    "ticket_id": "30971949",
+    "ticket_item_id": "30972180",
+    "service_id": "XN-CTM5",
+    "type": "out",
+    "mechine_code": "HH.2.500523000400",
+    "describe": null,
+    "conclusion": null,
+    "result": [
+      {
+        "param_code": "H17",
+        "param_name": "Số lượng bạch cầu",
+        "param_value": "11.6",
+        "param_unit": "X10^3/uL"
+      },
+      {
+        "param_code": "H22",
+        "param_name": "Lympho",
+        "param_value": "5.7",
+        "param_unit": "%"
+      },
+      {
+        "param_code": "H21",
+        "param_name": "Mono",
+        "param_value": "7.3",
+        "param_unit": "%"
+      },
+      {
+        "param_code": "H19",
+        "param_name": "Ưa axít",
+        "param_value": "0.5",
+        "param_unit": "%"
+      },
+      {
+        "param_code": "H20",
+        "param_name": "Ưa bazơ",
+        "param_value": "0.0",
+        "param_unit": "%"
+      },
+      {
+        "param_code": "H18",
+        "param_name": "Trung tính",
+        "param_value": "86.5",
+        "param_unit": "%"
+      },
+      {
+        "param_code": "",
+        "param_name": "",
+        "param_value": "0.7",
+        "param_unit": "X10^3/uL"
+      },
+      {
+        "param_code": "",
+        "param_name": "",
+        "param_value": "0.8",
+        "param_unit": "X10^3/uL"
+      },
+      {
+        "param_code": "",
+        "param_name": "",
+        "param_value": "0.1",
+        "param_unit": "X10^3/uL"
+      },
+      {
+        "param_code": "",
+        "param_name": "",
+        "param_value": "0.0",
+        "param_unit": "X10^3/uL"
+      },
+      {
+        "param_code": "",
+        "param_name": "",
+        "param_value": "10.0",
+        "param_unit": "X10^3/uL"
+      },
+      {
+        "param_code": "H01",
+        "param_name": "Số lượng hồng cầu",
+        "param_value": "4.77",
+        "param_unit": "X10^6/uL"
+      },
+      {
+        "param_code": "H02",
+        "param_name": "Huyết sắc tố",
+        "param_value": "13.0",
+        "param_unit": "g/dL"
+      },
+      {
+        "param_code": "H03",
+        "param_name": "Hematocrit",
+        "param_value": "37.9",
+        "param_unit": "%"
+      },
+      {
+        "param_code": "H04",
+        "param_name": "Thể tích trung bình hồng cầu (MCV)",
+        "param_value": "79.4",
+        "param_unit": "fl"
+      },
+      {
+        "param_code": "H05",
+        "param_name": "Lượng HST trung bình hồng cầu (MCH)",
+        "param_value": "27.3",
+        "param_unit": "pg"
+      },
+      {
+        "param_code": "H06",
+        "param_name": "Nồng độ HST trung bình hồng cầu (MCHC)",
+        "param_value": "34.3",
+        "param_unit": "g/dL"
+      },
+      {
+        "param_code": "H07",
+        "param_name": "Độ phân tán của đường kính hồng cầu (RDW)",
+        "param_value": "12.2",
+        "param_unit": "%"
+      },
+      {
+        "param_code": "H07",
+        "param_name": "Độ phân tán của đường kính hồng cầu (RDW)",
+        "param_value": "37.2",
+        "param_unit": "fl"
+      },
+      {
+        "param_code": "H13",
+        "param_name": "Số lượng tiểu cầu",
+        "param_value": "284.0",
+        "param_unit": "X10^3/uL"
+      },
+      {
+        "param_code": null,
+        "param_name": null,
+        "param_value": "7.9",
+        "param_unit": "fl"
+      },
+      {
+        "param_code": "H14",
+        "param_name": "Thể tích khối tiểu cầu (PCT)",
+        "param_value": "0.223",
+        "param_unit": "%"
+      },
+      {
+        "param_code": "H15",
+        "param_name": "Độ phân tán của đường kính tiểu cầu (PDW)",
+        "param_value": "18.6",
+        "param_unit": "%"
+      },
+      {
+        "param_code": null,
+        "param_name": null,
+        "param_value": "9.7",
+        "param_unit": "%"
+      }
+    ],
+    "date": "2026-06-02T21:44:00",
+    "nguoi_thuc_hien": "H Phích Byă",
+    "bs_doc_kq": "6616036187",
+    "thoi_gian_thuc_hien": "2026-06-02T14:19:00"
+  },
+  {
+    "patient_id": "015186",
+    "ticket_id": "30971949",
+    "ticket_item_id": "30972183",
+    "service_id": "XN-CRPdl",
+    "type": "out",
+    "mechine_code": "SH.2.SI90T240CS0252",
+    "describe": null,
+    "conclusion": null,
+    "result": [
+      {
+        "param_code": "1CRP",
+        "param_name": "CRP định lượng [Giá phản ứng CRP]",
+        "param_value": "1.3",
+        "param_unit": "mg/dl"
+      }
+    ],
+    "date": "2026-06-02T21:44:00",
+    "nguoi_thuc_hien": "H Phích Byă",
+    "bs_doc_kq": "6616036187",
+    "thoi_gian_thuc_hien": "2026-06-02T14:19:00"
+  },
+  {
+    "patient_id": "015186",
+    "ticket_id": "30971949",
+    "ticket_item_id": "30972187",
+    "service_id": "XN-NS1Ag2",
+    "type": "out",
+    "mechine_code": null,
+    "describe": null,
+    "conclusion": null,
+    "result": [
+      {
+        "param_code": "V23",
+        "param_name": "Dengue",
+        "param_value": null,
+        "param_unit": ""
+      }
+    ],
+    "date": "2026-06-02T21:44:00",
+    "nguoi_thuc_hien": "H Phích Byă",
+    "bs_doc_kq": "6616036187",
+    "thoi_gian_thuc_hien": "2026-06-02T14:19:00"
+  }
+]

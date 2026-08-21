@@ -1,0 +1,17 @@
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Launcher\bin\Release\net6.0-windows\Launcher.exe
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Launcher\bin\Release\net6.0-windows\Launcher.deps.json
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Launcher\bin\Release\net6.0-windows\Launcher.runtimeconfig.json
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Launcher\bin\Release\net6.0-windows\Launcher.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Launcher\bin\Release\net6.0-windows\Launcher.pdb
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Launcher\obj\Release\net6.0-windows\Launcher.frmMain.resources
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Launcher\obj\Release\net6.0-windows\Launcher.csproj.GenerateResource.cache
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Launcher\obj\Release\net6.0-windows\Launcher.GeneratedMSBuildEditorConfig.editorconfig
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Launcher\obj\Release\net6.0-windows\Launcher.AssemblyInfoInputs.cache
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Launcher\obj\Release\net6.0-windows\Launcher.AssemblyInfo.cs
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Launcher\obj\Release\net6.0-windows\Launcher.csproj.CoreCompileInputs.cache
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Launcher\obj\Release\net6.0-windows\Launcher.sourcelink.json
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Launcher\obj\Release\net6.0-windows\Launcher.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Launcher\obj\Release\net6.0-windows\refint\Launcher.dll
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Launcher\obj\Release\net6.0-windows\Launcher.pdb
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Launcher\obj\Release\net6.0-windows\Launcher.genruntimeconfig.cache
+D:\Source Code\Du_An_LAB\Project\Web\Connects\Launcher\obj\Release\net6.0-windows\ref\Launcher.dll

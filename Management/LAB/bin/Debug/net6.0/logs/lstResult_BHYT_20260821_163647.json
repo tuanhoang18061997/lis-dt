@@ -1,0 +1,209 @@
+[
+  {
+    "patient_id": "183164",
+    "ticket_id": "27008055",
+    "ticket_item_id": "27008073",
+    "service_id": "XN-CTM5",
+    "type": "in",
+    "mechine_code": "HH.2.66244.500523000400",
+    "describe": null,
+    "conclusion": null,
+    "result": [
+      {
+        "param_code": "H17",
+        "param_name": "Số lượng bạch cầu",
+        "param_value": "8.3",
+        "param_unit": "X10^9/L"
+      },
+      {
+        "param_code": "H22",
+        "param_name": "Lympho",
+        "param_value": "43.7",
+        "param_unit": "%"
+      },
+      {
+        "param_code": "H21",
+        "param_name": "Mono",
+        "param_value": "15.0",
+        "param_unit": "%"
+      },
+      {
+        "param_code": "H19",
+        "param_name": "Ưa axít",
+        "param_value": "0.0",
+        "param_unit": "%"
+      },
+      {
+        "param_code": "H20",
+        "param_name": "Ưa bazơ",
+        "param_value": "0.1",
+        "param_unit": "%"
+      },
+      {
+        "param_code": "H18",
+        "param_name": "Trung tính",
+        "param_value": "41.2",
+        "param_unit": "%"
+      },
+      {
+        "param_code": null,
+        "param_name": null,
+        "param_value": "3.6",
+        "param_unit": "X10^9/L"
+      },
+      {
+        "param_code": null,
+        "param_name": null,
+        "param_value": "1.2",
+        "param_unit": "X10^9/L"
+      },
+      {
+        "param_code": null,
+        "param_name": null,
+        "param_value": "0.0",
+        "param_unit": "X10^9/L"
+      },
+      {
+        "param_code": null,
+        "param_name": null,
+        "param_value": "0.0",
+        "param_unit": "X10^9/L"
+      },
+      {
+        "param_code": null,
+        "param_name": null,
+        "param_value": "3.4",
+        "param_unit": "X10^9/L"
+      },
+      {
+        "param_code": "H01",
+        "param_name": "Số lượng hồng cầu",
+        "param_value": "3.78",
+        "param_unit": "X10^12/L"
+      },
+      {
+        "param_code": "H02",
+        "param_name": "Huyết sắc tố",
+        "param_value": "10.8",
+        "param_unit": "g/dL"
+      },
+      {
+        "param_code": "H03",
+        "param_name": "Hematocrit",
+        "param_value": "31.1",
+        "param_unit": ""
+      },
+      {
+        "param_code": "H04",
+        "param_name": "Thể tích trung bình hồng cầu (MCV)",
+        "param_value": "82.3",
+        "param_unit": "fl"
+      },
+      {
+        "param_code": "H05",
+        "param_name": "Lượng HST trung bình hồng cầu (MCH)",
+        "param_value": "28.6",
+        "param_unit": "pg"
+      },
+      {
+        "param_code": "H06",
+        "param_name": "Nồng độ HST trung bình hồng cầu (MCHC)",
+        "param_value": "34.7",
+        "param_unit": "g/dL"
+      },
+      {
+        "param_code": "H07",
+        "param_name": "Độ phân tán của đường kính hồng cầu (RDW)",
+        "param_value": "12.4",
+        "param_unit": "%"
+      },
+      {
+        "param_code": "H07",
+        "param_name": "Độ phân tán của đường kính hồng cầu (RDW)",
+        "param_value": "39.6",
+        "param_unit": "fl"
+      },
+      {
+        "param_code": "H13",
+        "param_name": "Số lượng tiểu cầu",
+        "param_value": "234.0",
+        "param_unit": "10^9/L"
+      },
+      {
+        "param_code": null,
+        "param_name": null,
+        "param_value": "6.9",
+        "param_unit": "fl"
+      },
+      {
+        "param_code": "H14",
+        "param_name": "Thể tích khối tiểu cầu (PCT)",
+        "param_value": "0.162",
+        "param_unit": "%"
+      },
+      {
+        "param_code": "H15",
+        "param_name": "Độ phân tán của đường kính tiểu cầu (PDW)",
+        "param_value": "14.4",
+        "param_unit": "%"
+      },
+      {
+        "param_code": null,
+        "param_name": null,
+        "param_value": "6.1",
+        "param_unit": "%"
+      }
+    ],
+    "date": "2025-08-16T11:48:00",
+    "nguoi_thuc_hien": "Phạm Thị Kim Chi",
+    "ma_nguoi_thuc_hien": 14048966,
+    "bs_doc_kq": "6622163921",
+    "thoi_gian_thuc_hien": "2025-08-16T11:29:00"
+  },
+  {
+    "patient_id": "183164",
+    "ticket_id": "27008055",
+    "ticket_item_id": "27008075",
+    "service_id": "XN-CRPdl",
+    "type": "in",
+    "mechine_code": "SH.2.66244.SI90T240CS0252",
+    "describe": null,
+    "conclusion": null,
+    "result": [
+      {
+        "param_code": "1CRP",
+        "param_name": "CRP định lượng [Giá phản ứng CRP]",
+        "param_value": "0.79",
+        "param_unit": "mg/dl"
+      }
+    ],
+    "date": "2025-08-16T11:48:00",
+    "nguoi_thuc_hien": "Phạm Thị Kim Chi",
+    "ma_nguoi_thuc_hien": 14048966,
+    "bs_doc_kq": "6622163921",
+    "thoi_gian_thuc_hien": "2025-08-16T11:29:00"
+  },
+  {
+    "patient_id": "183164",
+    "ticket_id": "27008055",
+    "ticket_item_id": "27008081",
+    "service_id": "XN-NS1Ag2",
+    "type": "in",
+    "mechine_code": null,
+    "describe": null,
+    "conclusion": null,
+    "result": [
+      {
+        "param_code": "V23",
+        "param_name": "Dengue",
+        "param_value": "ÂM TÍNH ",
+        "param_unit": ""
+      }
+    ],
+    "date": "2025-08-16T11:48:00",
+    "nguoi_thuc_hien": "Phạm Thị Kim Chi",
+    "ma_nguoi_thuc_hien": 14048966,
+    "bs_doc_kq": "6622163921",
+    "thoi_gian_thuc_hien": "2025-08-16T11:29:00"
+  }
+]

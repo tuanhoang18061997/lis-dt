@@ -1,0 +1,459 @@
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\appsettings.Development.json
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\appsettings.json
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Management.staticwebassets.runtime.json
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Management.exe
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Management.deps.json
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Management.runtimeconfig.json
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Management.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Management.pdb
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Castle.Core.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Humanizer.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.Data.SqlClient.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.Extensions.Caching.Memory.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.Identity.Client.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\System.Drawing.Common.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\System.Runtime.Caching.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\System.Security.Permissions.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\System.Windows.Extensions.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.csproj.AssemblyReference.cache
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.GeneratedMSBuildEditorConfig.editorconfig
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.AssemblyInfoInputs.cache
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.AssemblyInfo.cs
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.csproj.CoreCompileInputs.cache
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.MvcApplicationPartsAssemblyInfo.cache
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.RazorAssemblyInfo.cache
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.RazorAssemblyInfo.cs
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\staticwebassets.build.json
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\staticwebassets.development.json
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutMain.cshtml.rz.scp.css
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.csproj.CopyComplete
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\refint\Management.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.pdb
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.genruntimeconfig.cache
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\ref\Management.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Select.Html.dep
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Newtonsoft.Json.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Newtonsoft.Json.Bson.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Select.HtmlToPdf.dll
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutAccount.cshtml.rz.scp.css
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutExport.cshtml.rz.scp.css
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSA.cshtml.rz.scp.css
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutXN.cshtml.rz.scp.css
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutData.cshtml.rz.scp.css
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutExport_Report.cshtml.rz.scp.css
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutNS.cshtml.rz.scp.css
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutReport.cshtml.rz.scp.css
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSettup.cshtml.rz.scp.css
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSettupDetail.cshtml.rz.scp.css
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutXQ.cshtml.rz.scp.css
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\bundle\Check.styles.css
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\projectbundle\Check.bundle.scp.css
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSAT.cshtml.rz.scp.css
+E:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSearch.cshtml.rz.scp.css
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Select.Html.dep
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\appsettings.Development.json
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\appsettings.json
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Management.staticwebassets.runtime.json
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Management.exe
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Management.deps.json
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Management.runtimeconfig.json
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Management.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Management.pdb
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Castle.Core.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Humanizer.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.Data.SqlClient.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.Identity.Client.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Newtonsoft.Json.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Newtonsoft.Json.Bson.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\Select.HtmlToPdf.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\System.Drawing.Common.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\System.Runtime.Caching.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\System.Security.Permissions.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\System.Windows.Extensions.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.csproj.AssemblyReference.cache
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.GeneratedMSBuildEditorConfig.editorconfig
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.AssemblyInfoInputs.cache
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.AssemblyInfo.cs
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.csproj.CoreCompileInputs.cache
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.MvcApplicationPartsAssemblyInfo.cache
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.RazorAssemblyInfo.cache
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.RazorAssemblyInfo.cs
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\staticwebassets\msbuild.Check.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\staticwebassets\msbuild.build.Check.props
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\staticwebassets\msbuild.buildMultiTargeting.Check.props
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\staticwebassets\msbuild.buildTransitive.Check.props
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\staticwebassets.pack.json
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\staticwebassets.build.json
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\staticwebassets.development.json
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutAccount.cshtml.rz.scp.css
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutData.cshtml.rz.scp.css
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutExport.cshtml.rz.scp.css
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutExport_Report.cshtml.rz.scp.css
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutMain.cshtml.rz.scp.css
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutNS.cshtml.rz.scp.css
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutReport.cshtml.rz.scp.css
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSA.cshtml.rz.scp.css
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSAT.cshtml.rz.scp.css
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSearch.cshtml.rz.scp.css
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSettup.cshtml.rz.scp.css
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSettupDetail.cshtml.rz.scp.css
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutXN.cshtml.rz.scp.css
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutXQ.cshtml.rz.scp.css
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\bundle\Check.styles.css
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\projectbundle\Check.bundle.scp.css
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.csproj.CopyComplete
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\refint\Management.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.pdb
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.genruntimeconfig.cache
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\ref\Management.dll
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\Management.sourcelink.json
+D:\Source Code\Du_An_LAB\Project\Web\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutDDT.cshtml.rz.scp.css
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Select.Html.dep
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\appsettings.Development.json
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\appsettings.json
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Management.staticwebassets.runtime.json
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\LatoFont\Lato-Black.ttf
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\LatoFont\Lato-BlackItalic.ttf
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\LatoFont\Lato-Bold.ttf
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\LatoFont\Lato-BoldItalic.ttf
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\LatoFont\Lato-ExtraBold.ttf
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\LatoFont\Lato-ExtraBoldItalic.ttf
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\LatoFont\Lato-ExtraLight.ttf
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\LatoFont\Lato-ExtraLightItalic.ttf
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\LatoFont\Lato-Italic.ttf
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\LatoFont\Lato-Light.ttf
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\LatoFont\Lato-LightItalic.ttf
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\LatoFont\Lato-Medium.ttf
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\LatoFont\Lato-MediumItalic.ttf
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\LatoFont\Lato-Regular.ttf
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\LatoFont\Lato-SemiBold.ttf
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\LatoFont\Lato-SemiBoldItalic.ttf
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\LatoFont\Lato-Thin.ttf
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\LatoFont\Lato-ThinItalic.ttf
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\LatoFont\OFL.txt
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Management.exe
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Management.deps.json
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Management.runtimeconfig.json
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Management.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Management.pdb
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Castle.Core.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Humanizer.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Microsoft.Data.SqlClient.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Microsoft.Identity.Client.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Newtonsoft.Json.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Newtonsoft.Json.Bson.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\QuestPDF.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Select.HtmlToPdf.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\System.Drawing.Common.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\System.Runtime.Caching.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\System.Security.Permissions.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\System.Windows.Extensions.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\linux-arm64\native\libQuestPdfSkia.so
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\linux-arm64\native\libcrypto.so
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\linux-arm64\native\libjpeg.so.8
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\linux-arm64\native\libqpdf.so
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\linux-musl-x64\native\libQuestPdfSkia.so
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\linux-musl-x64\native\libcrypto.so
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\linux-musl-x64\native\libjpeg.so.8
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\linux-musl-x64\native\libqpdf.so
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\linux-x64\native\libQuestPdfSkia.so
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\linux-x64\native\libcrypto.so
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\linux-x64\native\libjpeg.so.8
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\linux-x64\native\libqpdf.so
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\osx-arm64\native\libQuestPdfSkia.dylib
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\osx-arm64\native\libcrypto.dylib
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\osx-arm64\native\libjpeg.dylib
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\osx-arm64\native\libqpdf.dylib
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\osx-x64\native\libQuestPdfSkia.dylib
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\osx-x64\native\libcrypto.dylib
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\osx-x64\native\libjpeg.dylib
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\osx-x64\native\libqpdf.dylib
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win-x64\native\QuestPdfSkia.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win-x64\native\libgcc_s_seh-1.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win-x64\native\libstdc++-6.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win-x64\native\libwinpthread-1.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win-x64\native\qpdf.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win-x86\native\QuestPdfSkia.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win-x86\native\libgcc_s_dw2-1.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win-x86\native\libstdc++-6.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win-x86\native\libwinpthread-1.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win-x86\native\qpdf.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\Management.csproj.AssemblyReference.cache
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\Management.GeneratedMSBuildEditorConfig.editorconfig
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\Management.AssemblyInfoInputs.cache
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\Management.AssemblyInfo.cs
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\Management.csproj.CoreCompileInputs.cache
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\Management.MvcApplicationPartsAssemblyInfo.cache
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\Management.RazorAssemblyInfo.cache
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\Management.RazorAssemblyInfo.cs
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\staticwebassets.build.json
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\staticwebassets.development.json
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutAccount.cshtml.rz.scp.css
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutData.cshtml.rz.scp.css
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutDDT.cshtml.rz.scp.css
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutExport.cshtml.rz.scp.css
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutExport_Report.cshtml.rz.scp.css
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutMain.cshtml.rz.scp.css
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutNS.cshtml.rz.scp.css
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutReport.cshtml.rz.scp.css
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSA.cshtml.rz.scp.css
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSAT.cshtml.rz.scp.css
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSearch.cshtml.rz.scp.css
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSettup.cshtml.rz.scp.css
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSettupDetail.cshtml.rz.scp.css
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutXN.cshtml.rz.scp.css
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutXQ.cshtml.rz.scp.css
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\scopedcss\bundle\Check.styles.css
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\scopedcss\projectbundle\Check.bundle.scp.css
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\Management.csproj.Up2Date
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\Management.dll
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\refint\Management.dll
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\Management.pdb
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\Management.genruntimeconfig.cache
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\ref\Management.dll
+D:\lis-dt-src\Management\LAB\bin\Release\net6.0\Management.staticwebassets.endpoints.json
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\rpswa.dswa.cache.json
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\rjimswa.dswa.cache.json
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\rjsmrazor.dswa.cache.json
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\rjsmcshtml.dswa.cache.json
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\staticwebassets.build.json.cache
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\staticwebassets.build.endpoints.json
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\swae.build.ex.cache
+D:\lis-dt-src\Management\LAB\obj\Release\net6.0\staticwebassets.upToDateCheck.txt
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Select.Html.dep
+D:\lis-dt\Management\LAB\bin\Release\net6.0\appsettings.Development.json
+D:\lis-dt\Management\LAB\bin\Release\net6.0\appsettings.json
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Management.staticwebassets.endpoints.json
+D:\lis-dt\Management\LAB\bin\Release\net6.0\LatoFont\Lato-Black.ttf
+D:\lis-dt\Management\LAB\bin\Release\net6.0\LatoFont\Lato-BlackItalic.ttf
+D:\lis-dt\Management\LAB\bin\Release\net6.0\LatoFont\Lato-Bold.ttf
+D:\lis-dt\Management\LAB\bin\Release\net6.0\LatoFont\Lato-BoldItalic.ttf
+D:\lis-dt\Management\LAB\bin\Release\net6.0\LatoFont\Lato-ExtraBold.ttf
+D:\lis-dt\Management\LAB\bin\Release\net6.0\LatoFont\Lato-ExtraBoldItalic.ttf
+D:\lis-dt\Management\LAB\bin\Release\net6.0\LatoFont\Lato-ExtraLight.ttf
+D:\lis-dt\Management\LAB\bin\Release\net6.0\LatoFont\Lato-ExtraLightItalic.ttf
+D:\lis-dt\Management\LAB\bin\Release\net6.0\LatoFont\Lato-Italic.ttf
+D:\lis-dt\Management\LAB\bin\Release\net6.0\LatoFont\Lato-Light.ttf
+D:\lis-dt\Management\LAB\bin\Release\net6.0\LatoFont\Lato-LightItalic.ttf
+D:\lis-dt\Management\LAB\bin\Release\net6.0\LatoFont\Lato-Medium.ttf
+D:\lis-dt\Management\LAB\bin\Release\net6.0\LatoFont\Lato-MediumItalic.ttf
+D:\lis-dt\Management\LAB\bin\Release\net6.0\LatoFont\Lato-Regular.ttf
+D:\lis-dt\Management\LAB\bin\Release\net6.0\LatoFont\Lato-SemiBold.ttf
+D:\lis-dt\Management\LAB\bin\Release\net6.0\LatoFont\Lato-SemiBoldItalic.ttf
+D:\lis-dt\Management\LAB\bin\Release\net6.0\LatoFont\Lato-Thin.ttf
+D:\lis-dt\Management\LAB\bin\Release\net6.0\LatoFont\Lato-ThinItalic.ttf
+D:\lis-dt\Management\LAB\bin\Release\net6.0\LatoFont\OFL.txt
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Management.staticwebassets.runtime.json
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Management.exe
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Management.deps.json
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Management.runtimeconfig.json
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Management.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Management.pdb
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Castle.Core.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Humanizer.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Microsoft.Data.SqlClient.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Microsoft.Identity.Client.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Newtonsoft.Json.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Newtonsoft.Json.Bson.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\QuestPDF.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\Select.HtmlToPdf.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\System.Drawing.Common.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\System.Runtime.Caching.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\System.Security.Permissions.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\System.Windows.Extensions.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\linux-arm64\native\libQuestPdfSkia.so
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\linux-arm64\native\libcrypto.so
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\linux-arm64\native\libjpeg.so.8
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\linux-arm64\native\libqpdf.so
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\linux-musl-x64\native\libQuestPdfSkia.so
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\linux-musl-x64\native\libcrypto.so
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\linux-musl-x64\native\libjpeg.so.8
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\linux-musl-x64\native\libqpdf.so
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\linux-x64\native\libQuestPdfSkia.so
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\linux-x64\native\libcrypto.so
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\linux-x64\native\libjpeg.so.8
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\linux-x64\native\libqpdf.so
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\osx-arm64\native\libQuestPdfSkia.dylib
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\osx-arm64\native\libcrypto.dylib
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\osx-arm64\native\libjpeg.dylib
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\osx-arm64\native\libqpdf.dylib
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\osx-x64\native\libQuestPdfSkia.dylib
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\osx-x64\native\libcrypto.dylib
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\osx-x64\native\libjpeg.dylib
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\osx-x64\native\libqpdf.dylib
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win-x64\native\QuestPdfSkia.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win-x64\native\libgcc_s_seh-1.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win-x64\native\libstdc++-6.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win-x64\native\libwinpthread-1.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win-x64\native\qpdf.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win-x86\native\QuestPdfSkia.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win-x86\native\libgcc_s_dw2-1.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win-x86\native\libstdc++-6.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win-x86\native\libwinpthread-1.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win-x86\native\qpdf.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\lis-dt\Management\LAB\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\lis-dt\Management\LAB\obj\Release\net6.0\Management.csproj.AssemblyReference.cache
+D:\lis-dt\Management\LAB\obj\Release\net6.0\rpswa.dswa.cache.json
+D:\lis-dt\Management\LAB\obj\Release\net6.0\Management.GeneratedMSBuildEditorConfig.editorconfig
+D:\lis-dt\Management\LAB\obj\Release\net6.0\Management.AssemblyInfoInputs.cache
+D:\lis-dt\Management\LAB\obj\Release\net6.0\Management.AssemblyInfo.cs
+D:\lis-dt\Management\LAB\obj\Release\net6.0\Management.csproj.CoreCompileInputs.cache
+D:\lis-dt\Management\LAB\obj\Release\net6.0\Management.MvcApplicationPartsAssemblyInfo.cache
+D:\lis-dt\Management\LAB\obj\Release\net6.0\Management.RazorAssemblyInfo.cache
+D:\lis-dt\Management\LAB\obj\Release\net6.0\Management.RazorAssemblyInfo.cs
+D:\lis-dt\Management\LAB\obj\Release\net6.0\rjimswa.dswa.cache.json
+D:\lis-dt\Management\LAB\obj\Release\net6.0\rjsmrazor.dswa.cache.json
+D:\lis-dt\Management\LAB\obj\Release\net6.0\rjsmcshtml.dswa.cache.json
+D:\lis-dt\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutAccount.cshtml.rz.scp.css
+D:\lis-dt\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutData.cshtml.rz.scp.css
+D:\lis-dt\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutDDT.cshtml.rz.scp.css
+D:\lis-dt\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutExport.cshtml.rz.scp.css
+D:\lis-dt\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutExport_Report.cshtml.rz.scp.css
+D:\lis-dt\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutMain.cshtml.rz.scp.css
+D:\lis-dt\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutNS.cshtml.rz.scp.css
+D:\lis-dt\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutReport.cshtml.rz.scp.css
+D:\lis-dt\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSA.cshtml.rz.scp.css
+D:\lis-dt\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSAT.cshtml.rz.scp.css
+D:\lis-dt\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSearch.cshtml.rz.scp.css
+D:\lis-dt\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSettup.cshtml.rz.scp.css
+D:\lis-dt\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutSettupDetail.cshtml.rz.scp.css
+D:\lis-dt\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutXN.cshtml.rz.scp.css
+D:\lis-dt\Management\LAB\obj\Release\net6.0\scopedcss\Views\Shared\_LayoutXQ.cshtml.rz.scp.css
+D:\lis-dt\Management\LAB\obj\Release\net6.0\scopedcss\bundle\Check.styles.css
+D:\lis-dt\Management\LAB\obj\Release\net6.0\scopedcss\projectbundle\Check.bundle.scp.css
+D:\lis-dt\Management\LAB\obj\Release\net6.0\staticwebassets.build.json
+D:\lis-dt\Management\LAB\obj\Release\net6.0\staticwebassets.build.json.cache
+D:\lis-dt\Management\LAB\obj\Release\net6.0\staticwebassets.development.json
+D:\lis-dt\Management\LAB\obj\Release\net6.0\staticwebassets.build.endpoints.json
+D:\lis-dt\Management\LAB\obj\Release\net6.0\swae.build.ex.cache
+D:\lis-dt\Management\LAB\obj\Release\net6.0\staticwebassets.upToDateCheck.txt
+D:\lis-dt\Management\LAB\obj\Release\net6.0\Management.csproj.Up2Date
+D:\lis-dt\Management\LAB\obj\Release\net6.0\Management.dll
+D:\lis-dt\Management\LAB\obj\Release\net6.0\refint\Management.dll
+D:\lis-dt\Management\LAB\obj\Release\net6.0\Management.pdb
+D:\lis-dt\Management\LAB\obj\Release\net6.0\Management.genruntimeconfig.cache
+D:\lis-dt\Management\LAB\obj\Release\net6.0\ref\Management.dll

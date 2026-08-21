@@ -1,0 +1,104 @@
+D:\HongDuc\New\Device\I-Stat\Test1\Server_Client\Server\bin\Debug\Server.exe.config
+D:\HongDuc\New\Device\I-Stat\Test1\Server_Client\Server\bin\Debug\Server.exe
+D:\HongDuc\New\Device\I-Stat\Test1\Server_Client\Server\bin\Debug\Server.pdb
+D:\HongDuc\New\Device\I-Stat\Test1\Server_Client\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+D:\HongDuc\New\Device\I-Stat\Test1\Server_Client\Server\obj\Debug\Server.Server.resources
+D:\HongDuc\New\Device\I-Stat\Test1\Server_Client\Server\obj\Debug\Server.Properties.Resources.resources
+D:\HongDuc\New\Device\I-Stat\Test1\Server_Client\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+D:\HongDuc\New\Device\I-Stat\Test1\Server_Client\Server\obj\Debug\Server.exe
+D:\HongDuc\New\Device\I-Stat\Test1\Server_Client\Server\obj\Debug\Server.pdb
+D:\HongDuc\New\Device\I-Stat\Test\Server_Client\Server\bin\Debug\Server.exe.config
+D:\HongDuc\New\Device\I-Stat\Test\Server_Client\Server\obj\Debug\Server.exe
+D:\HongDuc\New\Device\I-Stat\Test\Server_Client\Server\obj\Debug\Server.pdb
+D:\HongDuc\New\Device\I-Stat\Test\Server_Client\Server\bin\Debug\Server.exe
+D:\HongDuc\New\Device\I-Stat\Test\Server_Client\Server\bin\Debug\Server.pdb
+D:\HongDuc\New\Device\I-Stat\Test\Server_Client\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+D:\HongDuc\New\Device\I-Stat\Test\Server_Client\Server\obj\Debug\Server.Server.resources
+D:\HongDuc\New\Device\I-Stat\Test\Server_Client\Server\obj\Debug\Server.Properties.Resources.resources
+D:\HongDuc\New\Device\I-Stat\Test\Server_Client\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+D:\HongDuc\New\Device\I-Stat\Test\Server_Client_Test\Server\bin\Debug\Server.exe.config
+D:\HongDuc\New\Device\I-Stat\Test\Server_Client_Test\Server\obj\Debug\Server.exe
+D:\HongDuc\New\Device\I-Stat\Test\Server_Client_Test\Server\obj\Debug\Server.pdb
+D:\HongDuc\New\Device\I-Stat\Test\Server_Client_Test\Server\bin\Debug\Server.exe
+D:\HongDuc\New\Device\I-Stat\Test\Server_Client_Test\Server\bin\Debug\Server.pdb
+D:\HongDuc\New\Device\I-Stat\Test\Server_Client_Test\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+D:\HongDuc\New\Device\I-Stat\Test\Server_Client_Test\Server\obj\Debug\Server.Server.resources
+D:\HongDuc\New\Device\I-Stat\Test\Server_Client_Test\Server\obj\Debug\Server.Properties.Resources.resources
+D:\HongDuc\New\Device\I-Stat\Test\Server_Client_Test\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+D:\HongDuc\New\Devices\I-Stat\Test\Server_Client\Server\bin\Debug\Server.exe.config
+D:\HongDuc\New\Devices\I-Stat\Test\Server_Client\Server\bin\Debug\Server.exe
+D:\HongDuc\New\Devices\I-Stat\Test\Server_Client\Server\bin\Debug\Server.pdb
+D:\HongDuc\New\Devices\I-Stat\Test\Server_Client\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+D:\HongDuc\New\Devices\I-Stat\Test\Server_Client\Server\obj\Debug\Server.Server.resources
+D:\HongDuc\New\Devices\I-Stat\Test\Server_Client\Server\obj\Debug\Server.Properties.Resources.resources
+D:\HongDuc\New\Devices\I-Stat\Test\Server_Client\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+D:\HongDuc\New\Devices\I-Stat\Test\Server_Client\Server\obj\Debug\Server.exe
+D:\HongDuc\New\Devices\I-Stat\Test\Server_Client\Server\obj\Debug\Server.pdb
+E:\Source Code\HongDuc\New\Devices\I-Stat\Test\Server_Client\Server\bin\Debug\Server.exe.config
+E:\Source Code\HongDuc\New\Devices\I-Stat\Test\Server_Client\Server\bin\Debug\Server.exe
+E:\Source Code\HongDuc\New\Devices\I-Stat\Test\Server_Client\Server\bin\Debug\Server.pdb
+E:\Source Code\HongDuc\New\Devices\I-Stat\Test\Server_Client\Server\obj\Debug\Server.Server.resources
+E:\Source Code\HongDuc\New\Devices\I-Stat\Test\Server_Client\Server\obj\Debug\Server.Properties.Resources.resources
+E:\Source Code\HongDuc\New\Devices\I-Stat\Test\Server_Client\Server\obj\Debug\Server.csproj.GenerateResource.cache
+E:\Source Code\HongDuc\New\Devices\I-Stat\Test\Server_Client\Server\obj\Debug\Server.exe
+E:\Source Code\HongDuc\New\Devices\I-Stat\Test\Server_Client\Server\obj\Debug\Server.pdb
+E:\Source Code\NhiDongII\Device\CLC\Erba_Elite_580\Server_Client\Server\bin\Debug\Server.exe.config
+E:\Source Code\NhiDongII\Device\CLC\Erba_Elite_580\Server_Client\Server\bin\Debug\Server.exe
+E:\Source Code\NhiDongII\Device\CLC\Erba_Elite_580\Server_Client\Server\bin\Debug\Server.pdb
+E:\Source Code\NhiDongII\Device\CLC\Erba_Elite_580\Server_Client\Server\obj\Debug\Server.Server.resources
+E:\Source Code\NhiDongII\Device\CLC\Erba_Elite_580\Server_Client\Server\obj\Debug\Server.Properties.Resources.resources
+E:\Source Code\NhiDongII\Device\CLC\Erba_Elite_580\Server_Client\Server\obj\Debug\Server.csproj.GenerateResource.cache
+E:\Source Code\NhiDongII\Device\CLC\Erba_Elite_580\Server_Client\Server\obj\Debug\Server.exe
+E:\Source Code\NhiDongII\Device\CLC\Erba_Elite_580\Server_Client\Server\obj\Debug\Server.pdb
+E:\Source Code\NhiDongII\Device\CLC\Erba_Elite_580\Server_Client\Server\obj\Debug\Server.csprojAssemblyReference.cache
+E:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\bin\Debug\Server.exe.config
+E:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\bin\Debug\Server.exe
+E:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\bin\Debug\Server.pdb
+E:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\obj\Debug\Server.Server.resources
+E:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\obj\Debug\Server.Properties.Resources.resources
+E:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\obj\Debug\Server.csproj.GenerateResource.cache
+E:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\obj\Debug\Server.exe
+E:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\obj\Debug\Server.pdb
+E:\Source Code\HongDuc\New\NhiDong2\Server_Client - Copy\Server\bin\Debug\Server.exe.config
+E:\Source Code\HongDuc\New\NhiDong2\Server_Client - Copy\Server\bin\Debug\Server.exe
+E:\Source Code\HongDuc\New\NhiDong2\Server_Client - Copy\Server\bin\Debug\Server.pdb
+E:\Source Code\HongDuc\New\NhiDong2\Server_Client - Copy\Server\obj\Debug\Server.Server.resources
+E:\Source Code\HongDuc\New\NhiDong2\Server_Client - Copy\Server\obj\Debug\Server.Properties.Resources.resources
+E:\Source Code\HongDuc\New\NhiDong2\Server_Client - Copy\Server\obj\Debug\Server.csproj.GenerateResource.cache
+E:\Source Code\HongDuc\New\NhiDong2\Server_Client - Copy\Server\obj\Debug\Server.exe
+E:\Source Code\HongDuc\New\NhiDong2\Server_Client - Copy\Server\obj\Debug\Server.pdb
+E:\Source Code\HongDuc\New\NhiDong2\Server_Client - Copy\Server\obj\Debug\Server.csprojAssemblyReference.cache
+E:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+E:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\bin\Debug\Server.exe.config
+D:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\bin\Debug\Server.exe
+D:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\bin\Debug\Server.pdb
+D:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+D:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\obj\Debug\Server.csproj.SuggestedBindingRedirects.cache
+D:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\obj\Debug\Server.Server.resources
+D:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\obj\Debug\Server.Properties.Resources.resources
+D:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\obj\Debug\Server.csproj.GenerateResource.cache
+D:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\obj\Debug\Server.exe
+D:\Source Code\HongDuc\New\NhiDong2\Server_Client\Server\obj\Debug\Server.pdb
+D:\Source Code\Du_An_CongTy\Source\Server_Client\Server\bin\Debug\Server.exe.config
+D:\Source Code\Du_An_CongTy\Source\Server_Client\Server\bin\Debug\Server.exe
+D:\Source Code\Du_An_CongTy\Source\Server_Client\Server\bin\Debug\Server.pdb
+D:\Source Code\Du_An_CongTy\Source\Server_Client\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+D:\Source Code\Du_An_CongTy\Source\Server_Client\Server\obj\Debug\Server.csproj.SuggestedBindingRedirects.cache
+D:\Source Code\Du_An_CongTy\Source\Server_Client\Server\obj\Debug\Server.Server.resources
+D:\Source Code\Du_An_CongTy\Source\Server_Client\Server\obj\Debug\Server.Properties.Resources.resources
+D:\Source Code\Du_An_CongTy\Source\Server_Client\Server\obj\Debug\Server.csproj.GenerateResource.cache
+D:\Source Code\Du_An_CongTy\Source\Server_Client\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\Source Code\Du_An_CongTy\Source\Server_Client\Server\obj\Debug\Server.exe
+D:\Source Code\Du_An_CongTy\Source\Server_Client\Server\obj\Debug\Server.pdb
+D:\Source Code\Du_An_CongTy\Source\Demo_Connect\Server_Client\Server\bin\Debug\Server.exe.config
+D:\Source Code\Du_An_CongTy\Source\Demo_Connect\Server_Client\Server\bin\Debug\Server.exe
+D:\Source Code\Du_An_CongTy\Source\Demo_Connect\Server_Client\Server\bin\Debug\Server.pdb
+D:\Source Code\Du_An_CongTy\Source\Demo_Connect\Server_Client\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+D:\Source Code\Du_An_CongTy\Source\Demo_Connect\Server_Client\Server\obj\Debug\Server.Server.resources
+D:\Source Code\Du_An_CongTy\Source\Demo_Connect\Server_Client\Server\obj\Debug\Server.Properties.Resources.resources
+D:\Source Code\Du_An_CongTy\Source\Demo_Connect\Server_Client\Server\obj\Debug\Server.csproj.GenerateResource.cache
+D:\Source Code\Du_An_CongTy\Source\Demo_Connect\Server_Client\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\Source Code\Du_An_CongTy\Source\Demo_Connect\Server_Client\Server\obj\Debug\Server.exe
+D:\Source Code\Du_An_CongTy\Source\Demo_Connect\Server_Client\Server\obj\Debug\Server.pdb

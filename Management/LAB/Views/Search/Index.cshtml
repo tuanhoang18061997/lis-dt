@@ -1,0 +1,27 @@
+﻿@using Management.BL
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    ViewData["Title"] = "Tìm kết quả";
+    Layout = "_LayoutSearch"; 
+}
+
+<div class="search-container">
+    <div class="search-left">
+        <div class="search-left-search">
+            @await Html.PartialAsync("_Search_Search")
+        </div>
+        <div id="listPatient" class="search-left-list">
+            @await Html.PartialAsync("_Search_ListPatient")
+        </div>
+    </div>
+    <div class="search-right">
+        <div id="patientInfo" class="search-right-info">
+            @await Html.PartialAsync("_Search_PatientInfo")
+        </div>
+        <div id="patientService" class="search-right-service">
+            <div id="search-right-service-gridview" class="search-right-service-gridview">
+                @await Html.PartialAsync("_Search_ListService")
+            </div>
+        </div>
+    </div>
+</div>

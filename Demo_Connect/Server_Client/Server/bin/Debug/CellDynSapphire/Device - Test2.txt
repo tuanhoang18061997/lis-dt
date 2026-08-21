@@ -1,0 +1,1 @@
+2P^Blasts^NO^0.00|IC|6|I|SP^Variant Lymphoids^NO^0.00|IC|7|I|SP^Immature Granulocytes^NO^0.00|IC|8|I|SP^Unidentified Fluorescent Cells^NO^0.00|IC|9|I|SP^Resistant RBCs^YES^1.10|IC|10|I|SP^Asymmetric RBC^NO^0.00|IC|11|I|SP^High Number I28

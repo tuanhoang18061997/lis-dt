@@ -1,0 +1,45 @@
+﻿@{
+    var lstPatient = ViewData["lstPatient"] as List<Patient>;
+}
+<div class="list-group list-group-flush">
+    @{
+        if (lstPatient != null || lstPatient.Count > 0)
+        {
+            var index = 1;
+            foreach (var patient in lstPatient)
+            {
+                index++;
+                if (index % 2 == 0)
+                {
+                    <a href="#" class="list-group-item list-group-item-action" onclick="Process_GetPatientInfo(@patient.Id)">
+                        <div class="list-group-item-pid-age-sex">
+                            <div class="list-group-item-pid-age-sex-pid">@patient.PatientId</div>
+                            <div class="list-group-item-pid-age-sex-age">@patient.Age?.ToString("dd/MM/yyyy")</div>
+                            <div class="list-group-item-pid-age-sex-sex">
+                                @{
+                                    @patient.Sex
+                                }
+                            </div>
+                        </div>
+                        <div class="list-group-item-name"> @patient.PatientName.ToUpper()</div>
+                    </a>
+                }
+                else
+                {
+                    <a href="#" class="list-group-item list-group-item-action" onclick="Process_GetPatientInfo(@patient.Id)">
+                        <div class="list-group-item-pid-age-sex">
+                            <div class="list-group-item-pid-age-sex-pid">@patient.PatientId</div>
+                            <div class="list-group-item-pid-age-sex-age">@patient.Age?.ToString("dd/MM/yyyy")</div>
+                            <div class="list-group-item-pid-age-sex-sex">
+                                @{
+                                    @patient.Sex
+                                }
+                            </div>
+                        </div>
+                        <div class="list-group-item-name"> @patient.PatientName.ToUpper()</div>
+                    </a>
+                }
+            }
+        }
+    }
+</div>
