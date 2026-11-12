@@ -1,0 +1,43 @@
+# ============================================================
+# PACS local archive / evidence
+# Không commit các baseline, freeze artifact, test evidence local
+# ============================================================
+/PACS_ARCHIVE/
+/PACS-ARCHIVE/
+/Management/LAB/tests/
+/Management/LAB/tools/
+/Management/LAB/obj/
+/Management/LAB/bin/
+
+
+
+# =====================================
+# Visual Studio
+# =====================================
+**/.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vsidx
+# NuGet packages
+**/packages/
+
+# PACS local backup and release artifacts
+/Management/_PACS_DEV_PATCH_BACKUPS/
+/Management/_PACS_RELEASE_CANDIDATES/
+# =====================================
+# .NET build outputs
+# =====================================
+**/bin/
+**/obj/
+**/TestResults/
+
+# =====================================
+# Frontend build dependencies
+# =====================================
+**/node_modules/
+**/.angular/
+**/dist/
+
+

@@ -1,0 +1,899 @@
+/* =========================================================
+   PACS DOCK - SHARED RESPONSIVE UI
+   Dùng chung cho CT / XQ / MRI / MG
+   và có thể tái sử dụng cho Process / ReturnResult.
+
+   Cấu trúc layout kỳ vọng ở view:
+   <div class="pacs-shell" id="pacs_shell">
+       <main class="pacs-main">
+           ... RIS / Result UI ...
+       </main>
+
+       @await Html.PartialAsync("_PacsDock")
+   </div>
+
+   JS sẽ toggle:
+   - .has-pacs-open trên .pacs-shell
+   - .is-open trên .pacs-dock
+   - .pacs-mobile-open trên <body> khi mobile/tablet dọc
+   - .pacs-size-60 / 75 / 90 trên .pacs-shell
+   ========================================================= */
+
+
+/* =========================================================
+   1. SHELL CHUNG
+   ========================================================= */
+
+.pacs-shell {
+    display: flex;
+    width: 100%;
+    min-height: 0;
+}
+
+/*
+   Khi PACS chưa mở, giữ hành vi layout cũ của màn hình RIS.
+   Chỉ khóa chiều cao/scroll khi thật sự mở dock.
+*/
+.pacs-shell:not(.has-pacs-open) {
+    height: auto;
+    overflow: visible;
+}
+
+.pacs-shell.has-pacs-open {
+    height: calc(100vh - 50px);
+    height: calc(100dvh - 50px);
+    overflow: hidden;
+}
+
+.pacs-main {
+    flex: 1 1 auto;
+    min-width: 0;
+    transition:
+        flex-basis .18s ease,
+        width .18s ease;
+}
+
+.pacs-shell:not(.has-pacs-open) .pacs-main {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.pacs-shell.has-pacs-open .pacs-main {
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* =========================================================
+   2. PACS DOCK
+   ========================================================= */
+
+.pacs-dock {
+    display: none;
+    flex: 0 0 50vw;
+    min-width: 360px;
+    max-width: 75vw;
+    height: 100%;
+    min-height: 0;
+
+    background: #0f172a;
+    color: #fff;
+
+    overflow: hidden;
+    border-left: 1px solid rgba(255, 255, 255, .14);
+
+    position: relative;
+}
+
+.pacs-dock.is-open {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   3. KÍCH THƯỚC PACS TRÊN DESKTOP
+   ========================================================= */
+
+.pacs-shell.pacs-size-60 .pacs-dock {
+    flex-basis: 40vw;
+    max-width: 60vw;
+}
+
+.pacs-shell.pacs-size-75 .pacs-dock {
+    flex-basis: 50vw;
+    max-width: 75vw;
+}
+
+.pacs-shell.pacs-size-90 .pacs-dock {
+    flex-basis: 65vw;
+    max-width: 90vw;
+}
+
+
+/* =========================================================
+   4. HEADER
+   ========================================================= */
+
+.pacs-dock-header {
+    min-height: 52px;
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    padding: 6px 8px;
+
+    background: #111827;
+    border-bottom: 1px solid rgba(255, 255, 255, .12);
+
+    position: relative;
+    z-index: 5;
+}
+
+.pacs-dock-heading {
+    flex: 1 1 auto;
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pacs-dock-title-wrap {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.pacs-dock-title {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pacs-dock-subtitle {
+    margin-top: 1px;
+
+    font-size: 11px;
+    line-height: 15px;
+
+    color: rgba(255, 255, 255, .72);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   5. ACTION BUTTONS
+   ========================================================= */
+
+.pacs-dock-actions {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pacs-dock-size-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.pacs-dock-btn {
+    min-width: 38px;
+    min-height: 38px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    border: 1px solid rgba(255, 255, 255, .22);
+    border-radius: 5px;
+
+    padding: 5px 8px;
+
+    background: rgba(255, 255, 255, .08);
+    color: #fff;
+
+    font-size: 12px;
+    line-height: 18px;
+
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.pacs-dock-btn:hover,
+.pacs-dock-btn:focus-visible,
+.pacs-dock-btn.active {
+    background: rgba(59, 130, 246, .90);
+    border-color: rgba(96, 165, 250, 1);
+    color: #fff;
+}
+
+.pacs-dock-btn:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, .9);
+    outline-offset: 1px;
+}
+
+.pacs-dock-btn-icon {
+    width: 40px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.pacs-dock-btn-close {
+    background: rgba(220, 38, 38, .90);
+    border-color: rgba(248, 113, 113, 1);
+}
+
+.pacs-dock-btn-close:hover,
+.pacs-dock-btn-close:focus-visible {
+    background: rgba(185, 28, 28, 1);
+}
+
+.pacs-mobile-action {
+    display: none;
+}
+
+
+/* =========================================================
+   6. BODY / IFRAME
+   ========================================================= */
+
+.pacs-dock-body {
+    position: relative;
+
+    flex: 1 1 auto;
+    min-height: 0;
+    min-width: 0;
+
+    background: #000;
+    overflow: hidden;
+}
+
+.pacs-dock-iframe {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+
+    border: 0;
+    background: #000;
+
+    touch-action: auto;
+}
+
+
+/* =========================================================
+   7. LOADING
+   ========================================================= */
+
+.pacs-dock-loading {
+    display: none;
+
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 16px;
+
+    background: rgba(15, 23, 42, .88);
+    color: #fff;
+}
+
+.pacs-dock-loading.show {
+    display: flex;
+}
+
+.pacs-dock-loading-content {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+/* =========================================================
+   8. MOBILE FOOTER
+   ========================================================= */
+
+.pacs-mobile-footer {
+    display: none;
+
+    flex: 0 0 auto;
+
+    background: #111827;
+    border-top: 1px solid rgba(255, 255, 255, .12);
+
+    padding:
+        6px
+        max(6px, env(safe-area-inset-right))
+        max(6px, env(safe-area-inset-bottom))
+        max(6px, env(safe-area-inset-left));
+}
+
+.pacs-mobile-footer-btn {
+    flex: 1 1 0;
+
+    min-width: 0;
+    min-height: 46px;
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+
+    border: 0;
+    border-radius: 6px;
+
+    padding: 4px 6px;
+
+    background: transparent;
+    color: #fff;
+
+    font-size: 11px;
+    line-height: 14px;
+
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.pacs-mobile-footer-btn i {
+    font-size: 17px;
+    line-height: 20px;
+}
+
+.pacs-mobile-footer-btn:active,
+.pacs-mobile-footer-btn:focus-visible {
+    background: rgba(255, 255, 255, .12);
+}
+
+
+
+/* =========================================================
+   8B. TƯƠNG THÍCH LAYOUT RIS HIỆN TẠI
+   Tránh overflow khi vùng RIS bị thu hẹp bởi PACS dock.
+   ========================================================= */
+
+.pacs-main .ct-container,
+.pacs-main .xq-container,
+.pacs-main .mri-container,
+.pacs-main .mg-container {
+    width: 100%;
+    min-width: 0;
+}
+
+.pacs-shell.has-pacs-open .ct-container,
+.pacs-shell.has-pacs-open .xq-container,
+.pacs-shell.has-pacs-open .mri-container,
+.pacs-shell.has-pacs-open .mg-container {
+    height: 100%;
+}
+
+.pacs-main .ct-right,
+.pacs-main .xq-right,
+.pacs-main .mri-right,
+.pacs-main .mg-right,
+.pacs-main .ct-right-info,
+.pacs-main .xq-right-info,
+.pacs-main .mri-right-info,
+.pacs-main .mg-right-info,
+.pacs-main .ct-right-service,
+.pacs-main .xq-right-service,
+.pacs-main .mri-right-service,
+.pacs-main .mg-right-service {
+    min-width: 0;
+}
+
+/* =========================================================
+   9. TABLET LANDSCAPE
+   Giữ split-screen để bác sĩ vừa xem ảnh vừa đối chiếu kết quả.
+   ========================================================= */
+
+@media
+    (min-width: 769px)
+    and (max-width: 1199px)
+    and (orientation: landscape) {
+
+    .pacs-shell {
+        height: calc(100vh - 50px);
+        height: calc(100dvh - 50px);
+    }
+
+    .pacs-main {
+        flex: 1 1 42%;
+        min-width: 320px;
+    }
+
+    .pacs-dock {
+        flex: 1 1 58%;
+        width: auto;
+        min-width: 420px;
+        max-width: none;
+    }
+
+    .pacs-shell.pacs-size-60 .pacs-dock {
+        flex-basis: 52%;
+        max-width: none;
+    }
+
+    .pacs-shell.pacs-size-75 .pacs-dock {
+        flex-basis: 60%;
+        max-width: none;
+    }
+
+    .pacs-shell.pacs-size-90 .pacs-dock {
+        flex-basis: 68%;
+        max-width: none;
+    }
+
+    .pacs-dock-btn {
+        min-width: 42px;
+        min-height: 42px;
+    }
+
+    .pacs-dock-btn-icon {
+        width: 42px;
+    }
+}
+
+
+/* =========================================================
+   10. TABLET PORTRAIT
+   PACS chuyển gần full-screen.
+   ========================================================= */
+
+@media
+    (min-width: 769px)
+    and (max-width: 1199px)
+    and (orientation: portrait) {
+
+    .pacs-shell {
+        display: block;
+        height: auto;
+        min-height: calc(100vh - 50px);
+        min-height: calc(100dvh - 50px);
+        overflow: visible;
+    }
+
+    .pacs-main {
+        width: 100%;
+        height: auto;
+        min-height: calc(100vh - 50px);
+        min-height: calc(100dvh - 50px);
+        overflow: visible;
+    }
+
+    .pacs-dock.is-open {
+        position: fixed;
+        inset: 0;
+        z-index: 2050;
+
+        width: 100vw;
+        max-width: none;
+        min-width: 0;
+
+        height: 100vh;
+        height: 100dvh;
+
+        border-left: 0;
+    }
+
+    .pacs-dock-header {
+        min-height: 54px;
+
+        padding:
+            max(6px, env(safe-area-inset-top))
+            max(8px, env(safe-area-inset-right))
+            6px
+            max(8px, env(safe-area-inset-left));
+    }
+
+    .pacs-mobile-action {
+        display: inline-flex;
+    }
+
+    .pacs-dock-size-actions {
+        display: none;
+    }
+
+    .pacs-mobile-footer {
+        display: flex;
+    }
+
+    body.pacs-mobile-open {
+        overflow: hidden !important;
+        overscroll-behavior: none;
+    }
+}
+
+
+/* =========================================================
+   11. MOBILE
+   Luôn ưu tiên PACS full-screen, kể cả landscape.
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .pacs-shell {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        min-height: calc(100vh - 50px);
+        min-height: calc(100dvh - 50px);
+
+        overflow: visible;
+    }
+
+    .pacs-main {
+        width: 100%;
+        height: auto;
+
+        min-height: calc(100vh - 50px);
+        min-height: calc(100dvh - 50px);
+
+        overflow: visible;
+    }
+
+    .pacs-dock.is-open {
+        position: fixed;
+        inset: 0;
+        z-index: 2050;
+
+        width: 100vw;
+        max-width: none;
+        min-width: 0;
+
+        height: 100vh;
+        height: 100dvh;
+
+        border-left: 0;
+    }
+
+    .pacs-dock-header {
+        min-height: 50px;
+
+        gap: 4px;
+
+        padding:
+            max(5px, env(safe-area-inset-top))
+            max(5px, env(safe-area-inset-right))
+            5px
+            max(5px, env(safe-area-inset-left));
+    }
+
+    .pacs-dock-heading {
+        gap: 4px;
+    }
+
+    .pacs-dock-title {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .pacs-dock-subtitle {
+        font-size: 10px;
+        line-height: 13px;
+    }
+
+    .pacs-dock-actions {
+        gap: 3px;
+    }
+
+    .pacs-dock-size-actions {
+        display: none;
+    }
+
+    .pacs-mobile-action {
+        display: inline-flex;
+    }
+
+    .pacs-dock-btn {
+        min-width: 44px;
+        min-height: 44px;
+
+        padding: 5px;
+    }
+
+    .pacs-dock-btn-icon {
+        width: 44px;
+    }
+
+    /* Footer giữ các thao tác quan trọng trong vùng dễ chạm bằng ngón cái. */
+    .pacs-mobile-footer {
+        display: flex;
+    }
+
+    .pacs-dock-body {
+        min-height: 0;
+    }
+
+    body.pacs-mobile-open {
+        overflow: hidden !important;
+        overscroll-behavior: none;
+    }
+}
+
+
+/* =========================================================
+   12. TOUCH DEVICES
+   Tăng vùng bấm mà không phụ thuộc hoàn toàn vào width.
+   ========================================================= */
+
+@media (pointer: coarse) {
+
+    .pacs-dock-btn {
+        min-height: 44px;
+    }
+
+    .pacs-mobile-footer-btn {
+        min-height: 48px;
+    }
+}
+
+
+/* =========================================================
+   13. FULLSCREEN API
+   ========================================================= */
+
+.pacs-dock:fullscreen,
+.pacs-dock:-webkit-full-screen {
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    max-width: none;
+    min-width: 0;
+
+    height: 100vh;
+    height: 100dvh;
+
+    border: 0;
+
+    background: #000;
+}
+
+.pacs-dock:fullscreen .pacs-dock-body,
+.pacs-dock:-webkit-full-screen .pacs-dock-body {
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+
+/* =========================================================
+   14. ACCESSIBILITY / REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pacs-main {
+        transition: none;
+    }
+}
+
+
+/* =========================================================
+   15. SHARED PACS THUMBNAIL / MEDIA PANEL
+   Dùng cho ReturnResult hiện tại và Process sau khi refactor.
+   ========================================================= */
+
+.pacs-media-panel {
+    width: 100%;
+    min-width: 0;
+}
+
+.pacs-thumbnail-section,
+.pacs-manual-image-section {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 8px;
+    border: 1px solid #c8cdd2;
+    background: #f8f9fa;
+}
+
+.pacs-media-section-header {
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 8px;
+    background: #e9ecef;
+    border-bottom: 1px solid #c8cdd2;
+    color: #1f2937;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.pacs-thumbnail-list {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    align-items: stretch;
+    gap: 6px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 6px;
+    background: #fff;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.pacs-thumbnail-item {
+    flex: 0 0 145px;
+    width: 145px;
+    min-width: 145px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border: 1px solid #cfd4da;
+    border-radius: 3px;
+    background: #fff;
+    color: #111827;
+    text-align: left;
+    cursor: pointer;
+    overflow: hidden;
+    scroll-snap-align: start;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.pacs-thumbnail-item:hover,
+.pacs-thumbnail-item:focus-visible,
+.pacs-thumbnail-item.active {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, .18);
+}
+
+.pacs-thumbnail-item:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 1px;
+}
+
+.pacs-thumbnail-image-wrap {
+    width: 100%;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    overflow: hidden;
+}
+
+.pacs-thumbnail-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+}
+
+.pacs-thumbnail-info {
+    display: block;
+    min-width: 0;
+    padding: 5px 6px 6px;
+}
+
+.pacs-thumbnail-title {
+    display: block;
+    min-width: 0;
+    color: #1d4ed8;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pacs-thumbnail-meta {
+    display: block;
+    margin-top: 1px;
+    color: #6b7280;
+    font-size: 10px;
+    line-height: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pacs-thumbnail-loading,
+.pacs-thumbnail-empty,
+.pacs-manual-image-empty {
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: 100%;
+    padding: 10px;
+    color: #6b7280;
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
+.pacs-manual-image-list {
+    width: 100%;
+    min-width: 0;
+    min-height: 72px;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 6px;
+    background: #fff;
+    -webkit-overflow-scrolling: touch;
+}
+
+.pacs-manual-image-list .hinh {
+    flex: 0 0 auto;
+}
+
+@media (pointer: coarse) {
+    .pacs-thumbnail-item {
+        flex-basis: 150px;
+        width: 150px;
+        min-width: 150px;
+    }
+
+    .pacs-thumbnail-image-wrap {
+        height: 92px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pacs-media-section-header {
+        min-height: 34px;
+        font-size: 12px;
+    }
+
+    .pacs-thumbnail-list {
+        gap: 7px;
+        padding: 7px;
+    }
+
+    .pacs-thumbnail-item {
+        flex-basis: 132px;
+        width: 132px;
+        min-width: 132px;
+    }
+
+    .pacs-thumbnail-image-wrap {
+        height: 84px;
+    }
+
+    .pacs-thumbnail-title {
+        font-size: 11px;
+    }
+
+    .pacs-thumbnail-meta {
+        font-size: 10px;
+    }
+}

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-
+using Management.Models.Pacs;
 
 namespace Management.Models
 {
@@ -41,20 +41,98 @@ namespace Management.Models
         public virtual DbSet<ResultCDHA> ResultCDHAs { get; set; }
         public virtual DbSet<ImageCDHA> ImageCDHAs { get; set; }
         public virtual DbSet<DigitalSign> DigitalSigns { get; set; }
+        // ==================== PACS ====================
+        public virtual DbSet<PacsConfig> PacsConfigs { get; set; }
+        public virtual DbSet<PacsStudy> PacsStudies { get; set; }
+        public virtual DbSet<PacsSeries> PacsSeries { get; set; }
+        public virtual DbSet<PacsInstance> PacsInstances { get; set; }
+        public virtual DbSet<PacsWorklistItem> PacsWorklistItems { get; set; }
+        public virtual DbSet<PacsSyncState> PacsSyncStates { get; set; }
 
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseLazyLoadingProxies();
+
+        //    IConfigurationRoot configuration = new ConfigurationBuilder()
+        //    .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+        //    .AddJsonFile("appsettings.json")
+        //    .Build();
+        //    optionsBuilder.UseSqlServer(configuration.GetConnectionString("LABConnectionString"));           
+        //}
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseLazyLoadingProxies();
 
-            IConfigurationRoot configuration = new ConfigurationBuilder()
-            .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-            .AddJsonFile("appsettings.json")
-            .Build();
-            optionsBuilder.UseSqlServer(configuration.GetConnectionString("LABConnectionString"));           
+            if (optionsBuilder.IsConfigured)
+                return;
+
+            var environmentName =
+                Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")
+                ?? Environment.GetEnvironmentVariable("DOTNET_ENVIRONMENT")
+                ?? "Production";
+
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                .AddJsonFile(
+                    "appsettings.json",
+                    optional: false,
+                    reloadOnChange: false)
+                .AddJsonFile(
+                    $"appsettings.{environmentName}.json",
+                    optional: true,
+                    reloadOnChange: false)
+                .AddEnvironmentVariables()
+                .Build();
+
+            var connectionString =
+                configuration.GetConnectionString("LABConnectionString");
+
+            optionsBuilder.UseSqlServer(connectionString);
         }
 
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //}
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<PacsSyncState>(entity =>
+            {
+                entity.ToTable("PacsSyncStates");
+
+                entity.HasKey(x => x.Id);
+
+                entity.HasIndex(x => x.PacsConfigId)
+                    .IsUnique()
+                    .HasDatabaseName(
+                        "UX_PacsSyncStates_PacsConfigId");
+
+                entity.Property(x => x.PacsConfigId)
+                    .IsRequired();
+
+                entity.Property(x => x.LastChangeSeq)
+                    .IsRequired()
+                    .HasDefaultValue(0L);
+
+                entity.Property(x => x.LastRunAt)
+                    .HasColumnType("datetime2")
+                    .IsRequired(false);
+
+                entity.Property(x => x.LastSuccessAt)
+                    .HasColumnType("datetime2")
+                    .IsRequired(false);
+
+                entity.Property(x => x.LastError)
+                    .HasColumnType("nvarchar(max)")
+                    .IsRequired(false);
+
+                entity.Property(x => x.CreatedOn)
+                    .HasColumnType("datetime2")
+                    .HasDefaultValueSql("GETDATE()");
+
+                entity.Property(x => x.UpdatedOn)
+                    .HasColumnType("datetime2")
+                    .IsRequired(false);
+            });
         }
     }
 }

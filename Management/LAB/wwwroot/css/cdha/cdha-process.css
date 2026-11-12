@@ -1,0 +1,1786 @@
+﻿/* ============================================================
+   PACS-CDHA-UI-SHARED-08
+   Shared responsive layout for CDHA Process screens
+
+   IMPORTANT
+   - No module-specific xq/ct/mr/mg selectors here.
+   - Legacy module CSS remains loaded during migration.
+   - These semantic selectors override legacy float/fixed widths.
+   ============================================================ */
+
+
+/* ============================================================
+   1. RIS CONTAINER
+   pacs-main changes width whenever PACS 60/75/90 changes.
+   Container queries therefore react to ACTUAL RIS width.
+   ============================================================ */
+
+.cdha-process-main {
+    min-width: 0;
+    container-type: inline-size;
+    container-name: cdha-ris;
+}
+
+
+.cdha-process-container {
+    width: 100%;
+    height: calc(100dvh - 60px);
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 5px;
+    margin: 0;
+    padding-top: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.pacs-shell.has-pacs-open .cdha-process-container {
+    height: 100%;
+    min-height: 0;
+}
+
+
+/* ============================================================
+   2. LEFT - SEARCH + PATIENT LIST
+   ============================================================ */
+
+.cdha-process-left {
+    width: auto;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    float: none;
+    display: flex;
+    flex-direction: column;
+    padding-right: 0;
+    overflow: hidden;
+}
+
+
+.cdha-process-search {
+    width: 100%;
+    height: auto;
+    flex: 0 0 auto;
+    float: none;
+}
+
+
+.cdha-process-patient-list-host {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    flex: 1 1 auto;
+    float: none;
+    overflow: hidden;
+}
+
+
+.cdha-process-patient-list {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    margin-top: 5px;
+    margin-bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.cdha-process-patient-item {
+    min-width: 0;
+}
+
+
+/* ============================================================
+   3. RIGHT
+   This becomes a SECOND container.
+
+   PatientInfo and Workspace react to actual width available
+   after Patient List and PACS have taken their space.
+   ============================================================ */
+
+.cdha-process-right {
+    width: auto;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    float: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    container-type: inline-size;
+    container-name: cdha-content;
+}
+
+
+/* ============================================================
+   4. PATIENT INFO
+   ============================================================ */
+
+.cdha-process-patient-info-host {
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    flex: 0 0 auto;
+    float: none;
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr) minmax(250px, .85fr);
+    gap: 5px 10px;
+}
+
+
+.cdha-process-info-title {
+    width: 100%;
+    height: 28px;
+    grid-column: 1 / -1;
+    float: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0 5px;
+    line-height: normal;
+}
+
+
+.cdha-process-info-col {
+    width: auto;
+    height: auto;
+    min-width: 0;
+    float: none;
+    padding-left: 0;
+}
+
+
+.cdha-process-field-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    align-items: center;
+    gap: 6px;
+    float: none;
+}
+
+
+.cdha-process-field-label {
+    width: auto;
+    min-width: 0;
+    float: none;
+    line-height: normal;
+}
+
+
+.cdha-process-field-input {
+    width: auto;
+    min-width: 0;
+    float: none;
+}
+
+
+    .cdha-process-field-input > input,
+    .cdha-process-field-input > select,
+    .cdha-process-field-input > textarea {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+.cdha-process-seq-sid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+
+.cdha-process-seq,
+.cdha-process-sid {
+    width: auto;
+    min-width: 0;
+    float: none;
+}
+
+
+.cdha-process-pair-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr) 70px minmax(0, 1fr);
+    align-items: center;
+    gap: 5px;
+    float: none;
+}
+
+
+.cdha-process-pair-label,
+.cdha-process-pair-input {
+    width: auto;
+    min-width: 0;
+    float: none;
+    line-height: normal;
+}
+
+
+/* ============================================================
+   5. SERVICE HOST
+   ============================================================ */
+
+.cdha-process-service-host {
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    flex: 1 1 auto;
+    float: none;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   6. ACTION BAR
+   ============================================================ */
+
+.cdha-process-action-host {
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    flex: 0 0 auto;
+    float: none;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+
+.cdha-process-action-bar {
+    width: auto;
+    height: auto;
+    min-width: 0;
+    flex: 0 1 auto;
+    float: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+}
+
+
+    .cdha-process-action-bar .btn {
+        width: auto;
+        min-width: 92px;
+        height: 28px;
+        padding: 0 8px;
+        flex: 0 1 auto;
+        white-space: nowrap;
+    }
+
+
+.cdha-process-template-bar {
+    width: auto;
+    height: auto;
+    min-width: 240px;
+    flex: 1 1 260px;
+    float: none;
+    display: flex;
+    align-items: stretch;
+}
+
+
+.cdha-process-template-title {
+    width: auto;
+    min-width: 92px;
+    height: 28px;
+    flex: 0 0 auto;
+    float: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0 7px;
+}
+
+
+.cdha-process-template-select {
+    width: auto;
+    height: 28px;
+    min-width: 0;
+    flex: 1 1 auto;
+    float: none;
+    padding-left: 5px;
+}
+
+
+    .cdha-process-template-select select {
+        width: 100%;
+    }
+
+
+    .cdha-process-template-select .select2-container {
+        width: 100% !important;
+    }
+
+
+/* ============================================================
+   7. WORKSPACE
+   Service + PACS thumbnail | Result Editor
+   ============================================================ */
+
+.cdha-process-workspace-host {
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    flex: 1 1 auto;
+    float: none;
+    overflow: hidden;
+}
+
+
+    .cdha-process-workspace-host
+    .cdha-process-workspace {
+        width: 100%;
+        height: 100%;
+        min-width: 0;
+        min-height: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: minmax(300px, 38%) minmax(420px, 1fr);
+        gap: 7px;
+        overflow: hidden;
+    }
+
+
+        /* ============================================================
+   8. WORKSPACE LEFT
+   ============================================================ */
+
+        .cdha-process-workspace-host
+        .cdha-process-workspace
+        .cdha-process-workspace-left {
+            width: auto !important;
+            height: 100% !important;
+            min-width: 0;
+            min-height: 0;
+            float: none !important;
+            display: grid;
+            grid-template-rows: minmax(90px, 35%) minmax(150px, 1fr);
+            gap: 5px;
+            overflow: hidden;
+        }
+
+
+.cdha-process-service-list {
+    width: 100%;
+    height: auto !important;
+    min-height: 0;
+    max-height: none !important;
+    float: none !important;
+    margin: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+    .cdha-process-service-list > .table-responsive {
+        width: 100%;
+        height: auto !important;
+        min-height: 0;
+        float: none !important;
+        padding: 0;
+        overflow: visible;
+    }
+
+
+.cdha-process-service-row {
+    cursor: pointer;
+}
+
+
+    .cdha-process-service-row.active {
+        background-color: #e8f2ff;
+        box-shadow: inset 3px 0 0 #3f78b8;
+    }
+
+
+.cdha-process-media {
+    width: 100% !important;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    max-height: none !important;
+    float: none !important;
+    overflow: auto !important;
+}
+
+
+    .cdha-process-media .pacs-media-panel {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .cdha-process-media .pacs-thumbnail-list {
+        width: 100%;
+        min-width: 0;
+        min-height: 118px;
+        overflow-x: auto;
+    }
+
+
+/* ============================================================
+   9. WORKSPACE RIGHT
+   ============================================================ */
+
+.cdha-process-workspace-host
+.cdha-process-workspace
+.cdha-process-workspace-right {
+    width: auto !important;
+    height: 100% !important;
+    min-width: 0;
+    min-height: 0;
+    float: none !important;
+    display: grid;
+    grid-template-rows: minmax(220px, 1fr) auto;
+    gap: 6px;
+    overflow: hidden;
+}
+
+
+    .cdha-process-workspace-host
+    .cdha-process-workspace
+    .cdha-process-workspace-right
+    .cdha-process-description {
+        width: 100% !important;
+        height: auto !important;
+        min-width: 0;
+        min-height: 0;
+        float: none !important;
+        padding-left: 0 !important;
+        margin: 0 !important;
+        overflow: hidden;
+    }
+
+
+.cdha-process-description .content {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 220px;
+}
+
+
+/* CKEditor responsive */
+
+.cdha-process-description .cke {
+    width: 100% !important;
+    height: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cdha-process-description .cke_inner {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cdha-process-description .cke_contents {
+    height: auto !important;
+    min-height: 180px;
+    flex: 1 1 auto;
+}
+
+
+/* ============================================================
+   10. RESULT + SUGGEST
+   ============================================================ */
+
+.cdha-process-workspace-host
+.cdha-process-result-suggest {
+    width: 100% !important;
+    height: auto !important;
+    min-width: 0;
+    float: none !important;
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 6px;
+}
+
+
+    .cdha-process-workspace-host
+    .cdha-process-result-suggest
+    .cdha-process-result,
+    .cdha-process-workspace-host
+    .cdha-process-result-suggest
+    .cdha-process-suggest {
+        width: auto !important;
+        height: auto !important;
+        min-width: 0;
+        float: none !important;
+    }
+
+
+.cdha-process-result textarea,
+.cdha-process-suggest textarea {
+    width: 100%;
+    min-width: 0;
+    min-height: 105px;
+    resize: vertical;
+}
+
+
+/* ============================================================
+   11. RIS WIDTH
+   React when PACS 60 / 75 / 90 changes pacs-main width.
+   ============================================================ */
+
+
+/*
+   RIS <= 1100
+   Slightly narrower patient sidebar.
+*/
+@container cdha-ris (max-width: 1100px) {
+
+    .cdha-process-container {
+        grid-template-columns: 220px minmax(0, 1fr);
+    }
+}
+
+
+/*
+   RIS <= 900 AND PACS OPEN
+
+   At this width the patient sidebar consumes too much useful
+   result space, so hide it while PACS is open.
+
+   Closing PACS restores it automatically because pacs-main
+   becomes wide again.
+*/
+@container cdha-ris (max-width: 900px) {
+
+    .pacs-shell.has-pacs-open
+    .cdha-process-container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+
+    .pacs-shell.has-pacs-open
+    .cdha-process-left {
+        display: none;
+    }
+}
+
+
+/*
+   Small screen with PACS CLOSED.
+
+   Do not permanently hide the patient list.
+   Stack it above result UI instead.
+*/
+@container cdha-ris (max-width: 680px) {
+
+    .pacs-shell:not(.has-pacs-open)
+    .cdha-process-container {
+        height: auto;
+        min-height: calc(100dvh - 60px);
+        grid-template-columns: minmax(0, 1fr);
+        overflow-y: auto;
+    }
+
+
+    .pacs-shell:not(.has-pacs-open)
+    .cdha-process-left {
+        display: flex;
+        height: 280px;
+        min-height: 240px;
+        max-height: 320px;
+    }
+
+
+    .pacs-shell:not(.has-pacs-open)
+    .cdha-process-right {
+        min-height: 650px;
+    }
+}
+
+
+/* ============================================================
+   12. RIGHT CONTENT WIDTH
+   This query uses ACTUAL width of the XQ content panel.
+   ============================================================ */
+
+
+/*
+   CONTENT <= 1050
+   Patient Info: 2 columns.
+   Workspace: service/PACS above editor.
+*/
+@container cdha-content (max-width: 1050px) {
+
+    .cdha-process-patient-info-host {
+        grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr);
+    }
+
+
+    .cdha-process-info-col-3 {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 6px;
+    }
+
+
+    .cdha-process-workspace-host {
+        overflow-y: auto;
+    }
+
+
+        .cdha-process-workspace-host
+        .cdha-process-workspace {
+            height: auto;
+            grid-template-columns: minmax(0, 1fr);
+            overflow: visible;
+        }
+
+
+            .cdha-process-workspace-host
+            .cdha-process-workspace
+            .cdha-process-workspace-left {
+                height: auto !important;
+                min-height: 260px;
+                grid-template-rows: auto minmax(145px, auto);
+                overflow: visible;
+            }
+
+
+    .cdha-process-service-list {
+        max-height: 125px !important;
+    }
+
+
+    .cdha-process-workspace-host
+    .cdha-process-workspace
+    .cdha-process-workspace-right {
+        height: auto !important;
+        min-height: 390px;
+        grid-template-rows: minmax(230px, auto) auto;
+        overflow: visible;
+    }
+}
+
+
+/*
+   CONTENT <= 640
+   Patient Info: 1 column.
+*/
+@container cdha-content (max-width: 640px) {
+
+    .cdha-process-patient-info-host {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+
+    .cdha-process-info-col-3 {
+        grid-column: auto;
+        display: block;
+    }
+
+
+        .cdha-process-info-col-3
+        .cdha-process-field-row + .cdha-process-field-row {
+            margin-top: 5px;
+        }
+
+
+    .cdha-process-action-host {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+
+    .cdha-process-action-bar {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat( 2, minmax(0, 1fr) );
+    }
+
+
+        .cdha-process-action-bar .btn {
+            width: 100%;
+            min-width: 0;
+        }
+
+
+    .cdha-process-template-bar {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .cdha-process-result-suggest {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+
+/*
+   CONTENT <= 480
+   Very narrow form.
+*/
+@container cdha-content (max-width: 480px) {
+
+    .cdha-process-field-row {
+        grid-template-columns: 82px minmax(0, 1fr);
+    }
+
+
+    .cdha-process-pair-row {
+        grid-template-columns: 82px minmax(0, 1fr);
+    }
+
+
+    .cdha-process-info-title {
+        font-size: 12px;
+    }
+
+
+    .cdha-process-template-bar {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+
+    .cdha-process-template-title {
+        width: 100%;
+    }
+
+
+    .cdha-process-template-select {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 4px;
+    }
+}
+
+
+/* ============================================================
+   13. DEVICE MODAL
+   ============================================================ */
+
+.cdha-process-device-title,
+.cdha-process-device-content,
+.cdha-process-device-actions {
+    min-width: 0;
+}
+
+
+    .cdha-process-device-content select {
+        width: 100%;
+    }
+
+
+/* ============================================================
+   14. SAFETY
+   ============================================================ */
+
+.cdha-process-shell *,
+.cdha-process-shell *::before,
+.cdha-process-shell *::after {
+    box-sizing: border-box;
+}
+/* ============================================================
+   PACS-CDHA-UI-SHARED-08-HOTFIX-01
+   Demo v2 parity:
+   - Patient info fields fill available columns
+   - Uniform input/select sizes
+   - Action bar and template bar on separate rows
+   - Service list and PACS thumbnails stay together
+   - Remove excessive empty space
+   ============================================================ */
+
+
+/* ============================================================
+   1. PATIENT INFO - 3 BALANCED COLUMNS
+   ============================================================ */
+
+.cdha-process-patient-info-host {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 10px;
+    row-gap: 5px;
+}
+
+
+/*
+   Legacy XQ CSS still has:
+   max-width: 19rem
+   on .xq-right-info-div-combo-2-input.
+
+   Kill that restriction here.
+*/
+.cdha-process-info-col,
+.cdha-process-field-row,
+.cdha-process-field-input,
+.cdha-process-pair-row,
+.cdha-process-pair-input,
+.cdha-process-seq,
+.cdha-process-sid {
+    min-width: 0;
+    max-width: none !important;
+}
+
+
+.cdha-process-info-col {
+    width: 100% !important;
+    padding-left: 0 !important;
+    float: none !important;
+}
+
+
+/* ============================================================
+   2. NORMAL FIELD
+   label | input
+   ============================================================ */
+
+.cdha-process-field-row {
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 6px;
+}
+
+
+.cdha-process-field-label {
+    width: auto !important;
+    max-width: none !important;
+    padding: 0;
+    white-space: nowrap;
+    float: none !important;
+    line-height: 30px;
+}
+
+
+.cdha-process-field-input {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0;
+    float: none !important;
+}
+
+
+    .cdha-process-field-input > input,
+    .cdha-process-field-input > select {
+        width: 100% !important;
+        max-width: none !important;
+        height: 30px !important;
+        min-height: 30px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        box-sizing: border-box;
+    }
+
+
+/* ============================================================
+   3. PATIENT CODE / SID
+   ============================================================ */
+
+.cdha-process-seq-sid {
+    width: 100% !important;
+    max-width: none !important;
+    grid-template-columns: minmax(100px, 32%) minmax(0, 1fr);
+    gap: 0;
+}
+
+
+.cdha-process-seq,
+.cdha-process-sid {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+
+    .cdha-process-seq input,
+    .cdha-process-sid input {
+        width: 100% !important;
+        max-width: none !important;
+        height: 30px !important;
+    }
+
+
+/* ============================================================
+   4. DOB / SEX + OBJECT / MEDICAL RECORD
+   ============================================================ */
+
+.cdha-process-pair-row {
+    grid-template-columns: 90px minmax(0, 1fr) 72px minmax(0, 1fr);
+    gap: 6px;
+}
+
+
+.cdha-process-pair-label {
+    width: auto !important;
+    max-width: none !important;
+    padding: 0 !important;
+    white-space: nowrap;
+    float: none !important;
+    line-height: 30px;
+}
+
+
+.cdha-process-pair-input {
+    width: 100% !important;
+    max-width: none !important;
+    float: none !important;
+}
+
+
+    .cdha-process-pair-input input,
+    .cdha-process-pair-input select {
+        width: 100% !important;
+        max-width: none !important;
+        height: 30px !important;
+    }
+
+
+/* ============================================================
+   5. ADDRESS / DIAGNOSIS
+   ============================================================ */
+
+.cdha-process-info-col-3 {
+    min-width: 0;
+}
+
+
+    .cdha-process-info-col-3
+    .cdha-process-field-input {
+        padding-left: 0 !important;
+    }
+
+
+    .cdha-process-info-col-3 textarea {
+        width: 100% !important;
+        max-width: none !important;
+        height: 58px !important;
+        min-height: 58px;
+        resize: none;
+        padding: 6px 8px;
+        box-sizing: border-box;
+    }
+
+
+/* ============================================================
+   6. SELECT2 - DOCTOR
+   ============================================================ */
+
+.cdha-process-patient-info-host
+.select2-container {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+
+    .cdha-process-patient-info-host
+    .select2-container
+    .select2-selection--single {
+        height: 30px !important;
+        min-height: 30px;
+    }
+
+
+        .cdha-process-patient-info-host
+        .select2-container
+        .select2-selection--single
+        .select2-selection__rendered {
+            line-height: 28px !important;
+        }
+
+
+        .cdha-process-patient-info-host
+        .select2-container
+        .select2-selection--single
+        .select2-selection__arrow {
+            height: 28px !important;
+        }
+
+
+/* ============================================================
+   7. PATIENT INFO TITLE
+   ============================================================ */
+
+.cdha-process-info-title {
+    height: 30px;
+    margin-bottom: 0;
+    padding: 0 7px;
+    line-height: 30px;
+}
+
+
+/* ============================================================
+   8. ACTION AREA
+   Demo:
+       [Buttons]
+       [MÔ TẢ                  Sample dropdown]
+   ============================================================ */
+
+.cdha-process-action-host {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 5px;
+    align-items: stretch;
+}
+
+
+.cdha-process-action-bar {
+    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+
+    .cdha-process-action-bar .btn {
+        width: auto !important;
+        min-width: 86px;
+        height: 31px;
+        padding: 0 10px;
+    }
+
+
+/* Full second row */
+
+.cdha-process-template-bar {
+    width: 100% !important;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 28%);
+    gap: 0;
+    float: none !important;
+}
+
+
+.cdha-process-template-title {
+    width: 100% !important;
+    height: 32px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    background: #dce0e0;
+    font-weight: 700;
+}
+
+
+.cdha-process-template-select {
+    width: 100% !important;
+    height: 32px;
+    padding: 0;
+    float: none !important;
+}
+
+
+    .cdha-process-template-select select {
+        width: 100% !important;
+        height: 32px;
+    }
+
+
+    .cdha-process-template-select
+    .select2-container {
+        width: 100% !important;
+    }
+
+
+/* ============================================================
+   9. WORKSPACE
+   Demo desktop:
+       Service + PACS  |  Editor
+   ============================================================ */
+
+.cdha-process-workspace-host
+.cdha-process-workspace {
+    grid-template-columns: minmax(330px, 38%) minmax(0, 1fr);
+    gap: 7px;
+}
+
+
+    /* ============================================================
+   10. LEFT WORKSPACE
+   IMPORTANT:
+   Service list must NOT consume 35% of viewport height.
+   PACS media starts immediately after service list.
+   ============================================================ */
+
+    .cdha-process-workspace-host
+    .cdha-process-workspace
+    .cdha-process-workspace-left {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 7px;
+        height: 100% !important;
+        overflow: hidden;
+    }
+
+
+/* service only takes what it actually needs */
+
+.cdha-process-service-list {
+    flex: 0 0 auto;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0;
+    max-height: 132px !important;
+    margin: 0 !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+    .cdha-process-service-list > .table-responsive {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0;
+        margin: 0;
+        overflow: visible;
+    }
+
+
+    .cdha-process-service-list table {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+
+/* PACS starts immediately after services */
+
+.cdha-process-media {
+    flex: 0 0 auto;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 160px;
+    max-height: none !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+}
+
+
+    .cdha-process-media
+    .pacs-thumbnail-section {
+        margin: 0;
+    }
+
+
+    .cdha-process-media
+    .pacs-thumbnail-list {
+        min-height: 140px;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+
+    /* Manual image is not part of XQ Process target */
+    .cdha-process-media
+    .pacs-manual-image-section {
+        display: none;
+    }
+
+
+/* ============================================================
+   11. RIGHT WORKSPACE
+   ============================================================ */
+
+.cdha-process-workspace-host
+.cdha-process-workspace
+.cdha-process-workspace-right {
+    grid-template-rows: minmax(250px, 1fr) 116px;
+    gap: 7px;
+}
+
+
+/* CKEditor */
+
+.cdha-process-description {
+    padding: 0 !important;
+}
+
+
+    .cdha-process-description
+    .content {
+        min-height: 250px;
+    }
+
+
+    .cdha-process-description
+    .cke {
+        width: 100% !important;
+        min-width: 0;
+    }
+
+
+    .cdha-process-description
+    .cke_contents {
+        min-height: 195px;
+    }
+
+
+/* ============================================================
+   12. RESULT / SUGGEST
+   ============================================================ */
+
+.cdha-process-result-suggest {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 7px;
+}
+
+
+.cdha-process-result,
+.cdha-process-suggest {
+    padding: 0 !important;
+}
+
+
+    .cdha-process-result textarea,
+    .cdha-process-suggest textarea {
+        height: 116px !important;
+        min-height: 116px;
+        padding: 8px;
+        resize: none;
+    }
+
+
+/* ============================================================
+   13. RESPONSIVE <= 1050px CONTENT WIDTH
+   ============================================================ */
+
+@container cdha-content (max-width: 1050px) {
+
+    .cdha-process-patient-info-host {
+        grid-template-columns: repeat( 2, minmax(0, 1fr) );
+    }
+
+
+    .cdha-process-info-col-3 {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat( 2, minmax(0, 1fr) );
+        gap: 7px;
+    }
+
+
+    .cdha-process-workspace-host
+    .cdha-process-workspace {
+        grid-template-columns: minmax(0, 1fr);
+        height: auto;
+    }
+
+
+        .cdha-process-workspace-host
+        .cdha-process-workspace
+        .cdha-process-workspace-left {
+            height: auto !important;
+            overflow: visible;
+        }
+
+
+    .cdha-process-media {
+        min-height: 150px;
+    }
+}
+
+
+/* ============================================================
+   14. RESPONSIVE <= 640px
+   ============================================================ */
+
+@container cdha-content (max-width: 640px) {
+
+    .cdha-process-patient-info-host {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+
+    .cdha-process-info-col-3 {
+        grid-column: auto;
+        display: block;
+    }
+
+
+    .cdha-process-template-bar {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+
+    .cdha-process-template-title,
+    .cdha-process-template-select {
+        width: 100% !important;
+    }
+
+
+    .cdha-process-action-bar {
+        display: grid;
+        grid-template-columns: repeat( 2, minmax(0, 1fr) );
+    }
+
+
+        .cdha-process-action-bar .btn {
+            width: 100% !important;
+            min-width: 0;
+        }
+
+
+    .cdha-process-result-suggest {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+
+/* ============================================================
+   15. EXTRA NARROW
+   ============================================================ */
+
+@container cdha-content (max-width: 480px) {
+
+    .cdha-process-field-row {
+        grid-template-columns: 82px minmax(0, 1fr);
+    }
+
+
+    .cdha-process-pair-row {
+        grid-template-columns: 82px minmax(0, 1fr);
+    }
+}
+/* ============================================================
+   PACS-CDHA-UI-SHARED-08-HOTFIX-02
+   - Remove document horizontal overflow
+   - Normalize workspace sizing
+   - Editor headers: Description / Result / Suggest
+   ============================================================ */
+
+
+/* ============================================================
+   1. HARD WIDTH SAFETY
+   ============================================================ */
+
+.cdha-process-shell {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+
+.cdha-process-main {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+
+.cdha-process-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+
+.cdha-process-left,
+.cdha-process-right,
+.cdha-process-patient-info-host,
+.cdha-process-service-host,
+.cdha-process-action-host,
+.cdha-process-workspace-host,
+.cdha-process-workspace,
+.cdha-process-workspace-left,
+.cdha-process-workspace-right,
+.cdha-process-description,
+.cdha-process-result-suggest,
+.cdha-process-result,
+.cdha-process-suggest {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+
+
+/* ============================================================
+   2. PREVENT LEGACY WIDTH FROM ESCAPING GRID
+   ============================================================ */
+
+.cdha-process-shell input,
+.cdha-process-shell select,
+.cdha-process-shell textarea,
+.cdha-process-shell table,
+.cdha-process-shell .form-control,
+.cdha-process-shell .form-select,
+.cdha-process-shell .select2-container,
+.cdha-process-shell .cke,
+.cdha-process-shell .cke_inner {
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+
+
+.cdha-process-shell table {
+    width: 100% !important;
+}
+
+
+.cdha-process-service-list table {
+    table-layout: fixed;
+}
+
+
+.cdha-process-service-list .td-name {
+    width: auto !important;
+    max-width: none !important;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+
+/* ============================================================
+   3. WORKSPACE WIDTH
+   Desktop target close to Demo v2
+   ============================================================ */
+
+.cdha-process-workspace-host
+.cdha-process-workspace {
+    width: 100% !important;
+    max-width: 100% !important;
+    grid-template-columns: minmax(320px, 36%) minmax(0, 1fr);
+    overflow-x: hidden;
+}
+
+
+    /* Never allow legacy LEFT=400px / RIGHT=calc(...) to win */
+
+    .cdha-process-workspace-host
+    .cdha-process-workspace
+    .cdha-process-workspace-left {
+        width: auto !important;
+        max-width: 100% !important;
+    }
+
+
+    .cdha-process-workspace-host
+    .cdha-process-workspace
+    .cdha-process-workspace-right {
+        width: auto !important;
+        max-width: 100% !important;
+    }
+
+
+/* ============================================================
+   4. CKEDITOR WIDTH
+   CKEditor is a frequent offender for document overflow.
+   Humanity survived tables. It can survive this too.
+   ============================================================ */
+
+.cdha-process-description {
+    overflow: hidden;
+}
+
+
+.cdha-process-description-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+
+.cdha-process-description .cke {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+}
+
+
+.cdha-process-description .cke_inner,
+.cdha-process-description .cke_top,
+.cdha-process-description .cke_contents,
+.cdha-process-description .cke_bottom {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+}
+
+
+.cdha-process-description .cke_top {
+    white-space: normal;
+}
+
+
+/* ============================================================
+   5. EDITOR CARD / HEADER
+   ============================================================ */
+
+.cdha-process-editor-card {
+    min-width: 0;
+    border: 1px solid #cfd5db;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+
+.cdha-process-editor-title {
+    width: 100%;
+    height: 32px;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    background: #e9ecef;
+    border-bottom: 1px solid #cfd5db;
+    color: #111;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 32px;
+    box-sizing: border-box;
+}
+
+
+/* Description already has editor frame below title */
+
+.cdha-process-description-content {
+    flex: 1 1 auto;
+    min-height: 0;
+}
+
+
+/* ============================================================
+   6. RESULT / SUGGEST WITH HEADER
+   ============================================================ */
+
+.cdha-process-result-suggest {
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 7px;
+    overflow: hidden;
+}
+
+
+.cdha-process-result,
+.cdha-process-suggest {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+
+    .cdha-process-result textarea,
+    .cdha-process-suggest textarea {
+        width: 100% !important;
+        flex: 1 1 auto;
+        height: 90px !important;
+        min-height: 90px;
+        border: 0;
+        border-radius: 0;
+        resize: none;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+
+/* ============================================================
+   7. PACS MEDIA
+   Thumbnail horizontal scroll is local only.
+   ============================================================ */
+
+.cdha-process-media {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0;
+    overflow: hidden !important;
+}
+
+
+    .cdha-process-media
+    .pacs-media-panel,
+    .cdha-process-media
+    .pacs-thumbnail-section {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+
+    .cdha-process-media
+    .pacs-thumbnail-list {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+
+/* ============================================================
+   8. PATIENT INFO SAFETY
+   ============================================================ */
+
+.cdha-process-info-col,
+.cdha-process-field-row,
+.cdha-process-field-input,
+.cdha-process-pair-row,
+.cdha-process-pair-input,
+.cdha-process-seq-sid,
+.cdha-process-seq,
+.cdha-process-sid {
+    max-width: 100% !important;
+    min-width: 0;
+}
+
+
+/* ============================================================
+   9. NARROW CONTENT
+   ============================================================ */
+
+@container cdha-content (max-width: 1050px) {
+
+    .cdha-process-workspace-host
+    .cdha-process-workspace {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+
+@container cdha-content (max-width: 640px) {
+
+    .cdha-process-result-suggest {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+/* ============================================================
+   DOCUMENT LEVEL SAFETY FOR CDHA PROCESS
+
+   Không dùng width:100vw vì scrollbar dọc cũng được tính vào 100vw
+   và có thể tự tạo overflow ngang.
+   ============================================================ */
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* ============================================================
+   PACS-CDHA-UI-SHARED-09
+   Shared UI behavior
+   ============================================================ */
+
+
+/* ============================================================
+   PATIENT ACTIVE
+   ============================================================ */
+
+.cdha-process-patient-item.active {
+    background: #e7f1ff;
+    border-color: #b7d3f5;
+    box-shadow: inset 3px 0 0 #3f78b8;
+}
+
+
+    .cdha-process-patient-item.active
+    .list-group-item-name {
+        color: #0d4f98;
+    }
+
+
+/* ============================================================
+   PATIENT DRAWER BUTTON
+   Hidden on normal desktop
+   ============================================================ */
+
+.cdha-process-patient-toggle {
+    display: none;
+    width: max-content;
+    min-height: 30px;
+    margin: 0 0 5px 0;
+    padding: 0 9px;
+    border: 1px solid #8ca9ca;
+    border-radius: 3px;
+    background: #eef5ff;
+    color: #23588f;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* backdrop normally disabled */
+
+.cdha-process-patient-backdrop {
+    display: none;
+}
+
+
+/* ============================================================
+   NARROW RIS
+   ============================================================ */
+
+@container cdha-ris (max-width: 900px) {
+
+    .cdha-process-patient-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+    /*
+       Existing SHARED-08 hides left panel
+       while PACS is open.
+    */
+    .pacs-shell.has-pacs-open
+    .cdha-process-left {
+        display: none;
+    }
+    /*
+       User explicitly asks to open it.
+    */
+    .cdha-process-container.patient-drawer-open
+    .cdha-process-left {
+        display: flex !important;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2100;
+        width: min( 290px, 88% );
+        height: 100%;
+        min-height: 0;
+        padding: 5px;
+        background: #fff;
+        border-right: 1px solid #bfc8d2;
+        box-shadow: 7px 0 24px rgba( 0, 0, 0, .18 );
+    }
+
+
+    .cdha-process-container.patient-drawer-open
+    .cdha-process-patient-backdrop {
+        display: block;
+        position: absolute;
+        inset: 0;
+        z-index: 2000;
+        background: rgba( 0, 0, 0, .22 );
+    }
+}
+
+
+/* prevent background movement on very small layout */
+
+body.cdha-patient-drawer-open {
+    overscroll-behavior: none;
+}

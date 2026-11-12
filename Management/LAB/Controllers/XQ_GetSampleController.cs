@@ -1,4 +1,5 @@
 ﻿using Management.BL;
+using Management.BL.Pacs;
 using Management.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -26,9 +27,10 @@ namespace Management.Controllers
         public readonly SettingBL _settingBL;
         public readonly GroupBL _groupBL;
         public readonly string _XQ = "XQ";
+        private readonly PacsWorklistBL _pacsWorklistBL;
 
         public XQ_GetSampleController(ILogger<XQ_GetSampleController> logger, PatientCDHABL patientCDHABL, ObjectBL objectBL, LocationBL locationBL,
-                            DoctorBL doctorBL, UserBL userBL, CategoryBL categoryBL, ServiceBL serviceBL, ResultCDHABL resultCDHABL, SettingBL settingBL, GroupBL groupBL, DeviceBL deviceBL)
+                            DoctorBL doctorBL, UserBL userBL, CategoryBL categoryBL, ServiceBL serviceBL, ResultCDHABL resultCDHABL, SettingBL settingBL, GroupBL groupBL, DeviceBL deviceBL, PacsWorklistBL pacsWorklistBL)
         {
             _logger = logger;
             _patientCDHABL = patientCDHABL;
@@ -41,6 +43,7 @@ namespace Management.Controllers
             _resultCDHABL = resultCDHABL;
             _settingBL = settingBL;
             _groupBL = groupBL;
+            _pacsWorklistBL = pacsWorklistBL;
         }
 
         [HttpGet]
@@ -196,13 +199,78 @@ namespace Management.Controllers
         [Authorize]
         public async Task<IActionResult> ProcessResult(long id, DateTime getSampleTime)
         {
-            var _exitResultCDHA = await _resultCDHABL.ExitResultXN_Update_GetSampleTime(id, getSampleTime, _XQ);
+            var _exitResultCDHA =
+                await _resultCDHABL
+                    .ExitResultXN_Update_GetSampleTime(
+                        id,
+                        getSampleTime,
+                        _XQ);
+
             var _getSample = false;
+
             if (_exitResultCDHA)
             {
                 var _userLogin = this.GetUserLogin();
-                _getSample = await _patientCDHABL.GetSample_ProcessResult_ReturnResult(id, false, true, false, _userLogin.Value, _XQ);
+
+                _getSample =
+                    await _patientCDHABL
+                        .GetSample_ProcessResult_ReturnResult(
+                            id,
+                            false,
+                            true,
+                            false,
+                            _userLogin.Value,
+                            _XQ);
+
+                // PACS-XQ-03-08
+                // Chỉ tạo MWL sau khi LIS đã chuyển bệnh nhân
+                // từ Chờ thực hiện -> Đang thực hiện thành công.
+                //
+                // PACS là best-effort tại workflow boundary này:
+                // lỗi MWL phải được log để retry, nhưng không được
+                // trả False sau khi trạng thái LIS đã commit thành công.
+                if (_getSample)
+                {
+                    try
+                    {
+                        var worklistResult =
+                            await _pacsWorklistBL
+                                .CreateWorklistForPatientAsync(
+                                    patientId: id,
+                                    categoryCode: _XQ,
+                                    scheduledAt: getSampleTime,
+                                    userId: _userLogin.Value);
+
+                        if (!worklistResult.Success)
+                        {
+                            _logger.LogWarning(
+                                "PACS-XQ-03-08 Worklist partial/failed after LIS transition. " +
+                                "PatientId={PatientId}, CategoryCode={CategoryCode}, " +
+                                "Created={Created}, Skipped={Skipped}, Failed={Failed}, " +
+                                "ErrorCode={ErrorCode}, Message={Message}",
+                                id,
+                                _XQ,
+                                worklistResult.TotalCreated,
+                                worklistResult.TotalSkipped,
+                                worklistResult.TotalFailed,
+                                worklistResult.ErrorCode,
+                                worklistResult.Message);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.LogError(
+                            ex,
+                            "PACS-XQ-03-08 Worklist exception after LIS transition. " +
+                            "PatientId={PatientId}, CategoryCode={CategoryCode}",
+                            id,
+                            _XQ);
+                    }
+                }
             }
+
+            // Giữ nguyên response contract cũ cho wwwroot/js/xq.js:
+            // UI vẫn chỉ nhận text True / False theo kết quả LIS.
             return Content(_getSample.ToString());
         }
 

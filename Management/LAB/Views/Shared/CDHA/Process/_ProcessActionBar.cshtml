@@ -1,0 +1,135 @@
+﻿@using Management.Models
+@using Management.Models.ViewModels.CDHA
+
+@model CdhaProcessViewModel
+
+@{
+    var options =
+        Model.Options;
+
+    var modulePrefix =
+        options.ModulePrefix;
+}
+
+
+<div class="@($"{modulePrefix}-right-service-group-button") cdha-process-action-bar">
+
+    @if (options.EnableSave)
+    {
+        <button id="@options.Id("saveresult")"
+                class="btn btn-success btn-blue"
+                data-cdha-action="save"
+                onclick="Process_SaveResult()">
+
+            <i class="bi bi-download"></i>
+            Lưu
+
+        </button>
+    }
+
+
+    @if (options.EnablePacs)
+    {
+        <button id="@options.Id("view_pacs")"
+                type="button"
+                class="btn btn-success btn-blue"
+                data-cdha-action="view-pacs"
+                onclick="Process_ViewPacs()"
+                title="Xem ảnh DICOM trên PACS">
+
+            <i class="bi bi-image"></i>
+            Xem ảnh PACS
+
+        </button>
+    }
+
+
+    @if (options.EnableCancel)
+    {
+        <button id="@options.Id("cancelresult")"
+                class="btn btn-success btn-blue"
+                data-cdha-action="cancel"
+                onclick="Process_CancelResultt()">
+
+            <i class="bi bi-arrow-return-left"></i>
+            Bỏ qua
+
+        </button>
+    }
+
+
+    @if (options.EnableValidPrint)
+    {
+        <button id="@options.Id("valid_in")"
+                class="btn btn-success btn-blue"
+                data-cdha-action="valid-print"
+                onclick="Process_ValidPrint()">
+
+            <i class="bi bi-printer"></i>
+            Valid & In
+
+        </button>
+    }
+
+
+    @if (options.EnableReturnToWaiting)
+    {
+        <button id="@options.Id("getsample")"
+                class="btn btn-success btn-blue"
+                data-cdha-action="return-waiting"
+                onclick="Process_GetSample()">
+
+            <i class="bi bi-arrow-left"></i>
+            Đang chờ
+
+        </button>
+    }
+
+
+    @if (options.EnableDigitalSign)
+    {
+        <button id="@options.Id("signpdf")"
+                type="button"
+                class="btn btn-warning btn-md"
+                data-cdha-action="digital-sign"
+                onclick="Process_SignPdf()">
+
+            <i class="fa fa-certificate"></i>
+            In & Ký số
+
+        </button>
+    }
+
+</div>
+
+
+<div class="@($"{modulePrefix}-right-service-group-button-title-sample") cdha-process-template-bar">
+
+    <div class="title-process cdha-process-template-title">
+        MÔ TẢ
+    </div>
+
+
+    @if (options.EnableSampleTemplate)
+    {
+        <div class="sample cdha-process-template-select">
+
+            <select id="@options.Id("sampleresult")"
+                    name="@options.Id("sampleresult")"
+                    class="form-select height-28"
+                    data-cdha-role="sample-template"
+                    onchange="GetSampleForService(this.value)">
+
+                @foreach (var item in Model.Samples)
+                {
+                    <option value="@item.Id">
+                        @item.Name
+                    </option>
+                }
+
+            </select>
+
+        </div>
+    }
+
+</div>

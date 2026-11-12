@@ -21,19 +21,19 @@ namespace Management.BL
         {
             if (deviceId != null && !string.IsNullOrEmpty(seq))
             {
-                return await _db.ResultStandards.Where(p => p.InsertTime > from && p.InsertTime < to && p.DeviceId == deviceId && p.Seq == seq).ToListAsync();
+                return await _db.ResultStandards.Where(p => p.InsertTime > from && p.InsertTime < to && p.DeviceId == deviceId && p.Seq == seq).OrderByDescending(p => p.InsertTime).ToListAsync();
             }
             else if (deviceId == null && !string.IsNullOrEmpty(seq))
             {
-                return await _db.ResultStandards.Where(p => p.InsertTime > from && p.InsertTime < to && p.Seq == seq).ToListAsync();
+                return await _db.ResultStandards.Where(p => p.InsertTime > from && p.InsertTime < to && p.Seq == seq).OrderByDescending(p => p.InsertTime).ToListAsync();
             }
             else if (deviceId != null && string.IsNullOrEmpty(seq))
             {
-                return await _db.ResultStandards.Where(p => p.InsertTime > from && p.InsertTime < to && p.DeviceId == deviceId).ToListAsync();
+                return await _db.ResultStandards.Where(p => p.InsertTime > from && p.InsertTime < to && p.DeviceId == deviceId).OrderByDescending(p => p.InsertTime).ToListAsync();
             }
             else
             {
-                return await _db.ResultStandards.Where(p => p.InsertTime > from && p.InsertTime < to).ToListAsync();
+                return await _db.ResultStandards.Where(p => p.InsertTime > from && p.InsertTime < to).OrderByDescending(p => p.InsertTime).ToListAsync();
             }
         }
 

@@ -1,0 +1,97 @@
+﻿@using Management.Models
+@using Management.Models.ViewModels.CDHA
+
+@model CdhaProcessViewModel
+
+@{
+    var options =
+        Model.Options;
+
+    var modulePrefix =
+        options.ModulePrefix;
+
+    var selectId =
+        options.GetSampleId(
+            "select_device_select"
+        );
+
+    var buttonId =
+        options.GetSampleId(
+            "select_device_button"
+        );
+}
+
+@if (options.EnableDeviceModal)
+{
+    <div class="modal"
+         id="addDeviceForm"
+         data-bs-backdrop="static"
+         data-bs-keyboard="false"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="staticBackdropLabel"
+         aria-hidden="true">
+
+        <div class="modal-dialog"
+             role="document">
+
+            <div class="modal-content">
+
+                <div class="@($"{modulePrefix}-right-select-device-title") cdha-process-device-title">
+
+                    <div class="title">
+                        CHỌN THIẾT BỊ
+                    </div>
+
+                </div>
+
+
+                <div class="@($"{modulePrefix}-right-select-device") cdha-process-device-content">
+
+                    <div class="title">
+                        Thiết bị
+                    </div>
+
+                    <div class="content">
+
+                        <select id="@selectId"
+                                name="@selectId"
+                                class="form-select height-28">
+
+                            <option value=""></option>
+
+                            @foreach (var item in Model.Devices)
+                            {
+                                <option value="@item.Id">
+                                    @item.Name
+                                </option>
+                            }
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="@($"{modulePrefix}-right-select-device-button") cdha-process-device-actions">
+
+                    <button id="@buttonId"
+                            type="button"
+                            class="btn btn-success btn-blue"
+                            data-bs-dismiss="modal"
+                            onclick="Process_SelectDevice()">
+
+                        <i class="bi bi-download"></i>
+                        Lưu
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+}

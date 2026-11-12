@@ -1,0 +1,53 @@
+﻿@{
+    var pacsThumbnailTitle =
+        (ViewData["PacsThumbnailTitle"] as string
+        ?? "Ảnh PACS / DICOM")
+        .Trim();
+
+    var manualImageTitle =
+        (ViewData["PacsManualImageTitle"] as string
+        ?? "Ảnh tải lên / chụp thủ công")
+        .Trim();
+}
+
+<div id="pacs_media_panel"
+     class="pacs-media-panel">
+
+    <section class="pacs-thumbnail-section">
+
+        <div class="pacs-media-section-header">
+            <i class="bi bi-images"></i>
+            <span>@pacsThumbnailTitle</span>
+        </div>
+
+        <div id="pacs_thumbnail_list"
+             class="pacs-thumbnail-list"
+             aria-live="polite">
+
+            <div class="pacs-thumbnail-empty">
+                Chọn dịch vụ để tải thumbnail PACS.
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="pacs-manual-image-section">
+
+        <div class="pacs-media-section-header">
+            <i class="bi bi-card-image"></i>
+            <span>@manualImageTitle</span>
+        </div>
+
+        <div id="pacs_manual_image_list"
+             class="pacs-manual-image-list imageCDHA">
+
+            <div class="pacs-manual-image-empty">
+                Chưa có ảnh tải lên/chụp thủ công.
+            </div>
+
+        </div>
+
+    </section>
+
+</div>

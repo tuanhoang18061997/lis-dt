@@ -464,6 +464,11 @@ function GetSample_Get_Count() {
 
 //***************************************************************************************** Process
 
+// SHARED-10-06
+// Khi user chọn bệnh nhân nhưng session chưa có thiết bị, modal thiết bị sẽ mở.
+// Sau khi lưu thiết bị phải tiếp tục load đúng bệnh nhân, không được nhảy sang ValidPrint.
+var processPendingPatientId = null;
+
 function Process_ValidateInput(id) {
     var flag = true;
     $("#" + id).find(".valid").each(function (i, e) {
@@ -483,45 +488,112 @@ function Process_ValidateInput(id) {
     return flag;
 }
 
+function Process_ClosePacsForContextReset() {
+    if (
+        window.PacsDock &&
+        typeof window.PacsDock.close === 'function'
+    ) {
+        window.PacsDock.close();
+    }
+}
+
 function Process_Refresh() {
+
+    // Refresh làm thay đổi toàn bộ patient/service context.
+    // Đóng PACS ngay từ đầu để không giữ Study cũ trong lúc AJAX đang chạy.
+    Process_ClosePacsForContextReset();
+
     $.ajax({
         url: "/XQ_Process/Refresh/",
         type: "GET",
         dataType: "html",
         cache: false,
         success: function (result) {
-            var date = new Date();
-            var today = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" + ("0" + date.getDate()).slice(-2);
-            $("#process_listPatient").html(result);
-            $("#xq_getsample_timeSearchFrom").val(today);
-            $("#xq_getsample_timeSearchTo").val(today);
+            $("#process_listPatient")
+                .html(result);
             Process_ResetInput();
             Process_Get_Count();
         },
-        error: function () {
-            $("#process_listPatient").empty();
+        error: function (xhr) {
+            console.error(
+                "XQ Process Refresh failed:",
+                xhr.status,
+                xhr.responseText
+            );
         }
     });
 }
 
 function Process_Search() {
-    var xq_getsample_pidorseq = $("#xq_getsample_pidorseq").val();
-    var timeSearchFrom = $("#xq_getsample_timeSearchFrom").val();
-    var timeSearchTo = $("#xq_getsample_timeSearchTo").val();
+
+    var pidorseq =
+        $.trim($("#xq_process_pidorseq").val() || "");
+
+    var timeSearchFrom =
+        $("#xq_process_timeSearchFrom").val();
+
+    var timeSearchTo =
+        $("#xq_process_timeSearchTo").val();
+
+    console.log("Process_Search", {
+        pidorseq: pidorseq,
+        timeSearchFrom: timeSearchFrom,
+        timeSearchTo: timeSearchTo
+    });
+
+    if (!timeSearchFrom || !timeSearchTo) {
+        alert("Vui lòng chọn đầy đủ Từ ngày và Đến ngày.");
+        return;
+    }
+
+    if (timeSearchFrom > timeSearchTo) {
+        alert("Từ ngày không được lớn hơn Đến ngày.");
+        return;
+    }
+
     $.ajax({
-        url: "/XQ_Process/Search?" + "pidorseq=" + xq_getsample_pidorseq + "&timeSearchFrom=" + timeSearchFrom + "&timeSearchTo=" + timeSearchTo,
+        url: "/XQ_Process/Search",
         type: "GET",
         dataType: "html",
         cache: false,
-        success: function (result) {
-            $("#process_listPatient").html(result);
+
+        data: {
+            pidorseq: pidorseq,
+            timeSearchFrom: timeSearchFrom,
+            timeSearchTo: timeSearchTo
         },
-        error: function () {
-            $("#process_listPatient").empty();
+
+        success: function (result) {
+
+            console.log(
+                "Process_Search SUCCESS",
+                result.length
+            );
+
+            $("#process_listPatient").html(result);
+
+            Process_Get_Count();
+        },
+
+        error: function (xhr) {
+
+            console.error(
+                "Process_Search ERROR",
+                xhr.status,
+                xhr.responseText
+            );
+
+            // KHÔNG empty danh sách cũ
         }
     });
 }
 function Process_ResetInput() {
+    processPendingPatientId = null;
+
+    // Mọi luồng reset XQ Process đều phải vô hiệu context PACS hiện tại.
+    // HOTFIX-01 trong PacsDock.close() cũng abort/invalidate Viewer API pending.
+    Process_ClosePacsForContextReset();
+
     $("#xq_process_pidorseq").val('');
     $('#xq_process_id').val('');
     $('#xq_process_patientId').val('');
@@ -541,12 +613,50 @@ function Process_ResetInput() {
     $('#xq_process_userReturnResultXQ').val('');
     $('#xq_process_address').val('');
     $('#xq_process_diagnostic').val('');
+    // Service partial thực tế được render trong container này.
+    // Selector #tbody-gridview-service là legacy/mismatch nên không clear được UI hiện tại.
+    $('#process_xq-right-service-gridview').empty();
+
+    // Giữ fallback legacy để không phá các view cũ nếu còn dùng selector này.
     $('#tbody-gridview-service').empty();
+
     $('#imageCDHA').empty();
     $('#xq_process_result').empty();
     $('#xq_process_suggest').empty();
     CKEDITOR.instances["xq_process_description"].setData("");
     Process_SetSelect2_03(true);
+}
+
+function Process_LoadPatientContext(id) {
+    $.ajax({
+        url: "/XQ_Process/GetPatientInfo?id=" + id,
+        type: "GET",
+        dataType: "html",
+        cache: false,
+        success: function (result) {
+            $("#process_patientInfo").html(result);
+            Process_SetSelect2_03();
+
+            // Auto-chọn bác sĩ = user đang login (nếu DB chưa có giá trị).
+            var loginId = $("#xq_process_userLoginId").val();
+            var $sel = $("#xq_process_userReturnResultXQ");
+            if (loginId && (!$sel.val() || $sel.val() === "")) {
+                $sel.val(loginId).trigger("change");
+            }
+
+            $(document)
+                .off("change", "#xq_process_userReturnResultXQ")
+                .on("change", "#xq_process_userReturnResultXQ", Process_Load_SelectedDoctorInfo);
+
+            Process_Load_SelectedDoctorInfo();
+            Process_GetListServiceForPatient(id);
+        },
+        error: function () {
+            $("#process_patientInfo").empty();
+            $("#process_xq-right-service-gridview").empty();
+            $('#tbody-gridview-service').empty();
+        }
+    });
 }
 
 function Process_GetPatientInfo(id) {
@@ -556,40 +666,18 @@ function Process_GetPatientInfo(id) {
         dataType: 'text',
         success: function (result) {
             if (result === "False") {
+                processPendingPatientId = id;
                 $('#addDeviceForm').modal('show');
-            } else {
-                $.ajax({
-                    url: "/XQ_Process/GetPatientInfo?id=" + id,
-                    type: "GET",
-                    dataType: "html",
-                    cache: false,
-                    success: function (result) {
-                        $("#process_patientInfo").html(result);
-                        Process_SetSelect2_03();
-                        // Auto-chọn bác sĩ = user đang login (nếu chưa có giá trị)
-                        var loginId = $("#xq_process_userLoginId").val();
-                        var $sel = $("#xq_process_userReturnResultXQ");
-                        if (loginId && (!$sel.val() || $sel.val() === "")) {
-                            $sel.val(loginId).trigger("change");
-                        }
-
-                        // Gắn handler đổi bác sĩ
-                        $(document)
-                            .off("change", "#xq_process_userReturnResultXQ")
-                            .on("change", "#xq_process_userReturnResultXQ", Process_Load_SelectedDoctorInfo);
-                        // Lần đầu nếu có sẵn value thì cũng load info
-                        Process_Load_SelectedDoctorInfo();
-
-                        Process_GetListServiceForPatient(id);
-                    },
-                    error: function () {
-                        $("#process_patientInfo").empty();
-                        $('#tbody-gridview-service').empty();
-                    }
-                });
+                return;
             }
+
+            processPendingPatientId = null;
+            Process_LoadPatientContext(id);
+        },
+        error: function () {
+            alert("Không kiểm tra được thiết bị. Vui lòng thử lại!");
         }
-    })
+    });
 }
 
 function Process_GetListServiceForPatient(id) {
@@ -689,7 +777,16 @@ function Process_SelectDevice() {
                     alert("Không thể chọn thiết bị. Kiểm tra lại !");
                 }
                 else {
-                    Process_ValidPrint();
+                    // Nếu modal được mở từ thao tác chọn bệnh nhân, tiếp tục load bệnh nhân đó.
+                    if (processPendingPatientId) {
+                        var patientId = processPendingPatientId;
+                        processPendingPatientId = null;
+                        Process_LoadPatientContext(patientId);
+                    }
+                    else {
+                        // Modal được mở từ Valid & In.
+                        Process_ValidPrint();
+                    }
                 }
             },
             error: function () {
@@ -707,6 +804,7 @@ function Process_ValidPrint() {
         dataType: 'text',
         success: function (result) {
             if (result === "False") {
+                processPendingPatientId = null;
                 $('#addDeviceForm').modal('show');
             }
             else {
@@ -800,7 +898,7 @@ function Process_GetSample() {
     }
     else {
         $.ajax({
-            url: "/XQ_Process/GetSample?id= " + id,
+            url: "/XQ_Process/GetSample?id=" + encodeURIComponent(id),
             type: 'POST',
             dataType: 'text',
             success: function (result) {
@@ -856,19 +954,79 @@ function Process_Get_Count() {
 }
 
 function Process_CheckedBoxOnRow(id) {
-    $(".row-service").each(function () { // Lấy value trên từng Row
-        $(this).find(".form-check-input").each(function () {
-            var value = $(this).val();
-            if (value == id) {
-                $(this).prop("checked", true);
-                Process_LoadImageForService(id);
-            }
-            else {
-                $(this).prop("checked", false);
-            }
-        })
 
-    })
+    var selectedId = String(id || '').trim();
+
+    if (!selectedId) {
+        return;
+    }
+
+    $(".row-service").each(function () {
+
+        var $row = $(this);
+        var $checkbox =
+            $row.find(".form-check-input").first();
+
+        var value =
+            String($checkbox.val() || '').trim();
+
+        var isSelected =
+            value === selectedId;
+
+        $checkbox.prop(
+            "checked",
+            isSelected
+        );
+
+        $row.toggleClass(
+            "active",
+            isSelected
+        );
+    });
+
+    // Giữ nguyên flow hiện tại:
+    // Mô tả / Kết luận / Đề nghị.
+    Process_LoadImageForService(
+        selectedId
+    );
+
+    // PACS-XQ-UI-02:
+    // Click service -> auto load PACS thumbnails.
+    Process_LoadPacsThumbnailsForService(
+        selectedId
+    );
+}
+
+function Process_LoadPacsThumbnailsForService(
+    resultCDHAId
+) {
+
+    var id =
+        String(
+            resultCDHAId || ''
+        ).trim();
+
+    if (!id) {
+        return;
+    }
+
+    if (
+        !window.PacsDock ||
+        typeof window.PacsDock.loadThumbnails !==
+        'function'
+    ) {
+
+        console.warn(
+            '[PACS-XQ-UI-02] ' +
+            'PacsDock.loadThumbnails chưa sẵn sàng.'
+        );
+
+        return;
+    }
+
+    window.PacsDock.loadThumbnails(
+        id
+    );
 }
 
 function Process_LoadImageForService(id) {
@@ -926,6 +1084,35 @@ function Process_Load_SelectedDoctorInfo() {
             $("#xq_process_signerCCCD").text("Không lấy được thông tin bác sĩ.");
         }
     });
+}
+
+// ============================================================
+// PACS - SHARED VIEWER
+// ============================================================
+function Process_ViewPacs() {
+
+    if (
+        !window.PacsDock ||
+        typeof window.PacsDock.openSelected !== 'function'
+    ) {
+        if (
+            window.SwalHelper &&
+            SwalHelper.Toast &&
+            typeof SwalHelper.Toast.error === 'function'
+        ) {
+            SwalHelper.Toast.error(
+                'PACS Viewer chưa được khởi tạo.'
+            );
+        } else {
+            alert(
+                'PACS Viewer chưa được khởi tạo.'
+            );
+        }
+
+        return;
+    }
+
+    PacsDock.openSelected();
 }
 
 // ========================== KÝ SỐ PDF (Form: XQUANG) ==========================

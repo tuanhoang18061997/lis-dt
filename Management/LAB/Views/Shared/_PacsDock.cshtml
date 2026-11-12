@@ -1,0 +1,195 @@
+﻿@{
+    /*
+        Shared PACS Dock
+
+        ViewData:
+        - PacsModulePrefix : "xq" | "ct" | "mri" | "mg"
+        - PacsScreenPrefix : "process" | "returnresult"
+        - PacsTitle
+        - PacsDefaultSize  : "60" | "75" | "90"
+
+        Không chứa API theo module.
+        JS dùng shared /PacsViewer/*.
+    */
+
+    var modulePrefix =
+        (ViewData["PacsModulePrefix"] as string
+        ?? ViewData["ModulePrefix"] as string
+        ?? string.Empty)
+        .Trim()
+        .ToLowerInvariant();
+
+    var screenPrefix =
+        (ViewData["PacsScreenPrefix"] as string
+        ?? string.Empty)
+        .Trim()
+        .ToLowerInvariant();
+
+    var pacsTitle =
+        (ViewData["PacsTitle"] as string
+        ?? "XEM ẢNH PACS")
+        .Trim();
+
+    var defaultSize =
+        (ViewData["PacsDefaultSize"]?.ToString()
+        ?? "75")
+        .Trim();
+
+    if (defaultSize != "60" &&
+        defaultSize != "75" &&
+        defaultSize != "90")
+    {
+        defaultSize = "75";
+    }
+}
+
+<aside id="pacs_dock"
+       class="pacs-dock"
+       data-module="@modulePrefix"
+       data-screen="@screenPrefix"
+       data-default-size="@defaultSize"
+       aria-label="PACS Viewer"
+       aria-hidden="true">
+
+    <header class="pacs-dock-header">
+
+        <div class="pacs-dock-heading">
+
+            <button type="button"
+                    id="pacs_back_to_result"
+                    class="pacs-dock-btn pacs-dock-btn-icon pacs-mobile-action"
+                    title="Quay lại kết quả"
+                    aria-label="Quay lại kết quả">
+                <i class="bi bi-arrow-left"></i>
+            </button>
+
+            <div class="pacs-dock-title-wrap">
+
+                <div id="pacs_title"
+                     class="pacs-dock-title">
+                    @pacsTitle
+                </div>
+
+                <div id="pacs_subtitle"
+                     class="pacs-dock-subtitle"
+                     aria-live="polite">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="pacs-dock-actions">
+
+            <div class="pacs-dock-size-actions"
+                 role="group"
+                 aria-label="Kích thước vùng PACS">
+
+                <button type="button"
+                        class="pacs-dock-btn pacs-size-btn"
+                        data-pacs-size="60"
+                        title="PACS 60%">
+                    60
+                </button>
+
+                <button type="button"
+                        class="pacs-dock-btn pacs-size-btn"
+                        data-pacs-size="75"
+                        title="PACS 75%">
+                    75
+                </button>
+
+                <button type="button"
+                        class="pacs-dock-btn pacs-size-btn"
+                        data-pacs-size="90"
+                        title="PACS 90%">
+                    90
+                </button>
+
+            </div>
+
+            <button type="button"
+                    id="pacs_fullscreen"
+                    class="pacs-dock-btn pacs-dock-btn-icon"
+                    title="Toàn màn hình"
+                    aria-label="Toàn màn hình PACS">
+                <i class="bi bi-arrows-fullscreen"></i>
+            </button>
+
+            <button type="button"
+                    id="pacs_open_new_tab"
+                    class="pacs-dock-btn pacs-dock-btn-icon"
+                    title="Mở PACS ở tab mới"
+                    aria-label="Mở PACS ở tab mới">
+                <i class="bi bi-box-arrow-up-right"></i>
+            </button>
+
+            <button type="button"
+                    id="pacs_close"
+                    class="pacs-dock-btn pacs-dock-btn-icon pacs-dock-btn-close"
+                    title="Đóng PACS"
+                    aria-label="Đóng PACS">
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+    <div class="pacs-dock-body">
+
+        <div id="pacs_loading"
+             class="pacs-dock-loading"
+             role="status"
+             aria-live="polite">
+
+            <div class="pacs-dock-loading-content">
+
+                <div class="spinner-border spinner-border-sm"
+                     role="presentation">
+                </div>
+
+                <span>Đang tải ảnh PACS...</span>
+
+            </div>
+
+        </div>
+
+        <iframe id="pacs_iframe"
+                class="pacs-dock-iframe"
+                src="about:blank"
+                title="PACS OHIF Viewer"
+                allow="fullscreen; clipboard-read; clipboard-write"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+    </div>
+
+    <footer id="pacs_mobile_footer"
+            class="pacs-mobile-footer"
+            aria-hidden="true">
+
+        <button type="button"
+                id="pacs_mobile_back"
+                class="pacs-mobile-footer-btn">
+            <i class="bi bi-arrow-left"></i>
+            <span>Kết quả</span>
+        </button>
+
+        <button type="button"
+                id="pacs_mobile_fullscreen"
+                class="pacs-mobile-footer-btn">
+            <i class="bi bi-arrows-fullscreen"></i>
+            <span>Toàn màn hình</span>
+        </button>
+
+        <button type="button"
+                id="pacs_mobile_new_tab"
+                class="pacs-mobile-footer-btn">
+            <i class="bi bi-box-arrow-up-right"></i>
+            <span>Tab mới</span>
+        </button>
+
+    </footer>
+
+</aside>

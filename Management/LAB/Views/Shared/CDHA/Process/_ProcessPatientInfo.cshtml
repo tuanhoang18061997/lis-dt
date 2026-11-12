@@ -1,0 +1,380 @@
+﻿@using Management.Models
+@using Management.Models.ViewModels.CDHA
+
+@model CdhaProcessViewModel
+
+@{
+    var options =
+        Model.Options;
+
+    var patient =
+        Model.PatientInfo;
+
+    var age =
+        patient?.Age?
+            .ToString("dd/MM/yyyy")
+        ?? string.Empty;
+
+    var getSampleTime =
+        Model.DisplayGetSampleTime?
+            .ToString("dd/MM/yyyy HH:mm")
+        ?? string.Empty;
+
+    var returnResultTime =
+        Model.DisplayReturnResultTime
+        ?? DateTime.Now;
+
+    var selectedUserId =
+        Model.SelectedUserReturnResultId;
+
+    // Giữ class XQ hiện tại để CSS cũ vẫn hoạt động.
+    // Đồng thời thêm semantic shared class để SHARED-08
+    // chuyển sang responsive CSS mà không sửa markup lần nữa.
+    var moduleClass =
+        options.ModulePrefix;
+}
+
+<div class="@($"{moduleClass}-right-info-title") cdha-process-info-title">
+    THÔNG TIN BỆNH NHÂN
+</div>
+
+
+@* ============================================================
+   COLUMN 1
+   Giữ đúng thứ tự UI XQ hiện tại
+   ============================================================ *@
+
+<div class="@($"{moduleClass}-right-info-div-1") cdha-process-info-col cdha-process-info-col-1">
+
+    <div class="@($"{moduleClass}-right-info-div-combo-2") cdha-process-field-row">
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-label") cdha-process-field-label">
+            <label>Mã bệnh nhân</label>
+        </div>
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-input") cdha-process-field-input">
+
+            <input type="text"
+                   id="@options.Id("id")"
+                   hidden
+                   value="@patient?.Id" />
+
+            <input type="text"
+                   id="@options.Id("patientId")"
+                   value="@patient?.PatientId"
+                   class="form-control height-28 pading-left-5"
+                   disabled />
+
+        </div>
+
+    </div>
+
+
+    <div class="@($"{moduleClass}-right-info-div-combo-2") cdha-process-field-row div-margin-top-5">
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-label") cdha-process-field-label">
+            <label>Mã bệnh phẩm</label>
+        </div>
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-input") cdha-process-field-input cdha-process-seq-sid">
+
+            <div class="@($"{moduleClass}-right-info-div-combo-2-input-input1") cdha-process-seq">
+
+                <input type="text"
+                       id="@options.Id("seq")"
+                       value="@patient?.Seq"
+                       class="form-control height-28 pading-left-5 pading-right-5"
+                       disabled />
+
+            </div>
+
+            <div class="@($"{moduleClass}-right-info-div-combo-2-input-input2") cdha-process-sid">
+
+                <input type="text"
+                       id="@options.Id("sid")"
+                       value="@patient?.Sid"
+                       class="form-control height-28 pading-left-5 pading-right-5 border-left-none"
+                       disabled />
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="@($"{moduleClass}-right-info-div-combo-2") cdha-process-field-row div-margin-top-5">
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-label") cdha-process-field-label">
+            <label>Tên bệnh nhân</label>
+        </div>
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-input") cdha-process-field-input">
+
+            <input type="text"
+                   id="@options.Id("patientName")"
+                   value="@patient?.PatientName"
+                   class="form-control height-28 pading-left-5 pading-right-5"
+                   disabled />
+
+        </div>
+
+    </div>
+
+
+    <div class="@($"{moduleClass}-right-info-div-combo-4") cdha-process-pair-row div-margin-top-5">
+
+        <div class="@($"{moduleClass}-right-info-div-combo-4-label-age-object") cdha-process-pair-label">
+            <label>Ngày sinh</label>
+        </div>
+
+        <div class="@($"{moduleClass}-right-info-div-combo-4-input") cdha-process-pair-input">
+
+            <input type="text"
+                   id="@options.Id("age")"
+                   value="@age"
+                   class="form-control height-28 pading-left-5"
+                   disabled />
+
+        </div>
+
+        <div class="@($"{moduleClass}-right-info-div-combo-4-label-sex-benhan") cdha-process-pair-label pading-left-5">
+            <label>Giới tính</label>
+        </div>
+
+        <div class="@($"{moduleClass}-right-info-div-combo-4-input") cdha-process-pair-input">
+
+            <input type="text"
+                   id="@options.Id("sex")"
+                   value="@patient?.Sex"
+                   class="form-control height-28 pading-left-5 pading-right-5"
+                   disabled />
+
+        </div>
+
+    </div>
+
+
+    <div class="@($"{moduleClass}-right-info-div-combo-4") cdha-process-pair-row div-margin-top-5">
+
+        <div class="@($"{moduleClass}-right-info-div-combo-4-label-age-object") cdha-process-pair-label">
+            <label>Đối tượng</label>
+        </div>
+
+        <div class="@($"{moduleClass}-right-info-div-combo-4-input") cdha-process-pair-input">
+
+            <input type="text"
+                   id="@options.Id("obj")"
+                   value="@patient?.Object?.Name"
+                   class="form-control height-28 pading-left-5 pading-right-5"
+                   disabled />
+
+        </div>
+
+        <div class="@($"{moduleClass}-right-info-div-combo-4-label-sex-benhan") cdha-process-pair-label pading-left-5">
+            <label>Bệnh án</label>
+        </div>
+
+        <div class="@($"{moduleClass}-right-info-div-combo-4-input") cdha-process-pair-input">
+
+            <input type="text"
+                   id="@options.Id("type")"
+                   value="@Model.MedicalRecordName"
+                   class="form-control height-28 pading-left-5 pading-right-5"
+                   disabled />
+
+        </div>
+
+    </div>
+
+</div>
+
+
+@* ============================================================
+   COLUMN 2
+   ============================================================ *@
+
+<div class="@($"{moduleClass}-right-info-div-2") cdha-process-info-col cdha-process-info-col-2 pading-left-10">
+
+    <div class="@($"{moduleClass}-right-info-div-combo-2") cdha-process-field-row">
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-label") cdha-process-field-label">
+            <label>Nơi chỉ định</label>
+        </div>
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-input") cdha-process-field-input">
+
+            <input type="text"
+                   id="@options.Id("location")"
+                   value="@patient?.Location?.Name"
+                   class="form-control height-28 pading-left-5 pading-right-5"
+                   disabled />
+
+        </div>
+
+    </div>
+
+
+    <div class="@($"{moduleClass}-right-info-div-combo-2") cdha-process-field-row div-margin-top-5">
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-label") cdha-process-field-label">
+            <label>BS chỉ định</label>
+        </div>
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-input") cdha-process-field-input">
+
+            <input type="text"
+                   id="@options.Id("doctor")"
+                   value="@patient?.Doctor?.Name"
+                   class="form-control height-28 pading-left-5 pading-right-5"
+                   disabled />
+
+        </div>
+
+    </div>
+
+
+    <div class="@($"{moduleClass}-right-info-div-combo-2") cdha-process-field-row div-margin-top-5">
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-label") cdha-process-field-label">
+            <label>Giờ thực hiện</label>
+        </div>
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-input") cdha-process-field-input">
+
+            <input type="text"
+                   id="@options.Id("getSampleTime")"
+                   value="@getSampleTime"
+                   class="form-control height-28 pading-left-5"
+                   disabled />
+
+        </div>
+
+    </div>
+
+
+    <div class="@($"{moduleClass}-right-info-div-combo-2") cdha-process-field-row div-margin-top-5">
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-label") cdha-process-field-label">
+            <label>Giờ trả KQ</label>
+        </div>
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-input") cdha-process-field-input">
+
+            <input type="datetime-local"
+                   id="@options.Id("returnResultTime")"
+                   value="@returnResultTime.ToString("yyyy-MM-dd HH:mm")"
+                   class="form-control height-28 pading-left-5 valid"
+                   data-toggle="tooltip"
+                   title="Giờ trả kết quả là bắt buộc"
+                   data-placement="top" />
+
+        </div>
+
+    </div>
+
+
+    <div class="@($"{moduleClass}-right-info-div-combo-2") cdha-process-field-row div-margin-top-5">
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-label") cdha-process-field-label">
+            <label>BS thực hiện</label>
+        </div>
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-input") cdha-process-field-input">
+
+            <input type="hidden"
+                   id="@options.Id("userLoginId")"
+                   value="@Model.UserLoginId" />
+
+            <select id="@options.UserReturnResultElementId"
+                    name="@options.UserReturnResultElementSuffix"
+                    class="form-select height-28 valid"
+                    data-toggle="tooltip"
+                    title="Người trả kết quả là bắt buộc"
+                    data-placement="top">
+
+                @foreach (var user in Model.Users)
+                {
+                    if (
+                    selectedUserId.HasValue &&
+                    user.Id == selectedUserId.Value
+                    )
+                    {
+                        <option selected
+                                value="@user.Id">
+                            @user.Name
+                        </option>
+                    }
+                    else
+                    {
+                        <option value="@user.Id">
+                            @user.Name
+                        </option>
+                    }
+                }
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <div class="@($"{moduleClass}-right-info-div-combo-2") cdha-process-field-row div-margin-top-5">
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-label") cdha-process-field-label">
+            <label>CCCD BS</label>
+        </div>
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-input") cdha-process-field-input">
+
+            <input id="@options.Id("signerCCCD")"
+                   class="form-control height-28 pading-left-5 valid" />
+
+        </div>
+
+    </div>
+
+</div>
+
+
+@* ============================================================
+   COLUMN 3
+   ============================================================ *@
+
+<div class="@($"{moduleClass}-right-info-div-3") cdha-process-info-col cdha-process-info-col-3 pading-left-10">
+
+    <div class="@($"{moduleClass}-right-info-div-combo-2") cdha-process-field-row">
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-label") cdha-process-field-label">
+            <label>Địa chỉ</label>
+        </div>
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-input") cdha-process-field-input pading-left-10">
+
+            <textarea id="@options.Id("address")"
+                      class="form-control height-30 pading-left-5 pading-right-5"
+                      disabled>@patient?.Address</textarea>
+
+        </div>
+
+    </div>
+
+
+    <div class="@($"{moduleClass}-right-info-div-combo-2") cdha-process-field-row div-margin-top-5">
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-label") cdha-process-field-label">
+            <label>Chẩn đoán</label>
+        </div>
+
+        <div class="@($"{moduleClass}-right-info-div-combo-2-input") cdha-process-field-input pading-left-10">
+
+            <textarea id="@options.Id("diagnostic")"
+                      class="form-control height-30 pading-left-5 pading-right-5"
+                      disabled>@patient?.Diagnostic</textarea>
+
+        </div>
+
+    </div>
+
+</div>

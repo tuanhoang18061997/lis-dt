@@ -104,9 +104,19 @@ namespace Management.Controllers
         [Authorize]
         public async Task<IActionResult> Search(string pidorseq, DateTime timeSearchFrom, DateTime timeSearchTo)
         {
-            var from = new DateTime(timeSearchFrom.Year, timeSearchFrom.Month, timeSearchFrom.Day, 23, 59, 59).AddDays(-1);
-            var to = new DateTime(timeSearchTo.Year, timeSearchTo.Month, timeSearchTo.Day, 23, 59, 59);
+            if (timeSearchFrom.Date > timeSearchTo.Date)
+            {
+                return BadRequest(
+                    "Từ ngày không được lớn hơn Đến ngày."
+                );
+            }
+            //var from = new DateTime(timeSearchFrom.Year, timeSearchFrom.Month, timeSearchFrom.Day, 23, 59, 59).AddDays(-1);
+            //var to = new DateTime(timeSearchTo.Year, timeSearchTo.Month, timeSearchTo.Day, 23, 59, 59);
+            var from = new DateTime(timeSearchFrom.Year, timeSearchFrom.Month, timeSearchFrom.Day, 0, 0, 0);
+            var to = new DateTime(timeSearchTo.Year, timeSearchTo.Month, timeSearchTo.Day, 23, 59, 59 );
+            var a = await _patientCDHABL.Get_ListPatientByPidOrSid(from, to, false, true, false, pidorseq, _XQ);
             ViewData["lstPatient"] = await _patientCDHABL.Get_ListPatientByPidOrSid(from, to, false, true, false, pidorseq, _XQ);
+            await this.Get_Count();
 
             return PartialView("_XQ_Process_ListPatient");
         }

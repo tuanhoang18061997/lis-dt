@@ -1,11 +1,16 @@
 using Management.BL;
 using Management.BL.Services;
+using Management.BL.Pacs;
+using Management.Services.Pacs;
 using Management.Interfaces;
 using Management.Models;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using QuestPDF.Infrastructure;
 using System.Net;
+using System.Net.Http.Headers;
+using Yarp.ReverseProxy.Transforms;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +21,8 @@ QuestPDF.Settings.EnableDebugging = true;
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
+// PACS-07A-11D-02: Auth services for proxy endpoints (DEV PREVIEW).
+builder.Services.AddAuthorization();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddDistributedMemoryCache();
@@ -64,8 +71,97 @@ builder.Services.AddTransient<APIBL>();
 builder.Services.AddTransient<APIBL_MHIS>();
 builder.Services.AddTransient<PushResultHISBL>();
 builder.Services.AddTransient<DigitalSignBL>();
+
+// ============================================================
+// PACS CORE
+// ============================================================
+builder.Services.AddTransient<PacsConfigBL>();
+// PACS 07A-08B: Both OrthancClient and PacsConfigBL use this dedicated handler.
+// Only this client trusts the BVNDT PACS private CA; no system Root-store changes.
+builder.Services.AddHttpClient<OrthancClient>("pacs-orthanc")
+    .ConfigurePrimaryHttpMessageHandler(sp =>
+        PacsTlsHandlerFactory.Create(
+            sp.GetRequiredService<IConfiguration>()));
+builder.Services.AddTransient<PacsViewerBL>();
+builder.Services.AddTransient<PacsWorklistBL>();
+builder.Services.AddTransient<PacsStudyBL>();
+builder.Services.AddTransient<PacsChangeSyncBL>();
+builder.Services.AddTransient<PacsReliabilityBL>();
+
+builder.Services.Configure<PacsSyncBackgroundOptions>(
+    builder.Configuration.GetSection("PacsSyncBackground"));
+
+// PACS-XQ-PREPROD-01D
+// Recovery configuration used by PacsRecoveryBackgroundService.
+// Runtime execution still requires PacsSyncRecovery:Enabled=true.
+builder.Services.Configure<PacsSyncRecoveryOptions>(
+    builder.Configuration.GetSection("PacsSyncRecovery"));
+
+// Reconciliation configuration used by PacsReconciliationBackgroundService.
+// Runtime execution still requires PacsSyncReconciliation:Enabled=true.
+builder.Services.Configure<PacsSyncReconciliationOptions>(
+    builder.Configuration.GetSection("PacsSyncReconciliation"));
+
+// Keep the three background responsibilities separate:
+// 1) /changes checkpoint sync,
+// 2) Missing Study Recovery,
+// 3) Completed Study Reconciliation.
+builder.Services.AddHostedService<PacsSyncBackgroundService>();
+builder.Services.AddHostedService<PacsRecoveryBackgroundService>();
+builder.Services.AddHostedService<PacsReconciliationBackgroundService>();
+builder.Services.AddHostedService<
+    Management.BL.Pacs.PacsIisSmbOneShotHostedService>();
+// ======================================================
+// PACS / OHIF YARP Reverse Proxy
+// ======================================================
+builder.Services
+    .AddReverseProxy()
+    .LoadFromConfig(
+        builder.Configuration.GetSection("ReverseProxy")
+    )
+    .ConfigureHttpClient((_, handler) =>
+        PacsOhifProxySecurity.ConfigureYarpTls(builder.Configuration, handler))
+    .AddTransforms(transformBuilder =>
+    {
+        if (!string.Equals(transformBuilder.Cluster?.ClusterId, "ohif-cluster",
+                           StringComparison.Ordinal))
+            return;
+
+        transformBuilder.AddRequestTransform(transformContext =>
+        {
+            // Never forward the user's LIS cookies or Authorization header to PACS.
+            transformContext.ProxyRequest.Headers.Remove("Cookie");
+            transformContext.ProxyRequest.Headers.Authorization =
+                PacsOhifProxySecurity.BuildBasicAuthHeader(builder.Configuration);
+            return ValueTask.CompletedTask;
+        });
+    });
+// ======================================================
+// OHIF root asset proxy
+//
+// OHIF v3.8 có một số JS/CSS/worker/font/image được load
+// tại root của host thay vì dưới /ohif.
+// Base URL lấy từ cùng YARP destination để không hard-code.
+// ======================================================
+
+var ohifProxyBaseUrl =
+    builder.Configuration[
+        "ReverseProxy:Clusters:ohif-cluster:Destinations:ohif-destination:Address"
+    ]
+    ?? throw new InvalidOperationException(
+        "Không tìm thấy cấu hình ReverseProxy OHIF destination."
+    );
+
+builder.Services.AddHttpClient("ohif-proxy", client =>
+{
+    client.BaseAddress = new Uri(ohifProxyBaseUrl, UriKind.Absolute);
+    client.Timeout = TimeSpan.FromSeconds(120);
+})
+.ConfigurePrimaryHttpMessageHandler(sp =>
+    PacsTlsHandlerFactory.Create(sp.GetRequiredService<IConfiguration>()));
 builder.Services.AddHostedService<MyHostedService>();
 
+builder.Services.AddHostedService<Management.BL.Pacs.PacsIisMwlSyntheticHostedService>();
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())
@@ -75,11 +171,296 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
+// ======================================================
+// Normalize OHIF base path
+// /ohif -> /ohif/
+// ======================================================
+
+app.Use(async (context, next) =>
+{
+    if (context.Request.Path.Equals(
+        "/ohif",
+        StringComparison.OrdinalIgnoreCase))
+    {
+        context.Response.Redirect("/ohif/");
+        return;
+    }
+
+    await next();
+});
+// ======================================================
+// PACS / OHIF cross-origin headers
+//
+// Project A hiện activate PACS cho XQ.
+// Khi module khác được activate PACS thì bổ sung prefix tương ứng.
+// ======================================================
+
+app.Use(async (context, next) =>
+{
+    var path = context.Request.Path.Value ?? "";
+
+    var isPacsViewerRelated =
+        path.StartsWith(
+            "/XQ_Process",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.StartsWith(
+            "/ohif",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.StartsWith(
+            "/dicom-web",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.StartsWith(
+            "/wado",
+            StringComparison.OrdinalIgnoreCase);
+
+    if (isPacsViewerRelated)
+    {
+        context.Response.OnStarting(() =>
+        {
+            context.Response.Headers[
+                "Cross-Origin-Opener-Policy"
+            ] = "same-origin";
+
+            context.Response.Headers[
+                "Cross-Origin-Embedder-Policy"
+            ] = "require-corp";
+
+            context.Response.Headers[
+                "Cross-Origin-Resource-Policy"
+            ] = "cross-origin";
+
+            context.Response.Headers[
+                "Permissions-Policy"
+            ] = "cross-origin-isolated=*";
+
+            context.Response.Headers.Remove(
+                "X-Frame-Options"
+            );
+
+            return Task.CompletedTask;
+        });
+    }
+
+    await next();
+});
+// ======================================================
+// PROXY ROOT ASSETS CỦA OHIF
+//
+// OHIF v3.8 có thể load:
+//   /app.bundle.xxx.js
+//   /574.bundle.xxx.js
+//   /481.css
+//   /index.worker.xxx.worker.js
+//   /assets...
+//
+// Chỉ proxy asset ở ROOT để không ăn nhầm
+// JS/CSS của MVC/LIS nằm dưới các path khác.
+// ======================================================
+
 app.UseSession();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+// PACS-07A-11D-02: root-asset middleware now executes after authentication.
+app.Use(async (context, next) =>
+{
+    var path = context.Request.Path.Value ?? "";
+
+    var isOhifRootAsset =
+        path.Equals(
+            "/app-config.js",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.Equals(
+            "/manifest.json",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.Equals(
+            "/init-service-worker.js",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.Equals(
+            "/service-worker.js",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".js",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".css",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".json",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".png",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".jpg",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".jpeg",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".svg",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".ico",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".wasm",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".map",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".woff",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".woff2",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".ttf",
+            StringComparison.OrdinalIgnoreCase);
+
+    // Chỉ asset nằm ngay ROOT:
+    //
+    // /app.bundle.xxx.js   -> proxy
+    // /481.css             -> proxy
+    //
+    // /js/xq.js            -> KHÔNG proxy
+    // /css/site.css        -> KHÔNG proxy
+    // /XQ_Process/...      -> KHÔNG proxy
+    //
+    var isRootAsset =
+        path.Count(c => c == '/') == 1;
+
+    if (isRootAsset && isOhifRootAsset)
+    {
+        if (context.User.Identity?.IsAuthenticated != true)
+        {
+            await context.ChallengeAsync();
+            return;
+        }
+
+        var clientFactory =
+            context.RequestServices
+                .GetRequiredService<IHttpClientFactory>();
+
+        var client =
+            clientFactory.CreateClient("ohif-proxy");
+
+        var targetPath =
+            path + context.Request.QueryString;
+
+        using var requestMessage =
+            new HttpRequestMessage(HttpMethod.Get, targetPath);
+        requestMessage.Headers.Authorization =
+            PacsOhifProxySecurity.BuildBasicAuthHeader(
+                context.RequestServices.GetRequiredService<IConfiguration>());
+
+        using var responseMessage =
+            await client.SendAsync(
+                requestMessage,
+                HttpCompletionOption.ResponseHeadersRead,
+                context.RequestAborted
+            );
+
+        context.Response.StatusCode =
+            (int)responseMessage.StatusCode;
+
+        foreach (var header in responseMessage.Headers)
+        {
+            context.Response.Headers[
+                header.Key
+            ] = header.Value.ToArray();
+        }
+
+        foreach (var header in responseMessage.Content.Headers)
+        {
+            context.Response.Headers[
+                header.Key
+            ] = header.Value.ToArray();
+        }
+
+        // Hop-by-hop headers không được forward.
+        context.Response.Headers.Remove(
+            "transfer-encoding");
+
+        context.Response.Headers.Remove(
+            "connection");
+
+        context.Response.Headers.Remove(
+            "keep-alive");
+
+        context.Response.Headers.Remove(
+            "proxy-authenticate");
+
+        context.Response.Headers.Remove(
+            "proxy-authorization");
+
+        context.Response.Headers.Remove(
+            "te");
+
+        context.Response.Headers.Remove(
+            "trailer");
+
+        context.Response.Headers.Remove(
+            "upgrade");
+
+        // Giữ isolation headers cho OHIF/MPR/3D.
+        context.Response.Headers[
+            "Cross-Origin-Opener-Policy"
+        ] = "same-origin";
+
+        context.Response.Headers[
+            "Cross-Origin-Embedder-Policy"
+        ] = "require-corp";
+
+        context.Response.Headers[
+            "Cross-Origin-Resource-Policy"
+        ] = "cross-origin";
+
+        context.Response.Headers[
+            "Permissions-Policy"
+        ] = "cross-origin-isolated=*";
+
+        context.Response.Headers.Remove(
+            "X-Frame-Options");
+
+        await responseMessage.Content.CopyToAsync(
+            context.Response.Body,
+            context.RequestAborted
+        );
+
+        return;
+    }
+
+    await next();
+});
+app.UseStaticFiles();
+
+// ======================================================
+// YARP Reverse Proxy
+// ======================================================
+
+app.MapReverseProxy().RequireAuthorization();
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Account}/{action=Login}/{id?}");

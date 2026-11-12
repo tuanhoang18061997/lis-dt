@@ -31,7 +31,7 @@ namespace Management.Controllers
             var dateTimeNow = ToolBL.Get_DateNow();
             var from = new DateTime(dateTimeNow.Year, dateTimeNow.Month, dateTimeNow.Day, 23, 59, 59).AddDays(-1);
             var to = new DateTime(dateTimeNow.Year, dateTimeNow.Month, dateTimeNow.Day, 23, 59, 59);
-            ViewData["lstResultStandard"] = await _resultStandardBL.GetList(from, to);
+            //ViewData["lstResultStandard"] = await _resultStandardBL.GetList(from, to);
             ViewData["lstDevice"] = await _deviceBL.GetList();
             return View();
         }

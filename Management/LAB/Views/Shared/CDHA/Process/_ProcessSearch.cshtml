@@ -1,0 +1,57 @@
+﻿@model Management.Models.ViewModels.CDHA.CdhaProcessViewModel
+
+@{
+    var options = Model.Options;
+
+    var titleClass =
+        $"{options.ModulePrefix}-right-info-title";
+}
+
+<div class="@titleClass cdha-process-section-title">
+    DANH SÁCH BỆNH NHÂN
+</div>
+
+<div class="cdha-process-search-field">
+    <input type="text"
+           id="@options.Id("pidorseq")"
+           class="form-control height-28"
+           placeholder="Tìm theo PID hoặc SEQ" />
+</div>
+
+<div class="div-margin-top-5 cdha-process-search-field">
+    <input type="date"
+           id="@options.Id("timeSearchFrom")"
+           class="form-control height-28"
+           value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+</div>
+
+<div class="div-margin-top-5 cdha-process-search-field">
+    <input type="date"
+           id="@options.Id("timeSearchTo")"
+           class="form-control height-28"
+           value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+</div>
+
+<div class="div-margin-top-5 cdha-process-search-actions">
+
+    <button id="@options.Id("refresh")"
+            type="button"
+            class="btn btn-success btn-blue width-20"
+            onclick="Process_Refresh()">
+
+        <i class="bi bi-arrow-clockwise"></i>
+        Refresh
+
+    </button>
+
+    <button id="@options.Id("search")"
+            type="button"
+            class="btn btn-success btn-blue width-20"
+            onclick="Process_Search()">
+
+        <i class="bi bi-search"></i>
+        Tìm kiếm
+
+    </button>
+
+</div>

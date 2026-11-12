@@ -1,0 +1,50 @@
+﻿@model Management.Models.ViewModels.CDHA.CdhaProcessViewModel
+
+@{
+    var patients =
+        Model.Patients
+        ?? new List<Patient>();
+}
+
+<div class="list-group list-group-flush cdha-process-patient-list">
+
+    @foreach (var patient in patients)
+    {
+        var patientName =
+        patient.PatientName
+        ?? string.Empty;
+
+        var age =
+        patient.Age?
+        .ToString("dd/MM/yyyy")
+        ?? string.Empty;
+
+        <a href="#"
+           class="list-group-item list-group-item-action cdha-process-patient-item"
+           data-patient-db-id="@patient.Id"
+           onclick="Process_GetPatientInfo(@patient.Id)">
+
+            <div class="list-group-item-pid-age-sex">
+
+                <div class="list-group-item-pid-age-sex-pid">
+                    @patient.PatientId
+                </div>
+
+                <div class="list-group-item-pid-age-sex-age">
+                    @age
+                </div>
+
+                <div class="list-group-item-pid-age-sex-sex">
+                    @patient.Sex
+                </div>
+
+            </div>
+
+            <div class="list-group-item-name">
+                @patientName.ToUpper()
+            </div>
+
+        </a>
+    }
+
+</div>

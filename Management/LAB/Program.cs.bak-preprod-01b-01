@@ -1,0 +1,415 @@
+﻿using Management.BL;
+using Management.BL.Services;
+using Management.BL.Pacs;
+using Management.Services.Pacs;
+using Management.Interfaces;
+using Management.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore;
+using QuestPDF.Infrastructure;
+using System.Net;
+
+var builder = WebApplication.CreateBuilder(args);
+
+QuestPDF.Settings.License = LicenseType.Community;
+QuestPDF.Settings.CheckIfAllTextGlyphsAreAvailable = false;
+QuestPDF.Settings.EnableDebugging = true;
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(480);
+});
+
+#region Cau hinh CKS
+// HttpClient cho MySign
+builder.Services.AddHttpClient("mysign", client =>
+{
+    client.Timeout = TimeSpan.FromSeconds(60); // dung o file SignServerService.cs khi goi SignPdfAsync (var client = _httpClientFactory.CreateClient("mysign");)
+});
+
+builder.Services.AddScoped<ISignServerService, SignServerService>();
+#endregion Cau hinh CKS
+
+builder.Services.AddDbContext<LABContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("LABConnectionString")), ServiceLifetime.Transient);
+builder.Services.AddTransient<HospitalBL>();
+builder.Services.AddTransient<UserBL>();
+builder.Services.AddTransient<TypeBL>();
+builder.Services.AddTransient<PatientXNBL>();
+builder.Services.AddTransient<GroupBL>();
+builder.Services.AddTransient<DoctorBL>();
+builder.Services.AddTransient<LocationBL>();
+builder.Services.AddTransient<ObjectBL>();
+builder.Services.AddTransient<CategoryBL>();
+builder.Services.AddTransient<ServiceBL>();
+builder.Services.AddTransient<ResultXNBL>();
+builder.Services.AddTransient<ServiceTestBL>();
+builder.Services.AddTransient<SettingBL>();
+builder.Services.AddTransient<ToolBL>();
+builder.Services.AddTransient<ResultCDHABL>();
+builder.Services.AddTransient<PatientCDHABL>();
+builder.Services.AddTransient<SampleBL>();
+builder.Services.AddTransient<FunctionBL>();
+builder.Services.AddTransient<TestTypeBL>();
+builder.Services.AddTransient<PrintSampleBL>();
+builder.Services.AddTransient<DeviceBL>();
+builder.Services.AddTransient<TestCodeBL>();
+builder.Services.AddTransient<MapBL>();
+builder.Services.AddTransient<ResultStandardBL>();
+builder.Services.AddTransient<ReportBL>();
+builder.Services.AddTransient<APIBL>();
+builder.Services.AddTransient<APIBL_MHIS>();
+builder.Services.AddTransient<PushResultHISBL>();
+builder.Services.AddTransient<DigitalSignBL>();
+
+// ============================================================
+// PACS CORE
+// ============================================================
+builder.Services.AddTransient<PacsConfigBL>();
+builder.Services.AddHttpClient<OrthancClient>();
+builder.Services.AddTransient<PacsViewerBL>();
+builder.Services.AddTransient<PacsWorklistBL>();
+builder.Services.AddTransient<PacsStudyBL>();
+builder.Services.AddTransient<PacsChangeSyncBL>();
+
+builder.Services.Configure<PacsSyncBackgroundOptions>(
+    builder.Configuration.GetSection("PacsSyncBackground"));
+
+builder.Services.AddHostedService<PacsSyncBackgroundService>();
+// ======================================================
+// PACS / OHIF YARP Reverse Proxy
+// ======================================================
+builder.Services
+    .AddReverseProxy()
+    .LoadFromConfig(
+        builder.Configuration.GetSection("ReverseProxy")
+    );
+// ======================================================
+// OHIF root asset proxy
+//
+// OHIF v3.8 có một số JS/CSS/worker/font/image được load
+// tại root của host thay vì dưới /ohif.
+// Base URL lấy từ cùng YARP destination để không hard-code.
+// ======================================================
+
+var ohifProxyBaseUrl =
+    builder.Configuration[
+        "ReverseProxy:Clusters:ohif-cluster:Destinations:ohif-destination:Address"
+    ]
+    ?? throw new InvalidOperationException(
+        "Không tìm thấy cấu hình ReverseProxy OHIF destination."
+    );
+
+builder.Services.AddHttpClient("ohif-proxy", client =>
+{
+    client.BaseAddress = new Uri(
+        ohifProxyBaseUrl,
+        UriKind.Absolute
+    );
+
+    client.Timeout = TimeSpan.FromSeconds(120);
+});
+builder.Services.AddHostedService<MyHostedService>();
+
+var app = builder.Build();
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
+// ======================================================
+// Normalize OHIF base path
+// /ohif -> /ohif/
+// ======================================================
+
+app.Use(async (context, next) =>
+{
+    if (context.Request.Path.Equals(
+        "/ohif",
+        StringComparison.OrdinalIgnoreCase))
+    {
+        context.Response.Redirect("/ohif/");
+        return;
+    }
+
+    await next();
+});
+// ======================================================
+// PACS / OHIF cross-origin headers
+//
+// Project A hiện activate PACS cho XQ.
+// Khi module khác được activate PACS thì bổ sung prefix tương ứng.
+// ======================================================
+
+app.Use(async (context, next) =>
+{
+    var path = context.Request.Path.Value ?? "";
+
+    var isPacsViewerRelated =
+        path.StartsWith(
+            "/XQ_Process",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.StartsWith(
+            "/ohif",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.StartsWith(
+            "/dicom-web",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.StartsWith(
+            "/wado",
+            StringComparison.OrdinalIgnoreCase);
+
+    if (isPacsViewerRelated)
+    {
+        context.Response.OnStarting(() =>
+        {
+            context.Response.Headers[
+                "Cross-Origin-Opener-Policy"
+            ] = "same-origin";
+
+            context.Response.Headers[
+                "Cross-Origin-Embedder-Policy"
+            ] = "require-corp";
+
+            context.Response.Headers[
+                "Cross-Origin-Resource-Policy"
+            ] = "cross-origin";
+
+            context.Response.Headers[
+                "Permissions-Policy"
+            ] = "cross-origin-isolated=*";
+
+            context.Response.Headers.Remove(
+                "X-Frame-Options"
+            );
+
+            return Task.CompletedTask;
+        });
+    }
+
+    await next();
+});
+// ======================================================
+// PROXY ROOT ASSETS CỦA OHIF
+//
+// OHIF v3.8 có thể load:
+//   /app.bundle.xxx.js
+//   /574.bundle.xxx.js
+//   /481.css
+//   /index.worker.xxx.worker.js
+//   /assets...
+//
+// Chỉ proxy asset ở ROOT để không ăn nhầm
+// JS/CSS của MVC/LIS nằm dưới các path khác.
+// ======================================================
+
+app.Use(async (context, next) =>
+{
+    var path = context.Request.Path.Value ?? "";
+
+    var isOhifRootAsset =
+        path.Equals(
+            "/app-config.js",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.Equals(
+            "/manifest.json",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.Equals(
+            "/init-service-worker.js",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.Equals(
+            "/service-worker.js",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".js",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".css",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".json",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".png",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".jpg",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".jpeg",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".svg",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".ico",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".wasm",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".map",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".woff",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".woff2",
+            StringComparison.OrdinalIgnoreCase) ||
+
+        path.EndsWith(
+            ".ttf",
+            StringComparison.OrdinalIgnoreCase);
+
+    // Chỉ asset nằm ngay ROOT:
+    //
+    // /app.bundle.xxx.js   -> proxy
+    // /481.css             -> proxy
+    //
+    // /js/xq.js            -> KHÔNG proxy
+    // /css/site.css        -> KHÔNG proxy
+    // /XQ_Process/...      -> KHÔNG proxy
+    //
+    var isRootAsset =
+        path.Count(c => c == '/') == 1;
+
+    if (isRootAsset && isOhifRootAsset)
+    {
+        var clientFactory =
+            context.RequestServices
+                .GetRequiredService<IHttpClientFactory>();
+
+        var client =
+            clientFactory.CreateClient("ohif-proxy");
+
+        var targetPath =
+            path + context.Request.QueryString;
+
+        using var requestMessage =
+            new HttpRequestMessage(
+                HttpMethod.Get,
+                targetPath
+            );
+
+        using var responseMessage =
+            await client.SendAsync(
+                requestMessage,
+                HttpCompletionOption.ResponseHeadersRead,
+                context.RequestAborted
+            );
+
+        context.Response.StatusCode =
+            (int)responseMessage.StatusCode;
+
+        foreach (var header in responseMessage.Headers)
+        {
+            context.Response.Headers[
+                header.Key
+            ] = header.Value.ToArray();
+        }
+
+        foreach (var header in responseMessage.Content.Headers)
+        {
+            context.Response.Headers[
+                header.Key
+            ] = header.Value.ToArray();
+        }
+
+        // Hop-by-hop headers không được forward.
+        context.Response.Headers.Remove(
+            "transfer-encoding");
+
+        context.Response.Headers.Remove(
+            "connection");
+
+        context.Response.Headers.Remove(
+            "keep-alive");
+
+        context.Response.Headers.Remove(
+            "proxy-authenticate");
+
+        context.Response.Headers.Remove(
+            "proxy-authorization");
+
+        context.Response.Headers.Remove(
+            "te");
+
+        context.Response.Headers.Remove(
+            "trailer");
+
+        context.Response.Headers.Remove(
+            "upgrade");
+
+        // Giữ isolation headers cho OHIF/MPR/3D.
+        context.Response.Headers[
+            "Cross-Origin-Opener-Policy"
+        ] = "same-origin";
+
+        context.Response.Headers[
+            "Cross-Origin-Embedder-Policy"
+        ] = "require-corp";
+
+        context.Response.Headers[
+            "Cross-Origin-Resource-Policy"
+        ] = "cross-origin";
+
+        context.Response.Headers[
+            "Permissions-Policy"
+        ] = "cross-origin-isolated=*";
+
+        context.Response.Headers.Remove(
+            "X-Frame-Options");
+
+        await responseMessage.Content.CopyToAsync(
+            context.Response.Body,
+            context.RequestAborted
+        );
+
+        return;
+    }
+
+    await next();
+});
+app.UseStaticFiles();
+app.UseSession();
+app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
+
+// ======================================================
+// YARP Reverse Proxy
+// ======================================================
+
+app.MapReverseProxy();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Account}/{action=Login}/{id?}");
+
+app.Run();

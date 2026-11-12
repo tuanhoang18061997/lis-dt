@@ -1,0 +1,154 @@
+﻿@using Management.Models
+@using Management.Models.ViewModels.CDHA
+
+@model CdhaProcessViewModel
+
+@{
+    var options =
+        Model.Options;
+
+    var modulePrefix =
+        options.ModulePrefix;
+
+    var pacsSize =
+        options.PacsDefaultSize;
+
+    if (
+        pacsSize != "60" &&
+        pacsSize != "75" &&
+        pacsSize != "90"
+    )
+    {
+        pacsSize =
+            "75";
+    }
+
+
+    var serviceGroupId =
+        $"process_{modulePrefix}-right-service-group";
+
+    var serviceGridId =
+        $"process_{modulePrefix}-right-service-gridview";
+}
+
+
+<div id="pacs_shell"
+     class="pacs-shell pacs-size-@pacsSize cdha-process-shell @options.ModuleClass("process-shell")"
+     data-cdha-module="@modulePrefix"
+     data-cdha-screen="@options.ScreenPrefix">
+
+    <div id="pacs_main"
+         class="pacs-main cdha-process-main">
+
+
+        <div class="@($"{modulePrefix}-container") cdha-process-container">
+
+
+            @* =================================================
+               LEFT
+               Search + Patient List
+               ================================================= *@
+
+            <div class="@($"{modulePrefix}-left") cdha-process-left">
+
+                <div class="@($"{modulePrefix}-left-search") cdha-process-search">
+
+                    @await Html.PartialAsync(
+                    "~/Views/Shared/CDHA/Process/_ProcessSearch.cshtml",
+                                        Model
+                                        )
+
+                </div>
+
+                <div id="process_listPatient"
+                     class="@($"{modulePrefix}-left-list") cdha-process-patient-list-host">
+
+                    @await Html.PartialAsync(
+                                        "~/Views/Shared/CDHA/Process/_ProcessPatientList.cshtml",
+                                        Model
+                                        )
+
+                </div>
+
+            </div>
+
+            @* Backdrop PHẢI nằm ngoài LEFT *@
+            <div class="cdha-process-patient-backdrop"
+                 data-cdha-role="patient-backdrop">
+            </div>
+
+            @* =================================================
+               RIGHT
+               Patient Info + ActionBar + Workspace
+               ================================================= *@
+
+            <div class="@($"{modulePrefix}-right") cdha-process-right">
+
+                <button type="button"
+                        class="cdha-process-patient-toggle"
+                        data-cdha-action="toggle-patient-list"
+                        aria-label="Mở danh sách bệnh nhân">
+
+                    <i class="bi bi-list"></i>
+
+                    Danh sách bệnh nhân
+
+                </button>
+
+                <div id="process_patientInfo"
+                     class="@($"{modulePrefix}-right-info") cdha-process-patient-info-host">
+
+                    @await Html.PartialAsync(
+                                        "~/Views/Shared/CDHA/Process/_ProcessPatientInfo.cshtml",
+                                        Model
+                                        )
+
+                </div>
+
+
+                <div id="process_patientService"
+                     class="@($"{modulePrefix}-right-service") cdha-process-service-host">
+
+
+                    <div id="@serviceGroupId"
+                         class="@($"{modulePrefix}-right-service-group") cdha-process-action-host">
+
+                        @await Html.PartialAsync(
+                                                "~/Views/Shared/CDHA/Process/_ProcessActionBar.cshtml",
+                                                Model
+                                                )
+
+                    </div>
+
+
+                    <div id="@serviceGridId"
+                         class="@($"{modulePrefix}-right-service-gridview") cdha-process-workspace-host">
+
+                        @await Html.PartialAsync(
+                                                "~/Views/Shared/CDHA/Process/_ProcessWorkspace.cshtml",
+                                                Model
+                                                )
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    @if (options.EnablePacs)
+        {
+    @await Html.PartialAsync(
+        "~/Views/Shared/_PacsDock.cshtml"
+        )
+        }
+
+</div>

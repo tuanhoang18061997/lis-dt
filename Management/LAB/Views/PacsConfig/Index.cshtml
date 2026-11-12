@@ -1,0 +1,71 @@
+@{
+    Layout = null;
+    ViewData["Title"] = "Cấu hình PACS";
+}
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cấu hình PACS | LIS</title>
+    <link rel="stylesheet" href="@Url.Content("~/css/pacs/pacs-config.css")" />
+</head>
+<body>
+<main class="pacs-shell" id="pacsConfigPage"
+      data-getall="@Url.Action("GetAll", "PacsConfig")"
+      data-save="@Url.Action("Save", "PacsConfig")"
+      data-test="@Url.Action("TestConnection", "PacsConfig")">
+    <header class="pacs-header">
+        <div>
+            <div class="eyebrow">LIS / PACS</div>
+            <h1>Cấu hình PACS Server</h1>
+            <p>Quản lý điểm kết nối Orthanc. Background Sync vẫn phải giữ OFF cho đến khi hoàn thành Manual Sync UAT.</p>
+        </div>
+        <button type="button" id="refreshList" class="btn secondary">Làm mới danh sách</button>
+    </header>
+    <div id="statusLine" class="notice" role="status" aria-live="polite">Đang kiểm tra danh sách cấu hình...</div>
+
+    <section class="panel">
+        <div class="section-head"><h2>Danh sách PACS</h2><span id="configCount" class="pill">0 cấu hình</span></div>
+        <div class="table-wrap">
+            <table><thead><tr><th>Mã</th><th>Tên server</th><th>Base URL</th><th>Mặc định</th><th>Active</th><th>Trạng thái</th><th>Thao tác</th></tr></thead>
+            <tbody id="configRows"><tr><td colspan="7" class="muted">Đang tải...</td></tr></tbody></table>
+        </div>
+    </section>
+
+    <section class="panel" id="createPanel">
+        <div class="section-head">
+            <h2>Thêm cấu hình Orthanc</h2>
+            <span class="pill neutral">Chỉ tạo mới · không sửa API</span>
+        </div>
+        <p class="hint">Các giá trị dưới đây dựa trên checkpoint HTTPS đã nghiệm thu. Chỉ nhấn Lưu khi được phép tạo bản ghi Production.</p>
+        <form id="pacsCreateForm" autocomplete="off">
+            <div class="form-grid">
+                <label>Mã server <input name="Code" maxlength="100" required value="BVNDT_ORTHANC" /></label>
+                <label>Tên server <input name="Name" maxlength="250" required value="PACS Bệnh viện Nhi Đức Tâm - Orthanc" /></label>
+                <label>Server type <input name="ServerType" maxlength="50" required value="Orthanc" /></label>
+                <label>Base URL <input name="BaseUrl" maxlength="500" required value="https://192.168.10.106" /></label>
+                <label>API username <input name="ApiUsername" maxlength="100" value="lis_sync" /></label>
+                <label>API password <input name="ApiPassword" type="password" maxlength="500" required autocomplete="new-password" placeholder="Nhập mật khẩu lis_sync" /></label>
+                <label>DICOM AE Title <input name="DicomAETitle" maxlength="100" value="BVNDT_PACS" /></label>
+                <label>DICOM Host <input name="DicomHost" maxlength="250" value="192.168.10.106" /></label>
+                <label>DICOM Port <input name="DicomPort" type="number" min="1" max="65535" value="4242" /></label>
+                <label>DICOMweb Root <input name="DicomWebRoot" maxlength="250" value="/dicom-web/" /></label>
+                <label>OHIF URL (chưa chốt) <input name="OhifViewerUrl" maxlength="500" value="" placeholder="Để trống" /></label>
+                <label>Sync interval (giây) <input name="SyncIntervalSeconds" type="number" min="1" value="60" /></label>
+            </div>
+            <div class="flag-row">
+                <label><input type="checkbox" name="IsDefault" checked /> Đặt làm mặc định</label>
+                <label><input type="checkbox" name="IsActive" checked /> Kích hoạt cấu hình</label>
+                <span class="off-tag">Background Sync: OFF (cố định)</span>
+            </div>
+            <div class="actions">
+                <button type="submit" id="saveConfig" class="btn primary">Lưu cấu hình mới</button>
+                <span class="hint">Lưu sẽ INSERT vào bảng PacsConfigs. Không tự bật Background Sync.</span>
+            </div>
+        </form>
+    </section>
+</main>
+<script src="@Url.Content("~/js/pacs/pacs-config.js")"></script>
+</body>
+</html>

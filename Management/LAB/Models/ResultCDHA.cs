@@ -49,5 +49,24 @@ namespace Management.Models
         public bool Active { get; set; }
         public long? SignStoreId { get; set; }
         public int? SignStatus { get; set; }
+        /// <summary>
+        /// Mã Accession dùng để liên kết LIS Worklist với DICOM Study.
+        /// </summary>
+        public string? AccessionNumber { get; set; }
+
+        /// <summary>
+        /// DICOM Study Instance UID sau khi Study được đồng bộ từ PACS.
+        /// </summary>
+        public string? StudyInstanceUID { get; set; }
+
+        /// <summary>
+        /// ID Study tương ứng trong Orthanc.
+        /// </summary>
+        public string? OrthancStudyId { get; set; }
+
+        /// <summary>
+        /// Trạng thái PACS của kết quả CDHA.
+        /// </summary>
+        public string? PacsStatus { get; set; }
     }
 }
